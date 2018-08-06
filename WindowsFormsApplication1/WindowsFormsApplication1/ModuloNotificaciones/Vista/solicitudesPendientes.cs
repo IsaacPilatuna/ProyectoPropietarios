@@ -26,7 +26,7 @@ namespace WindowsFormsApplication1
             Conexion cn = new Conexion();
             cn.query("update solicitudreserva set estadosolicitud='aprobada1' where idsolicitudreserva='" + x + "'");
             
-
+            //cinebt
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
