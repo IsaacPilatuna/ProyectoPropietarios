@@ -28,7 +28,7 @@ namespace WindowsFormsApplication1
             Correo correo = new Correo();
             correo.enviarCorreoNotificacion("sofig.0106@gmail.com", "APROBACIÓN SOLICITUD", "SU SOLICITUD HA SIDO APROBADA");
             
-            //cinebt
+            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
