@@ -24,6 +24,7 @@ namespace WindowsFormsApplication1
             String x = dataGridView1.CurrentCell.Value.ToString();
             MessageBox.Show(x);
             Conexion cn = new Conexion();
+            //hola
             cn.query("update solicitudreserva set estadosolicitud='aprobada1' where idsolicitudreserva='" + x + "'");
             
 
