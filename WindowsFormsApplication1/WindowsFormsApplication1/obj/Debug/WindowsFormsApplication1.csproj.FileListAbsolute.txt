@@ -87,12 +87,8 @@ D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplicati
 D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\ModuloFormularios.FrmCalificacionServicio.resources
 D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\ModuloFormularios.Form2.resources
 D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\ModuloFormularios.FrmSolicitudDeViaje.resources
-D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ModuloNotificaciones.SimuladorLogin.ListaNotificaciones.resources
-D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.simuladorLogin.resources
-D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.OpcionesAutoridad.resources
 D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.solicitudesPendientes.resources
 D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
-D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Formulario.resources
 D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.cache
 D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.CoreCompileInputs.cache
 D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
@@ -446,108 +442,244 @@ C:\Users\Dany J\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\W
 C:\Users\Dany J\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.FormDatos.resources
 C:\Users\Dany J\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.FormLogin.resources
 C:\Users\Dany J\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.FormMenu.resources
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\SqlServerTypes\x64\msvcr120.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\SqlServerTypes\x86\msvcr120.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.ReportViewer.Common.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.ReportViewer.Design.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.ReportViewer.WebDesign.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.ReportViewer.WebForms.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.ReportViewer.WinForms.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.SqlServer.Types.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\EnvDTE.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\stdole.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.MSXML.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\de\Microsoft.ReportViewer.WebDesign.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\es\Microsoft.ReportViewer.WebDesign.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\fr\Microsoft.ReportViewer.WebDesign.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\it\Microsoft.ReportViewer.WebDesign.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ja\Microsoft.ReportViewer.WebDesign.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ko\Microsoft.ReportViewer.WebDesign.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\pt\Microsoft.ReportViewer.WebDesign.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ru\Microsoft.ReportViewer.WebDesign.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\de\Microsoft.ReportViewer.WebForms.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\es\Microsoft.ReportViewer.WebForms.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\fr\Microsoft.ReportViewer.WebForms.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\it\Microsoft.ReportViewer.WebForms.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ja\Microsoft.ReportViewer.WebForms.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ko\Microsoft.ReportViewer.WebForms.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\pt\Microsoft.ReportViewer.WebForms.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ru\Microsoft.ReportViewer.WebForms.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojAssemblyReference.cache
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\ModuloFormularios.FrmCalificacionServicio.resources
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\ModuloFormularios.Form2.resources
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\ModuloFormularios.FrmSolicitudDeViaje.resources
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ModuloNotificaciones.SimuladorLogin.ListaNotificaciones.resources
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.simuladorLogin.resources
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.OpcionesAutoridad.resources
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.solicitudesPendientes.resources
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ModuloReportesEstadisticos.FrmReporteHistorialKilometraje.resources
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ModuloReportesEstadisticos.FrmReporteViajes.resources
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.FormDatos.resources
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.FormLogin.resources
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.FormMenu.resources
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.cache
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.CoreCompileInputs.cache
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.CopyComplete
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ModuloDisponibilidad.Calendario.resources
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ModuloDisponibilidad.MenuDisponibilidad.resources
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.ReportViewer.Design.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.ReportViewer.WebDesign.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\EnvDTE.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.Build.Framework.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\stdole.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.VSHelp.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.Shell.Interop.9.0.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.ProjectAggregator.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.ComponentModelHost.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.Debugger.InteropA.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\EnvDTE80.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.Build.Tasks.Core.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.Data.Services.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\VSLangProj.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.Shell.Interop.11.0.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.Data.Core.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.Shell.Interop.10.0.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\VSLangProj80.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.ManagedInterfaces.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.WCFReference.Interop.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.Debugger.Interop.11.0.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.GraphModel.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.MSXML.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.Build.Utilities.Core.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.10.0.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\VSLangProj2.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.xml
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\de\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\es\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\fr\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\it\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ja\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ko\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\pt\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ru\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\de\Microsoft.ReportViewer.WebForms.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\es\Microsoft.ReportViewer.WebForms.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\fr\Microsoft.ReportViewer.WebForms.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\it\Microsoft.ReportViewer.WebForms.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ja\Microsoft.ReportViewer.WebForms.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ko\Microsoft.ReportViewer.WebForms.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\pt\Microsoft.ReportViewer.WebForms.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ru\Microsoft.ReportViewer.WebForms.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\es\Microsoft.VisualStudio.Data.Services.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\es\Microsoft.VisualStudio.Data.Core.resources.dll
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojAssemblyReference.cache
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe.config
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\ModuloFormularios.FrmCalificacionServicio.resources
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\ModuloFormularios.Form2.resources
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\ModuloFormularios.FrmSolicitudDeViaje.resources
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.solicitudesPendientes.resources
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ModuloReportesEstadisticos.FrmReporteHistorialKilometraje.resources
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ModuloReportesEstadisticos.FrmReporteViajes.resources
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.FormDatos.resources
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.FormLogin.resources
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.FormMenu.resources
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.cache
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.CoreCompileInputs.cache
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.CopyComplete
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+D:\AAPUnido\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.ReportViewer.Design.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.ReportViewer.WebDesign.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\EnvDTE.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.Build.Framework.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\stdole.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.VSHelp.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.Shell.Interop.9.0.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.ProjectAggregator.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.ComponentModelHost.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.Debugger.InteropA.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\EnvDTE80.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.Build.Tasks.Core.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.Data.Services.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\VSLangProj.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.Shell.Interop.11.0.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.Data.Core.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.Shell.Interop.10.0.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\VSLangProj80.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.ManagedInterfaces.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.WCFReference.Interop.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.Debugger.Interop.11.0.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.GraphModel.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.MSXML.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.Build.Utilities.Core.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.10.0.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\VSLangProj2.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.xml
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\de\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\es\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\fr\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\it\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ja\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ko\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\pt\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ru\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\de\Microsoft.ReportViewer.WebForms.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\es\Microsoft.ReportViewer.WebForms.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\fr\Microsoft.ReportViewer.WebForms.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\it\Microsoft.ReportViewer.WebForms.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ja\Microsoft.ReportViewer.WebForms.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ko\Microsoft.ReportViewer.WebForms.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\pt\Microsoft.ReportViewer.WebForms.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ru\Microsoft.ReportViewer.WebForms.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\es\Microsoft.VisualStudio.Data.Services.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\es\Microsoft.VisualStudio.Data.Core.resources.dll
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe.config
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ModuloReportesEstadisticos.FrmMenuPrincipalReportes.resources
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ModuloReportesEstadisticos.FrmReporteHistorialKilometraje.resources
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ModuloReportesEstadisticos.FrmReporteViajes.resources
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.FormDatos.resources
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.FormLogin.resources
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.FormMenu.resources
+D:\TransporteProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.CopyComplete

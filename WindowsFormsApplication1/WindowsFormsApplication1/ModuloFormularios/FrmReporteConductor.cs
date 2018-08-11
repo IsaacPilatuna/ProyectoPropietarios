@@ -7,69 +7,69 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApplication1.ModuloFormularios;
 
 namespace ModuloFormularios
 {
-    public partial class Form2 : Form
+    public partial class Form2: Form
     {
-        public Form2()
+        private CSReporteConductor reporteConductor;
+        
+        public Form2(string cedulaConductor, string nombresConductor)
         {
             InitializeComponent();
+            reporteConductor = new CSReporteConductor();
+            txt_ciConductor.Text = cedulaConductor;
+            txt_nombreConductor.Text = nombresConductor;
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void obtenerDatos(object sender, EventArgs e)
         {
+            try
+            {
+                reporteConductor.setDineroGastadoEnGasolina(Convert.ToSingle(txt_dinCombustible.Text));
+                
+                if (rb_inconvenienteT.Checked)
+                {
+                    reporteConductor.setDescripcionInconveniente(txt_descIncon.Text);
 
+                }
+                else
+                {
+                    reporteConductor.setDescripcionInconveniente("null");
+
+                }
+
+                if (rb_0.Checked)
+                {
+                    reporteConductor.setComportamientoPasajeros("0");
+                }
+                else if (rb_25.Checked)
+                {
+                    reporteConductor.setComportamientoPasajeros("25");
+                }
+                else if (rb_50.Checked)
+                {
+                    reporteConductor.setComportamientoPasajeros("50");
+                }
+                else if (rb_75.Checked)
+                {
+                    reporteConductor.setComportamientoPasajeros("75");
+                }
+                else
+                {
+                    reporteConductor.setComportamientoPasajeros("100");
+                }
+                reporteConductor.setIdConductor(txt_ciConductor.Text);
+                reporteConductor.guardarEnBase();
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show("Error al ingresar los datos");
+                Console.WriteLine(er.ToString());
+            }
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton5_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
-}
+ }
+

@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApplication1.ModuloNotificaciones.SimuladorLogin
+namespace WindowsFormsApplication1.ModuloReportesEstadisticos
 {
-    public partial class ListaNotificaciones : Form
+    public partial class FrmMenuPrincipalReportes : Form
     {
-        public ListaNotificaciones()
+        public FrmMenuPrincipalReportes()
         {
             InitializeComponent();
-        }
-
-        private void ListaNotificaciones_Load(object sender, EventArgs e)
-        {
-            
         }
     }
 }

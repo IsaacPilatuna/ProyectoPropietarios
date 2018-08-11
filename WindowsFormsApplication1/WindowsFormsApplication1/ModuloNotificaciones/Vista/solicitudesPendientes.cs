@@ -12,10 +12,10 @@ namespace WindowsFormsApplication1
 {
     public partial class solicitudesPendientes : Form
     {
-        string idautoridad;
-        public solicitudesPendientes(string idauto)
+        string auxemail;
+        public solicitudesPendientes(string email)
         {
-            idautoridad = idauto;
+            auxemail = email;
             InitializeComponent();
         }
 
@@ -24,8 +24,21 @@ namespace WindowsFormsApplication1
             String x = dataGridView1.CurrentCell.Value.ToString();
             MessageBox.Show(x);
             Conexion cn = new Conexion();
-            cn.query("update solicitudreserva set estadosolicitud='aprobada1' where idsolicitudreserva='" + x + "'");
-            
+         
+
+            DataTable dtaux = cn.Buscar(auxemail, "select idusuario, departamento from usuarios where email= '" + auxemail + "'");
+            DataRow row = dtaux.Rows[0];
+         
+            int idusuario = Convert.ToInt32(row["idusuario"]);
+            string facultad = Convert.ToString(row["departamento"]);
+            try
+            {
+                cn.query("update solicitudreserva set estadosolicitud='aprobada1' where idsolicitudreserva='" + x + "'");
+            }
+            catch
+            {
+                MessageBox.Show("CAMPO SELECCIANO NO ESTA CORRECTO");
+            }
 
         }
 
@@ -38,14 +51,25 @@ namespace WindowsFormsApplication1
         private void button2_Click(object sender, EventArgs e)
         {
             Conexion cn = new Conexion();
+           
+            DataTable dtaux = cn.Buscar(auxemail, "select idusuario, departamento from usuarios where email= '" + auxemail + "'");
+           DataRow row = dtaux.Rows[0];
+           string x;
+           int idusuario = Convert.ToInt32(row["idusuario"]);
+           string facultad = Convert.ToString(row["departamento"]);
+            MessageBox.Show(facultad);
+          
+          // MessageBox.Show("  select *from SolicitudReserva where idSolicitante in (select idSolicitante from Solicitante where facultad ='" + facultad + "'");
+           cn.CargarDatos("   select nombre AS NOMBRE_SOLICITANTE, fechasalida AS FECHA_SALIDA, fecharetorno AS FECHA_RETORNO, descripcion AS MOTIVO from Usuarios, MotivoViaje, solicitudreserva where Usuarios.idusuario = solicitudreserva.idusuario AND motivoviaje.idMotivoViaje = solicitudreserva.idMotivoViaje AND departamento ='"+facultad+"'", dataGridView1);
+           // MessageBox.Show("    select nombre AS NOMBRE_SOLICITANTE, fechasalida AS FECHA_SALIDA, fecharetorno AS FECHA_RETORNO, descripcion AS MOTIVO from Usuarios, MotivoViaje, solicitudreserva where Usuarios.idusuario = solicitudreserva.idusuario AND motivoviaje.idMotivoViaje = solicitudreserva.idMotivoViaje AND departamento = ' " + facultad + "'");
+         // cn.CargarDatos("select * from usuarios", dataGridView1);
+        }
 
-            DataTable dtaux = cn.Buscar(idautoridad, "select  idsolicitante, facultad, tipo from solicitante where idsolicitante= '" + idautoridad + "'");
-            DataRow row = dtaux.Rows[0];
-            string x;
-            string tipo = Convert.ToString(row["tipo"]);
-            string facultad = Convert.ToString(row["facultad"]);
-           // MessageBox.Show("  select *from SolicitudReserva where idSolicitante in (select idSolicitante from Solicitante where facultad ='" + facultad + "'");
-            cn.CargarDatos("  select *from SolicitudReserva where estadosolicitud = 'en espera' AND idSolicitante in (select idSolicitante from Solicitante where facultad ='" + facultad + "') ", dataGridView1);
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
+
+

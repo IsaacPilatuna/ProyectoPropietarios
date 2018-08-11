@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public class Modulo
+    public class GestiónModulos
     {
 
         Cargo cargo = new Cargo();
@@ -15,14 +15,14 @@ namespace WindowsFormsApplication1
         FormDatos frmDatos = new FormDatos();
 
 
-        public Modulo(FormMenu frm, String user)
+        public GestiónModulos(FormMenu frm, String user)
         {
 
 
             obtenerDatosCargo(user);
             obtenerDatosUsuario(user);
 
-            FormMenu frm1 = frm;
+            FormMenu frm1 = new FormMenu(user);
             privilegiosMenu(frm);
             frm1.iniciar(this);
             frm1.Show();
@@ -38,37 +38,56 @@ namespace WindowsFormsApplication1
 
             if (cargo.IDcargo1 == 1)
             {
-                frm.btnNotificaciones.Visible = true;
+
+                frm.btnReservas.Visible = true;
                 frm.btnReportes.Visible = true;
-                frm.btnRutas.Visible = true;
-                frm.btnUser.Visible = true;
+                frm.btnNotificaciones.Visible = false;
                 frm.btnVehículos.Visible = true;
+                frm.btnRutas.Visible = true;
+                frm.btnIncidencias.Visible = true;
+                frm.btnForm.Visible = false;
 
 
             }
             else if (cargo.IDcargo1 == 2)
             {
-
+                frm.btnReservas.Visible = true;
+                frm.btnReportes.Visible = true;
+                frm.btnNotificaciones.Visible = false;
+                frm.btnVehículos.Visible = true;
+                frm.btnRutas.Visible = true;
+                frm.btnIncidencias.Visible = true;
+                frm.btnForm.Visible = false;
             }
             else if (cargo.IDcargo1 == 3)
             {
-
+                frm.btnReservas.Visible = false;
+                frm.btnReportes.Visible = false;
+                frm.btnNotificaciones.Visible = true;
+                frm.btnVehículos.Visible = false;
+                frm.btnRutas.Visible = false;
+                frm.btnIncidencias.Visible = false;
+                frm.btnForm.Visible = true;
             }
             else if (cargo.IDcargo1 == 4)
             {
-                frm.btnNotificaciones.Visible = false;
+                frm.btnReservas.Visible = false;
                 frm.btnReportes.Visible = false;
-                frm.btnRutas.Visible = false;
-                frm.btnUser.Visible = false;
+                frm.btnNotificaciones.Visible = false;
                 frm.btnVehículos.Visible = false;
+                frm.btnRutas.Visible = false;
+                frm.btnIncidencias.Visible = false;
+                frm.btnForm.Visible = true;
             }
             else
             {
-                frm.btnNotificaciones.Visible = false;
+                frm.btnReservas.Visible = false;
                 frm.btnReportes.Visible = false;
-                frm.btnRutas.Visible = true;
-                frm.btnUser.Visible = false;
+                frm.btnNotificaciones.Visible = false;
                 frm.btnVehículos.Visible = true;
+                frm.btnRutas.Visible = true;
+                frm.btnIncidencias.Visible = true;
+                frm.btnForm.Visible = true;
             }
 
 
@@ -129,10 +148,9 @@ namespace WindowsFormsApplication1
             fh.Show();
         }
 
-
-
         public void mostrarDatos(FormMenu frmMenú)
         {
+
             privilegiosDatos();
             mostrarMódulo(frmMenú, frmDatos);
         }
@@ -144,6 +162,8 @@ namespace WindowsFormsApplication1
             {
                 frmDatos.bGuardar.Visible = true;
                 frmDatos.btnLimpiar.Visible = true;
+               
+
 
             }
             else if (cargo.IDcargo1 == 2)
