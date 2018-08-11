@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsFormsApp1.ModuloDisponibilidad
+namespace WindowsFormsApplication1.ModuloDisponibilidad
 {
     class Fecha
     {
+
+
     }
 }

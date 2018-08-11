@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1.ModuloDisponibilidad
+namespace WindowsFormsApplication1.ModuloDisponibilidad
 {
     public partial class MenuDisponibilidad : Form
     {

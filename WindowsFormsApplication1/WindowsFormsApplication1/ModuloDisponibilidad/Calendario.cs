@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data;
 
-namespace WindowsFormsApp1.ModuloDisponibilidad
+namespace WindowsFormsApplication1.ModuloDisponibilidad
 {
     public partial class Calendario : Form
     {
@@ -1079,8 +1079,13 @@ namespace WindowsFormsApp1.ModuloDisponibilidad
 
         private void panel60_DoubleClick(object sender, EventArgs e)
         {
-            MenuDisponibilidad a = new MenuDisponibilidad();
+           MenuDisponibilidad a = new MenuDisponibilidad();
             a.Show();
+        }
+
+        private void panel84_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

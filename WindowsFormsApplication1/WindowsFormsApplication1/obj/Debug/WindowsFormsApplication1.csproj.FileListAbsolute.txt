@@ -469,7 +469,6 @@ C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsAppli
 C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
 C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
 C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.MSXML.dll
-C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
 C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
 C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
 C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
@@ -550,3 +549,5 @@ C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsAppli
 C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.CopyComplete
 C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ModuloDisponibilidad.Calendario.resources
+C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ModuloDisponibilidad.MenuDisponibilidad.resources

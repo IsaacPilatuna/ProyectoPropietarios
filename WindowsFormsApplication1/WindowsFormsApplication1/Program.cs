@@ -7,8 +7,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApplication1.ModuloReportesEstadisticos;
+using WindowsFormsApplication1.ModuloDisponibilidad;
 
 namespace WindowsFormsApplication1
+
 {
     static class Program
     {
@@ -32,7 +34,9 @@ namespace WindowsFormsApplication1
             //log.ShowDialog();
 
 
-            Application.Run(new FormMenu());
+            //****************************************** Application.Run(new FormMenu());
+
+            Application.Run(new MenuDisponibilidad());
 
 
 

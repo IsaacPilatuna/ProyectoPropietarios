@@ -73,6 +73,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseDeDatos\Conexion.cs" />
+    <Compile Include="ModuloDisponibilidad\Calendario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloDisponibilidad\Calendario.designer.cs">
+      <DependentUpon>Calendario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloDisponibilidad\Conexion.cs" />
+    <Compile Include="ModuloDisponibilidad\Consulta.cs" />
+    <Compile Include="ModuloDisponibilidad\Fecha.cs" />
+    <Compile Include="ModuloDisponibilidad\MenuDisponibilidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloDisponibilidad\MenuDisponibilidad.designer.cs">
+      <DependentUpon>MenuDisponibilidad.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModuloFormularios\CSCalificacionDeServicio.cs" />
     <Compile Include="ModuloFormularios\CSListaCalificacionServicio.cs" />
     <Compile Include="ModuloFormularios\CSListaReporteConductor.cs" />
@@ -153,7 +168,6 @@
     <Compile Include="ModuloReportesEstadisticos\FrmReporteViajes.Designer.cs">
       <DependentUpon>FrmReporteViajes.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModuloReserva\Calendario.cs" />
     <Compile Include="ModuloReserva\Chofer.cs" />
     <Compile Include="ModuloReserva\Fecha.cs" />
     <Compile Include="Form1.cs">
@@ -199,6 +213,12 @@
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloDisponibilidad\Calendario.resx">
+      <DependentUpon>Calendario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloDisponibilidad\MenuDisponibilidad.resx">
+      <DependentUpon>MenuDisponibilidad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModuloFormularios\FrmCalificacionServicio.resx">
       <DependentUpon>FrmCalificacionServicio.cs</DependentUpon>
@@ -285,6 +305,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\flecha1.png" />
+    <None Include="Resources\bus1.png" />
+    <None Include="Resources\carro1.png" />
+    <None Include="Resources\leteers.png" />
+    <None Include="Resources\calendario.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -305,6 +330,7 @@
   <ItemGroup>
     <None Include="Resources\epn.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

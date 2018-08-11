@@ -8,7 +8,7 @@ using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1.ModuloDisponibilidad
+namespace WindowsFormsApplication1.ModuloDisponibilidad
 
 {
     class Conexion
