@@ -33,10 +33,9 @@ namespace WindowsFormsApplication1
             //simuladorLogin log = new simuladorLogin();
             //log.ShowDialog();
 
+            Application.Run(new FormMenu());
 
-            //****************************************** Application.Run(new FormMenu());
-
-            Application.Run(new MenuDisponibilidad());
+           // Application.Run(new MenuDisponibilidad());
 
 
 
