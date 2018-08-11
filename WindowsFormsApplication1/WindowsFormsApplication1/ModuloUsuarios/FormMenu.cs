@@ -18,13 +18,13 @@ namespace WindowsFormsApplication1
     {
 
 
-        Fachada_Modulo fm1;
+        GestiónModulos fm1;
         String auxuser;
 
 
       
         
-        public void iniciar(Fachada_Modulo fm)
+        public void iniciar(GestiónModulos fm)
         {
             fm1 = fm;
         }
@@ -147,7 +147,7 @@ namespace WindowsFormsApplication1
 
         private void btnUser_Click(object sender, EventArgs e)
         {
-            fm1.mostrarDatos(this);
+            
         }
 
 
