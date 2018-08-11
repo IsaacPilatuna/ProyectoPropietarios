@@ -86,6 +86,12 @@
       <DependentUpon>FrmSolicitudDeViaje.cs</DependentUpon>
     </Compile>
     <Compile Include="ModuloFormularios\Notificacion.cs" />
+    <Compile Include="ModuloFormularios\PrincipalFormularioProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloFormularios\PrincipalFormularioProfesor.Designer.cs">
+      <DependentUpon>PrincipalFormularioProfesor.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModuloNotificaciones\CarpetaNotificaciones\NotificacionMantenimiento.cs" />
     <Compile Include="ModuloNotificaciones\CarpetaNotificaciones\NotificacionRuta.cs" />
     <Compile Include="ModuloNotificaciones\CarpetaNotificaciones\NotificacionUsuario.cs" />
@@ -256,6 +262,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModuloFormularios\FrmSolicitudDeViaje.resx">
       <DependentUpon>FrmSolicitudDeViaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloFormularios\PrincipalFormularioProfesor.resx">
+      <DependentUpon>PrincipalFormularioProfesor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModuloNotificaciones\Vista\solicitudesPendientes.resx">
       <DependentUpon>solicitudesPendientes.cs</DependentUpon>

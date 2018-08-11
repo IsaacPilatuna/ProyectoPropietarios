@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using WindowsFormsApplication1.ModuloFormularios;
 using WindowsFormsApplication1.ModuloReportesEstadisticos;
 using WindowsFormsApplication1.ModuloVehiculo.Formularios;
 
@@ -17,6 +18,7 @@ namespace WindowsFormsApplication1
         FormDatos frmDatos = new FormDatos();
         mdiModVehiculo frmVehi = new mdiModVehiculo();
         solicitudesPendientes solicitudes;
+        PrincipalFormularioProfesor FormulariosProfesor = new PrincipalFormularioProfesor();
         String aux; 
 
         //FrmReporteHistorialKilometraje frmRep
@@ -142,7 +144,11 @@ namespace WindowsFormsApplication1
             solicitudes = new solicitudesPendientes(aux);
             mostrarMódulo(frmMenu, solicitudes);
         }
-
+        public void mostrarFormulario(FormMenu frmMenu)
+        {
+            FormulariosProfesor = new PrincipalFormularioProfesor();
+            mostrarMódulo(frmMenu, FormulariosProfesor);
+        }
         public void mostrarDatos(FormMenu frmMenú)
         {
 
