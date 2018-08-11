@@ -42,10 +42,9 @@ namespace ModuloFormularios
                 SqlCommand comando = new SqlCommand("SELECT idMotivoViaje, descripcion FROM dbo.MotivoViaje", conn);
                 SqlDataReader reader = comando.ExecuteReader();
                 comboBoxMotivos.DisplayMember = "Text";
-                comboBoxMotivos.ValueMember = "Value";
                 while (reader.Read())
                 {
-                    comboBoxMotivos.Items.Add(new { Text = reader[1], Value = reader[0] });
+                    comboBoxMotivos.Items.Add(new { Text = reader[1]});
 
                 }
                 comboBoxMotivos.SelectedIndex = 0;
@@ -60,14 +59,19 @@ namespace ModuloFormularios
         public void ponerIDs(String idusuario) {
             this.idusuario = idusuario;
         }
-        
+
+
+
         private void buttonGuardar_Click(object sender, EventArgs e)
         {
-            destino = textBox2.Text + "," + comboBox1.SelectedItem.ToString();
-            //string idUsuario,string idmotivo, string destino, string fechaSalida, string horaSalida, string fechaRetorno, string horaRetorno, int numeroPersonas
-            CSSolicitudDeViaje solicitudDeViaje = new CSSolicitudDeViaje(idusuario,""+comboBoxMotivos.SelectedIndex+1,destino,dtf_salida.Text, dth_salida.Text, dtf_llegada.Text, dth_llegada.Text, Convert.ToInt32(textBox1.Text));
-            solicitudDeViaje.guardarEnBase();
-            this.Close();
+            if (comboBox1.SelectedItem.ToString() != "" && textBox2.Text != "" && textBox1.Text != "")
+            {
+                destino = textBox2.Text + "," + comboBox1.SelectedItem.ToString();
+                int idmotivo = comboBoxMotivos.SelectedIndex + 1;
+                CSSolicitudDeViaje solicitudDeViaje = new CSSolicitudDeViaje(idusuario, "" + idmotivo, destino, dtf_salida.Text, dth_salida.Text, dtf_llegada.Text, dth_llegada.Text, Convert.ToInt32(textBox1.Text));
+                solicitudDeViaje.guardarEnBase();
+                this.Close();
+            }
         }
     }
 }

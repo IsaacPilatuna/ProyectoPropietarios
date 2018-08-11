@@ -113,7 +113,7 @@ namespace WindowsFormsApplication1.ModuloFormularios
 
         public bool existeCalificacion()
         {
-            string sql = "select count(*) from reservaaprobada where idusuario=" + usu.IDusuario1 + " and calificacionservicio is null and estadosolicitud is null";
+            string sql = "select count(*) from reservaaprobada where idusuario=" + usu.IDusuario1 + " and calificacionservicio is null and estadosolicitud is 'aprobado2'";
             string valor = "";
             MessageBox.Show(sql + "");
             conn = new SqlConnection(cnx.stringConexion);
