@@ -237,7 +237,6 @@
             this.lbCorreo.Size = new System.Drawing.Size(180, 15);
             this.lbCorreo.TabIndex = 17;
             this.lbCorreo.Text = "Correo";
-            this.lbCorreo.Click += new System.EventHandler(this.lbCorreo_Click);
             // 
             // lbID
             // 
@@ -260,7 +259,6 @@
             this.lbNombre.Size = new System.Drawing.Size(180, 30);
             this.lbNombre.TabIndex = 15;
             this.lbNombre.Text = "Nombre";
-            this.lbNombre.Click += new System.EventHandler(this.lbNombre_Click);
             // 
             // cerrarSesión
             // 
@@ -292,7 +290,6 @@
             this.btnReservas.TabIndex = 11;
             this.btnReservas.Text = "Gestión de Reservas";
             this.btnReservas.UseVisualStyleBackColor = true;
-            this.btnReservas.Click += new System.EventHandler(this.btnReservas_Click);
             // 
             // btnmenu
             // 
@@ -336,7 +333,6 @@
             this.btnNotificaciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNotificaciones.UseMnemonic = false;
             this.btnNotificaciones.UseVisualStyleBackColor = false;
-            this.btnNotificaciones.Click += new System.EventHandler(this.btnNotificaciones_Click);
             // 
             // btnRutas
             // 

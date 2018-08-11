@@ -184,7 +184,6 @@
     <Compile Include="ModuloUsuarios\Cargo.cs" />
     <Compile Include="ModuloUsuarios\Conexion2.cs" />
     <Compile Include="ModuloUsuarios\Cuenta.cs" />
-    <Compile Include="ModuloUsuarios\Modulo.cs" />
     <Compile Include="ModuloUsuarios\FormDatos.cs">
       <SubType>Form</SubType>
     </Compile>
