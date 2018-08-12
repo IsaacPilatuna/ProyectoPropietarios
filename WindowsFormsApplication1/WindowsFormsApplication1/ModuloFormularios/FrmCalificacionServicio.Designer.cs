@@ -462,9 +462,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(3, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(159, 15);
+            this.label4.Size = new System.Drawing.Size(155, 15);
             this.label4.TabIndex = 1;
-            this.label4.Text = "Nombre del Conductor";
+            this.label4.Text = "Nombre del solicitante";
             // 
             // txt_nomConductor
             // 

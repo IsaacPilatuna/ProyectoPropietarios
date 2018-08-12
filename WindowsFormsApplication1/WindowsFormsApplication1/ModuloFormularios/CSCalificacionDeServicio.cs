@@ -105,11 +105,11 @@ namespace WindowsFormsApplication1.ModuloFormularios
         {
             try
             {
-                MessageBox.Show("1");
+                
                 conn = new SqlConnection(cnx.stringConexion);
-                MessageBox.Show("2");
+                
                 conn.Open();
-                MessageBox.Show("3");
+                
                 String sql = "";
 
                 if (comentariosAdicionales==null)

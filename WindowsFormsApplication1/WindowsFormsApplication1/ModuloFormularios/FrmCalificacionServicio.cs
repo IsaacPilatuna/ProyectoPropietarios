@@ -83,6 +83,7 @@ namespace ModuloFormularios
                 //                    calificacionServicio.getLimpiezaVehiculo() + " " + calificacionServicio.getPuntualSalida() + calificacionServicio.getComentariosAdicionales()
                 //    + " " + txt_nomConductor.Text + " " + cb_reservas.SelectedItem);
                 calificacionServicio.guardarEnBase();
+                this.Close();
             }
             else{ 
                 MessageBox.Show("ERROR AL INGRESAR LOS DATOS");
