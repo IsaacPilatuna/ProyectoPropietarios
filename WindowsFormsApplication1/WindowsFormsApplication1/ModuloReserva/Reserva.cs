@@ -203,17 +203,9 @@ namespace WindowsFormsApplication1
             {
                 SqlCommand cmd = new SqlCommand("UPDATE SolicitudReserva SET estadoSolicitud= 'rechazado' WHERE idSolicitudReserva=" + reserva.IdReserva, coneccion.getConnection());
                 cmd.ExecuteNonQuery();
-
-
-                String email;
-                SqlCommand cmdAux = new SqlCommand("select email from Usuarios WHERE IDusuario=" + reserva.IdCategoriaUsuario, coneccion.getConnection());
-
-                email = "davidmoralesp1995@hotmail.com";// (String)cmdAux.ExecuteScalar();
-                coneccion.Desconectar();
-
-
+                
                 NotificacionUsuario notificacion = new NotificacionUsuario();
-                //notificacion.NotificacionSolicitudAprobada(email, "Aprobación de reserva", "" + reserva.Estado);
+                notificacion.notificacioReservaRechazada(reserva.IdReserva.ToString());
             }
         }
 
