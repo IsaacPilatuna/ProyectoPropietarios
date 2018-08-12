@@ -18,6 +18,7 @@ namespace WindowsFormsApplication1.ModuloFormularios
         private string nombre;
         private Conexion cnx;
         private SqlConnection conn;
+        private string valor;
         public FrmPrincipalChofer(string idUsuario, string nombre)
         {
             InitializeComponent();
@@ -31,7 +32,7 @@ namespace WindowsFormsApplication1.ModuloFormularios
         {
             if (existeReportes())
             {
-                new Form2(idUsuario, nombre,idReservaReporte());
+                new Form2(idUsuario, nombre,idReservaReporte()).Show();
 
             }
             else {
@@ -61,35 +62,22 @@ namespace WindowsFormsApplication1.ModuloFormularios
         }
         public string[] idReservaReporte()
         {
-
-            string sql = "select idReservaAprob from reservaaprobada where idchofer" + idUsuario + " and reporteconductor is null";
-            string [] valores = null;
-            conn = new SqlConnection(cnx.stringConexion);
-            try
+            Conexion cn = new Conexion();
+            string[] valores = new string[Convert.ToInt32(valor)];
+            DataTable dtaux = cn.Buscar("", "select IDRESERVAAPROB from reservaaprobada where idchofer=" + idUsuario + " and reporteconductor is null and estadosolicitud like 'aprobada2'");
+            for (Int32 j = 0; j < Convert.ToInt32(valor); j++)
             {
-                conn.Open();
-                SqlCommand comando = new SqlCommand(sql, conn);
-                SqlDataReader reader = comando.ExecuteReader();
-                int i = 0;
-                while (reader.Read())
-                {
-                    valores[i] = reader[0] + "";
-                    i++;
-
-                }
+                DataRow row = dtaux.Rows[j];
+                valores[j] = Convert.ToString(row["IDRESERVAAPROB"]);
             }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.ToString());
-            }
-
+                       
             return valores;
         }
 
         public bool existeReportes()
         {
 
-            string sql = "select count(*) from reservaaprobada where idchofer=" + idUsuario + " and reporteconductor is null";
+            string sql = "select count(*) from reservaaprobada where idchofer="+idUsuario + " and reporteconductor is null and estadosolicitud like 'aprobada2'";
             string valor = "";
             MessageBox.Show(sql + "");
             conn = new SqlConnection(cnx.stringConexion);
@@ -106,9 +94,10 @@ namespace WindowsFormsApplication1.ModuloFormularios
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.ToString());
+                valor = "0";
+                return false;
             }
-            
+            MessageBox.Show(valor);
             if (valor == "0")
             {
                 return false;

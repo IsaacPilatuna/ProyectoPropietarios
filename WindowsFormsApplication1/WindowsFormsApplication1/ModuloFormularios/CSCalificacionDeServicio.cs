@@ -105,26 +105,31 @@ namespace WindowsFormsApplication1.ModuloFormularios
         {
             try
             {
-                cnx = new Conexion();
+                MessageBox.Show("1");
                 conn = new SqlConnection(cnx.stringConexion);
+                MessageBox.Show("2");
                 conn.Open();
+                MessageBox.Show("3");
                 String sql = "";
 
                 if (comentariosAdicionales==null)
                 {
-                    //idReserva debe ser verificado (hace relacion a la tabla de solicitud servicio)
-                    sql = "insert into Calificiacion_Servicio (idReservaAprob, puntualSalida, limpieza, puntualDestino, puntualRetorno) values("+idReserva + "," + puntualSalida + "," + limpiezaVehiculo + "," + puntualAlDestino + "," + puntualAlRetorno + ")";
+                    sql = "insert into Calificacion_Servicio (idReservaAprob, puntualSalida, limpieza, puntualDestino, puntualRetorno) values("+idReserva + ",'" + puntualSalida + "','" + limpiezaVehiculo + "','" + puntualAlDestino + "','" + puntualAlRetorno + "')";
                 }
                 else
                 {
-                    sql = "insert into Calificiacion_Servicio (idReservaAprob, puntualSalida, limpieza, puntualDestino, puntualRetorno, comentarioAdicional) values(" + idReserva + "," + puntualSalida + "," + limpiezaVehiculo + "," + puntualAlDestino + "," + puntualAlRetorno + ","+ comentariosAdicionales+")";
+                    sql = "insert into Calificacion_Servicio (idReservaAprob, puntualSalida, limpieza, puntualDestino, puntualRetorno, comentarioAdicional) values(" + idReserva + ",'" + puntualSalida + "','" + limpiezaVehiculo + ",'" + puntualAlDestino + "','" + puntualAlRetorno + "','"+ comentariosAdicionales+"')";
                 }
-
+                MessageBox.Show("" + sql);
+                
                 SqlCommand comando = new SqlCommand(sql, conn);
                 int resultado = comando.ExecuteNonQuery();
-                // Comprobar resultado y mandar mensaje de confirmacion o de reintento
-                MessageBox.Show(resultado + "");
-                MessageBox.Show("" + sql);
+                
+                conn = new SqlConnection(cnx.stringConexion);
+                conn.Open();
+                comando = new SqlCommand("update reservaaprobada set calificacionservicio='V' where IDRESERVAAPROB="+idReserva, conn);
+                resultado = comando.ExecuteNonQuery();
+                MessageBox.Show("CALIFICACIÓN GENERADA CON ÉXITO");
             }
             catch (Exception er)
             {
