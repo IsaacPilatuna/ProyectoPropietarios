@@ -157,4 +157,19 @@
   <data name="icons8-encuesta-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-encuesta-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bus1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bus1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="calendario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\calendario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="carro1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\carro1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flecha1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flecha1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="leteers" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\leteers.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
