@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1.ModuloReportesEstadisticos
 {
-    partial class FrmReporteViajes
+    partial class FrmReporteServicio
     {
         /// <summary>
         /// Required designer variable.
