@@ -34,7 +34,7 @@ namespace WindowsFormsApplication1
             Application.SetCompatibleTextRenderingDefault(false);
 
             ////PRUEBAS UNITARIAS
-            //Application.Run(new FrmReporteHistorialKilometraje());
+            //Application.Run(new FrmReporteViajes());
 
             //simuladorLogin log = new simuladorLogin();
             //log.ShowDialog();

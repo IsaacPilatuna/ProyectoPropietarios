@@ -279,13 +279,13 @@ namespace WindowsFormsApplication1.ModuloReportesEstadisticos {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class DataSetViajesDataTable : global::System.Data.TypedTableBase<DataSetViajesRow> {
             
-            private global::System.Data.DataColumn columnprovincia;
+            private global::System.Data.DataColumn columnlugar;
             
             private global::System.Data.DataColumn columnfechaSalida;
             
             private global::System.Data.DataColumn columnfechaRetorno;
             
-            private global::System.Data.DataColumn columnnombreSolicitante;
+            private global::System.Data.DataColumn columnnombre;
             
             private global::System.Data.DataColumn columnnumeroPersonas;
             
@@ -324,9 +324,9 @@ namespace WindowsFormsApplication1.ModuloReportesEstadisticos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn provinciaColumn {
+            public global::System.Data.DataColumn lugarColumn {
                 get {
-                    return this.columnprovincia;
+                    return this.columnlugar;
                 }
             }
             
@@ -348,9 +348,9 @@ namespace WindowsFormsApplication1.ModuloReportesEstadisticos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn nombreSolicitanteColumn {
+            public global::System.Data.DataColumn nombreColumn {
                 get {
-                    return this.columnnombreSolicitante;
+                    return this.columnnombre;
                 }
             }
             
@@ -399,13 +399,13 @@ namespace WindowsFormsApplication1.ModuloReportesEstadisticos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataSetViajesRow AddDataSetViajesRow(string provincia, System.DateTime fechaSalida, System.DateTime fechaRetorno, string nombreSolicitante, int numeroPersonas) {
+            public DataSetViajesRow AddDataSetViajesRow(string lugar, string fechaSalida, string fechaRetorno, string nombre, int numeroPersonas) {
                 DataSetViajesRow rowDataSetViajesRow = ((DataSetViajesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        provincia,
+                        lugar,
                         fechaSalida,
                         fechaRetorno,
-                        nombreSolicitante,
+                        nombre,
                         numeroPersonas};
                 rowDataSetViajesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataSetViajesRow);
@@ -429,24 +429,24 @@ namespace WindowsFormsApplication1.ModuloReportesEstadisticos {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columnprovincia = base.Columns["provincia"];
+                this.columnlugar = base.Columns["lugar"];
                 this.columnfechaSalida = base.Columns["fechaSalida"];
                 this.columnfechaRetorno = base.Columns["fechaRetorno"];
-                this.columnnombreSolicitante = base.Columns["nombreSolicitante"];
+                this.columnnombre = base.Columns["nombre"];
                 this.columnnumeroPersonas = base.Columns["numeroPersonas"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnprovincia = new global::System.Data.DataColumn("provincia", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnprovincia);
-                this.columnfechaSalida = new global::System.Data.DataColumn("fechaSalida", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                this.columnlugar = new global::System.Data.DataColumn("lugar", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlugar);
+                this.columnfechaSalida = new global::System.Data.DataColumn("fechaSalida", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfechaSalida);
-                this.columnfechaRetorno = new global::System.Data.DataColumn("fechaRetorno", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                this.columnfechaRetorno = new global::System.Data.DataColumn("fechaRetorno", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfechaRetorno);
-                this.columnnombreSolicitante = new global::System.Data.DataColumn("nombreSolicitante", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnombreSolicitante);
+                this.columnnombre = new global::System.Data.DataColumn("nombre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombre);
                 this.columnnumeroPersonas = new global::System.Data.DataColumn("numeroPersonas", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnumeroPersonas);
                 this.ExtendedProperties.Add("Generator_TablePropName", "_DataSetViajes");
@@ -593,26 +593,26 @@ namespace WindowsFormsApplication1.ModuloReportesEstadisticos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string provincia {
+            public string lugar {
                 get {
                     try {
-                        return ((string)(this[this.tableDataSetViajes.provinciaColumn]));
+                        return ((string)(this[this.tableDataSetViajes.lugarColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'provincia\' in table \'DataSetViajes\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'lugar\' in table \'DataSetViajes\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataSetViajes.provinciaColumn] = value;
+                    this[this.tableDataSetViajes.lugarColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime fechaSalida {
+            public string fechaSalida {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableDataSetViajes.fechaSalidaColumn]));
+                        return ((string)(this[this.tableDataSetViajes.fechaSalidaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'fechaSalida\' in table \'DataSetViajes\' is DBNull.", e);
@@ -625,10 +625,10 @@ namespace WindowsFormsApplication1.ModuloReportesEstadisticos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime fechaRetorno {
+            public string fechaRetorno {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableDataSetViajes.fechaRetornoColumn]));
+                        return ((string)(this[this.tableDataSetViajes.fechaRetornoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'fechaRetorno\' in table \'DataSetViajes\' is DBNull.", e);
@@ -641,17 +641,17 @@ namespace WindowsFormsApplication1.ModuloReportesEstadisticos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string nombreSolicitante {
+            public string nombre {
                 get {
                     try {
-                        return ((string)(this[this.tableDataSetViajes.nombreSolicitanteColumn]));
+                        return ((string)(this[this.tableDataSetViajes.nombreColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'nombreSolicitante\' in table \'DataSetViajes\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'nombre\' in table \'DataSetViajes\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataSetViajes.nombreSolicitanteColumn] = value;
+                    this[this.tableDataSetViajes.nombreColumn] = value;
                 }
             }
             
@@ -673,14 +673,14 @@ namespace WindowsFormsApplication1.ModuloReportesEstadisticos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsprovinciaNull() {
-                return this.IsNull(this.tableDataSetViajes.provinciaColumn);
+            public bool IslugarNull() {
+                return this.IsNull(this.tableDataSetViajes.lugarColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetprovinciaNull() {
-                this[this.tableDataSetViajes.provinciaColumn] = global::System.Convert.DBNull;
+            public void SetlugarNull() {
+                this[this.tableDataSetViajes.lugarColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -709,14 +709,14 @@ namespace WindowsFormsApplication1.ModuloReportesEstadisticos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsnombreSolicitanteNull() {
-                return this.IsNull(this.tableDataSetViajes.nombreSolicitanteColumn);
+            public bool IsnombreNull() {
+                return this.IsNull(this.tableDataSetViajes.nombreColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetnombreSolicitanteNull() {
-                this[this.tableDataSetViajes.nombreSolicitanteColumn] = global::System.Convert.DBNull;
+            public void SetnombreNull() {
+                this[this.tableDataSetViajes.nombreColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
