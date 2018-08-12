@@ -67,8 +67,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox10</rd:DefaultName>
-            <Top>6.19717cm</Top>
-            <Left>1.09833cm</Left>
+            <Top>24.26173cm</Top>
+            <Left>1.09832cm</Left>
             <Height>0.6cm</Height>
             <Width>14.40153cm</Width>
             <Style>
@@ -85,7 +85,7 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>8.74354cm</Width>
+                  <Width>8.75708cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>3.87583cm</Width>
@@ -433,10 +433,10 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSetViajes</DataSetName>
-            <Top>7.4137cm</Top>
-            <Left>1.09833cm</Left>
+            <Top>24.96756cm</Top>
+            <Left>1.09832cm</Left>
             <Height>1.2cm</Height>
-            <Width>21.17895cm</Width>
+            <Width>21.19249cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -478,7 +478,18 @@
                         <Y>=Count(Fields!nombre.Value)</Y>
                       </ChartDataPointValues>
                       <ChartDataLabel>
-                        <Style />
+                        <Style>
+                          <Border>
+                            <Color>White</Color>
+                            <Width>2pt</Width>
+                          </Border>
+                          <BackgroundColor>LightGrey</BackgroundColor>
+                          <FontStyle>Normal</FontStyle>
+                          <FontSize>12pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                        <UseValueAsLabel>true</UseValueAsLabel>
+                        <Visible>true</Visible>
                       </ChartDataLabel>
                       <Style />
                       <ChartMarker>
@@ -762,11 +773,11 @@
                 <Caption>Viajes por Persona</Caption>
                 <Style>
                   <BackgroundGradientType>None</BackgroundGradientType>
-                  <FontSize>9pt</FontSize>
+                  <FontSize>12pt</FontSize>
                   <FontWeight>Normal</FontWeight>
                   <TextAlign>Left</TextAlign>
                   <VerticalAlign>Top</VerticalAlign>
-                  <Color>#a6a6a6</Color>
+                  <Color>DimGray</Color>
                 </Style>
                 <Position>TopLeft</Position>
               </ChartTitle>
@@ -790,9 +801,9 @@
             </ChartNoDataMessage>
             <DataSetName>DataSetViajes</DataSetName>
             <Top>0.71974cm</Top>
-            <Left>1.09833cm</Left>
-            <Height>5cm</Height>
-            <Width>8.74354cm</Width>
+            <Left>1.09832cm</Left>
+            <Height>9.33917cm</Height>
+            <Width>21.19249cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -836,7 +847,17 @@
                         <Y>=Count(Fields!lugar.Value)</Y>
                       </ChartDataPointValues>
                       <ChartDataLabel>
-                        <Style />
+                        <Style>
+                          <Border>
+                            <Color>White</Color>
+                            <Width>1.5pt</Width>
+                          </Border>
+                          <BackgroundColor>LightGrey</BackgroundColor>
+                          <FontSize>12pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                        <UseValueAsLabel>true</UseValueAsLabel>
+                        <Visible>true</Visible>
                       </ChartDataLabel>
                       <Style />
                       <ChartMarker>
@@ -1120,11 +1141,11 @@
                 <Caption>Viajes por Destino</Caption>
                 <Style>
                   <BackgroundGradientType>None</BackgroundGradientType>
-                  <FontSize>9pt</FontSize>
+                  <FontSize>12pt</FontSize>
                   <FontWeight>Normal</FontWeight>
                   <TextAlign>Left</TextAlign>
                   <VerticalAlign>Top</VerticalAlign>
-                  <Color>#a6a6a6</Color>
+                  <Color>DimGray</Color>
                 </Style>
                 <Position>TopLeft</Position>
               </ChartTitle>
@@ -1147,10 +1168,10 @@
               </Style>
             </ChartNoDataMessage>
             <DataSetName>DataSetViajes</DataSetName>
-            <Top>0.71974cm</Top>
-            <Left>13.40145cm</Left>
-            <Height>5cm</Height>
-            <Width>8.87583cm</Width>
+            <Top>11.21777cm</Top>
+            <Left>1.09833cm</Left>
+            <Height>9.55229cm</Height>
+            <Width>21.19249cm</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
@@ -1160,11 +1181,71 @@
               <BackgroundGradientType>None</BackgroundGradientType>
             </Style>
           </Chart>
+          <Textbox Name="Textbox13">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>[Figura 1: Porcentaje de viajes realizados por persona]</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox13</rd:DefaultName>
+            <Top>10.12946cm</Top>
+            <Left>7.87166cm</Left>
+            <Height>0.6cm</Height>
+            <Width>8.79645cm</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox14">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>[Figura 2: Porcentaje de viajes realizados por destino]</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox13</rd:DefaultName>
+            <Top>20.94645cm</Top>
+            <Left>7.87166cm</Left>
+            <Height>0.6cm</Height>
+            <Width>8.79645cm</Width>
+            <ZIndex>5</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
-        <Height>4.1008in</Height>
+        <Height>10.4758in</Height>
         <Style />
       </Body>
-      <Width>9.47916in</Width>
+      <Width>9.22916in</Width>
       <Page>
         <PageHeader>
           <Height>2.76958cm</Height>
@@ -1176,9 +1257,9 @@
               <Value>Escudo_de_la_Escuela_Politécnica_Nacional</Value>
               <Sizing>FitProportional</Sizing>
               <Top>0.76729cm</Top>
-              <Left>3.47958cm</Left>
-              <Height>1.5cm</Height>
-              <Width>1.5cm</Width>
+              <Left>2.71229cm</Left>
+              <Height>1.79104cm</Height>
+              <Width>2.10854cm</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1227,7 +1308,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
               <Top>0.76729cm</Top>
-              <Left>5.91375cm</Left>
+              <Left>5.88729cm</Left>
               <Height>1.5cm</Height>
               <Width>11.94562cm</Width>
               <ZIndex>1</ZIndex>
@@ -1241,6 +1322,21 @@
                 <PaddingBottom>2pt</PaddingBottom>
               </Style>
             </Textbox>
+            <Image Name="logoEPN2">
+              <Source>Embedded</Source>
+              <Value>Escudo_de_la_Escuela_Politécnica_Nacional</Value>
+              <Sizing>FitProportional</Sizing>
+              <Top>0.76729cm</Top>
+              <Left>18.60426cm</Left>
+              <Height>1.79104cm</Height>
+              <Width>2.10854cm</Width>
+              <ZIndex>2</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+              </Style>
+            </Image>
           </ReportItems>
           <Style>
             <Border>
@@ -1249,7 +1345,7 @@
           </Style>
         </PageHeader>
         <PageFooter>
-          <Height>1.79062cm</Height>
+          <Height>1.04042cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -1272,10 +1368,10 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>ExecutionTime</rd:DefaultName>
-              <Top>0.33459cm</Top>
+              <Top>0.17639cm</Top>
               <Left>0.43687cm</Left>
               <Height>0.6cm</Height>
-              <Width>6.28354cm</Width>
+              <Width>9.41854cm</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1309,8 +1405,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>OverallPageNumber</rd:DefaultName>
-              <Top>0.33459cm</Top>
-              <Left>16.62937cm</Left>
+              <Top>0.17639cm</Top>
+              <Left>15.82207cm</Left>
               <Height>0.6cm</Height>
               <Width>7.13021cm</Width>
               <ZIndex>1</ZIndex>
@@ -1331,8 +1427,8 @@
             </Border>
           </Style>
         </PageFooter>
-        <PageHeight>29.7cm</PageHeight>
-        <PageWidth>21cm</PageWidth>
+        <PageHeight>21cm</PageHeight>
+        <PageWidth>29.7cm</PageWidth>
         <LeftMargin>2cm</LeftMargin>
         <RightMargin>2cm</RightMargin>
         <TopMargin>2cm</TopMargin>

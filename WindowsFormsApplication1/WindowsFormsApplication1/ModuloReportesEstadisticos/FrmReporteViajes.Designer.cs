@@ -253,7 +253,8 @@
             // 
             // reportViewer1
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewer1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Top;
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "WindowsFormsApplication1.ModuloReportesEstadisticos.ReporteViajes.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
