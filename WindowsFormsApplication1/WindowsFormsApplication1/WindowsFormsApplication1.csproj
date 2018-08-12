@@ -162,6 +162,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="ModuloReportesEstadisticos\DataSetServicio.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetServicio.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ModuloReportesEstadisticos\DataSetViajes.cs">
       <DependentUpon>DataSetViajes.xsd</DependentUpon>
     </Compile>
@@ -181,6 +186,12 @@
     </Compile>
     <Compile Include="ModuloReportesEstadisticos\FrmReporteHistorialKilometraje.Designer.cs">
       <DependentUpon>FrmReporteHistorialKilometraje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloReportesEstadisticos\FrmReporteServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloReportesEstadisticos\FrmReporteServicio.Designer.cs">
+      <DependentUpon>FrmReporteServicio.cs</DependentUpon>
     </Compile>
     <Compile Include="ModuloReportesEstadisticos\FrmReporteViajes.cs">
       <SubType>Form</SubType>
@@ -329,10 +340,14 @@
     <EmbeddedResource Include="ModuloReportesEstadisticos\FrmReporteHistorialKilometraje.resx">
       <DependentUpon>FrmReporteHistorialKilometraje.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ModuloReportesEstadisticos\FrmReporteServicio.resx">
+      <DependentUpon>FrmReporteServicio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ModuloReportesEstadisticos\FrmReporteViajes.resx">
       <DependentUpon>FrmReporteViajes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModuloReportesEstadisticos\ReporteHistorialKilometraje.rdlc" />
+    <EmbeddedResource Include="ModuloReportesEstadisticos\ReporteServicio.rdlc" />
     <EmbeddedResource Include="ModuloReportesEstadisticos\ReporteViajes.rdlc" />
     <EmbeddedResource Include="ModuloReserva\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -396,6 +411,17 @@
     </None>
     <None Include="ModuloReportesEstadisticos\DataSetHistorialKilometraje.xss">
       <DependentUpon>DataSetHistorialKilometraje.xsd</DependentUpon>
+    </None>
+    <None Include="ModuloReportesEstadisticos\DataSetServicio.xsc">
+      <DependentUpon>DataSetServicio.xsd</DependentUpon>
+    </None>
+    <None Include="ModuloReportesEstadisticos\DataSetServicio.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetServicio.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ModuloReportesEstadisticos\DataSetServicio.xss">
+      <DependentUpon>DataSetServicio.xsd</DependentUpon>
     </None>
     <None Include="ModuloReportesEstadisticos\DataSetViajes.xsc">
       <DependentUpon>DataSetViajes.xsd</DependentUpon>
