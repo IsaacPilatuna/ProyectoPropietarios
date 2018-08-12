@@ -26,6 +26,7 @@ namespace WindowsFormsApplication1
 
 
             Conexion conect = new Conexion();
+            MessageBox.Show("reserva"+reserva);
             conect.query(" update solicitudreserva set estadosolicitud='aprobada1' where idsolicitudreserva=" + reserva + ";");
             Conexion cn = new Conexion();
 

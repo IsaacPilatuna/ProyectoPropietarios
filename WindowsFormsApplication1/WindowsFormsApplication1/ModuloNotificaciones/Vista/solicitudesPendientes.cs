@@ -29,13 +29,14 @@ namespace WindowsFormsApplication1
             Conexion cn = new Conexion();
              String x = dataGridView1.CurrentCell.Value.ToString();
              //MessageBox.Show(x);
-             DataTable dtaux = cn.Buscar(auxemail, "select idusuario, departamento from usuarios where nombre= '" + x + "'");
-             DataRow row = dtaux.Rows[0];
-             String idusuario = Convert.ToString(row["idusuario"]);
-             DataTable dtaux2 = cn.Buscar(auxemail, "select idsolicitudreserva from solicitudreserva where idusuario='" + idusuario + "'");
-             DataRow row2 = dtaux2.Rows[0];
-             String idreserva = Convert.ToString(row2["idsolicitudreserva"]);
-             autorizacion.autorizar(idreserva);
+            // DataTable dtaux = cn.Buscar(auxemail, "select idusuario, departamento from usuarios where nombre= '" + x + "'");
+            // DataRow row = dtaux.Rows[0];
+            // String idusuario = Convert.ToString(row["idusuario"]);
+            //MessageBox.Show("id usuarios"+idusuario);
+             //DataTable dtaux2 = cn.Buscar(auxemail, "select idsolicitudreserva from solicitudreserva where idusuario='" + x + "'");
+             //DataRow row2 = dtaux2.Rows[0];
+            // String idreserva = Convert.ToString(row2["idsolicitudreserva"]);
+             autorizacion.autorizar(x);
           
     
         }
@@ -52,13 +53,13 @@ namespace WindowsFormsApplication1
             Conexion cn = new Conexion();
             String x = dataGridView1.CurrentCell.Value.ToString();
            // MessageBox.Show(x);
-            DataTable dtaux = cn.Buscar(auxemail, "select idusuario, departamento from usuarios where nombre= '" + x + "'");
-            DataRow row = dtaux.Rows[0];
-            String idusuario = Convert.ToString(row["idusuario"]);
-            DataTable dtaux2 = cn.Buscar(auxemail, "select idsolicitudreserva from solicitudreserva where idusuario='" + idusuario + "'");
-            DataRow row2 = dtaux2.Rows[0];
-            String idreserva = Convert.ToString(row2["idsolicitudreserva"]);
-            autorizacion.rechazar(idreserva);
+            //DataTable dtaux = cn.Buscar(auxemail, "select idusuario, departamento from usuarios where nombre= '" + x + "'");
+            //DataRow row = dtaux.Rows[0];
+            //String idusuario = Convert.ToString(row["idusuario"]);
+            //DataTable dtaux2 = cn.Buscar(auxemail, "select idsolicitudreserva from solicitudreserva where idusuario='" + idusuario + "'");
+            //DataRow row2 = dtaux2.Rows[0];
+            //String idreserva = Convert.ToString(row2["idsolicitudreserva"]);
+            autorizacion.rechazar(x);
 
            
         }
@@ -105,16 +106,16 @@ namespace WindowsFormsApplication1
          
             if (bandera==0)
             {
-                cn.CargarDatos("select nombre AS NOMBRE_SOLICITANTE, fechasalida AS FECHA_SALIDA, fecharetorno AS FECHA_RETORNO, descripcion AS MOTIVO from Usuarios, MotivoViaje, solicitudreserva where Usuarios.idusuario = solicitudreserva.idusuario AND motivoviaje.idMotivoViaje = solicitudreserva.idMotivoViaje AND estadosolicitud='en espera' AND departamento ='" + facultad + "'", dgv);
+                cn.CargarDatos("select idsolicitudreserva AS N_SOLICITUD, nombre AS NOMBRE_SOLICITANTE, fechasalida AS FECHA_SALIDA, fecharetorno AS FECHA_RETORNO,lugar AS LUGAR, descripcion AS MOTIVO from Usuarios, MotivoViaje, solicitudreserva where Usuarios.idusuario = solicitudreserva.idusuario AND motivoviaje.idMotivoViaje = solicitudreserva.idMotivoViaje AND estadosolicitud='en espera' AND departamento ='" + facultad + "'", dgv);
 
             }
             else if (bandera == 1)
             {
-                cn.CargarDatos("select nombre AS NOMBRE_SOLICITANTE, fechasalida AS FECHA_SALIDA, fecharetorno AS FECHA_RETORNO, descripcion AS MOTIVO from Usuarios, MotivoViaje, solicitudreserva where Usuarios.idusuario = solicitudreserva.idusuario AND motivoviaje.idMotivoViaje = solicitudreserva.idMotivoViaje AND estadosolicitud='rechazada' AND departamento ='" + facultad + "'", dgv);
+                cn.CargarDatos("select idsolicitudreserva AS N_SOLICITUD, nombre AS NOMBRE_SOLICITANTE, fechasalida AS FECHA_SALIDA, fecharetorno AS FECHA_RETORNO,lugar AS LUGAR, descripcion AS MOTIVO from Usuarios, MotivoViaje, solicitudreserva where Usuarios.idusuario = solicitudreserva.idusuario AND motivoviaje.idMotivoViaje = solicitudreserva.idMotivoViaje AND estadosolicitud='rechazada' AND departamento ='" + facultad + "'", dgv);
             }
             else if (bandera == 2)
             {
-                cn.CargarDatos("select nombre AS NOMBRE_SOLICITANTE, fechasalida AS FECHA_SALIDA, fecharetorno AS FECHA_RETORNO, descripcion AS MOTIVO from Usuarios, MotivoViaje, solicitudreserva where Usuarios.idusuario = solicitudreserva.idusuario AND motivoviaje.idMotivoViaje = solicitudreserva.idMotivoViaje AND estadosolicitud='aprobada1' AND departamento ='" + facultad + "'", dgv);
+                cn.CargarDatos("select idsolicitudreserva AS N_SOLICITUD, nombre AS NOMBRE_SOLICITANTE, fechasalida AS FECHA_SALIDA, fecharetorno AS FECHA_RETORNO,lugar AS LUGAR, descripcion AS MOTIVO from Usuarios, MotivoViaje, solicitudreserva where Usuarios.idusuario = solicitudreserva.idusuario AND motivoviaje.idMotivoViaje = solicitudreserva.idMotivoViaje AND estadosolicitud='aprobada1' AND departamento ='" + facultad + "'", dgv);
             }
         }
 
