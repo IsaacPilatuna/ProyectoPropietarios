@@ -13,9 +13,9 @@ namespace WindowsFormsApplication1.ModuloDisponibilidad
 {
     class Conexion
     {
-        //public readonly String stringConexion = "Data Source=localhost,2000;Initial Catalog=sistemaAAP;User ID=sistemaAAP;Password=sistemaAAP";
+        public readonly String stringConexion = "Data Source=localhost,2000;Initial Catalog=sistemaAAP;User ID=sistemaAAP;Password=sistemaAAP";
         //public readonly String stringConexion = "Data Source=172.31.101.33,1433;Initial Catalog=SistemaAAP;Persist Security Info=True;User ID=grupoAli;Password=grupoAli";
-        public readonly String stringConexion = "Data Source=MICHAEL;Initial Catalog=sistemAAP;Integrated Security=True";
+        //public readonly String stringConexion = "Data Source=MICHAEL;Initial Catalog=sistemAAP;Integrated Security=True";
         // public SqlConnection conectarbd = new SqlConnection();
 
         SqlConnection cn;

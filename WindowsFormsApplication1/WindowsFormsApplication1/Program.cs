@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApplication1.ModuloReportesEstadisticos;
 
+
 namespace WindowsFormsApplication1
 {
     static class Program
@@ -40,7 +41,7 @@ namespace WindowsFormsApplication1
 
 
            Application.Run(new FormLogin());
-
+       
 
 
 

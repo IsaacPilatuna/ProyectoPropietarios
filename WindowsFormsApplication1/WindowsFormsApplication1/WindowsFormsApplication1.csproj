@@ -73,6 +73,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseDeDatos\Conexion.cs" />
+    <Compile Include="ModuloDisponibilidad\Calendario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloDisponibilidad\Calendario.designer.cs">
+      <DependentUpon>Calendario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloDisponibilidad\Conexion.cs" />
+    <Compile Include="ModuloDisponibilidad\Consulta.cs" />
+    <Compile Include="ModuloDisponibilidad\InfoFecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloDisponibilidad\InfoFecha.designer.cs">
+      <DependentUpon>InfoFecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloDisponibilidad\MenuDisponibilidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloDisponibilidad\MenuDisponibilidad.designer.cs">
+      <DependentUpon>MenuDisponibilidad.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModuloFormularios\CSCalificacionDeServicio.cs" />
     <Compile Include="ModuloFormularios\CSListaCalificacionServicio.cs" />
     <Compile Include="ModuloFormularios\CSListaReporteConductor.cs" />
@@ -266,6 +286,15 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ModuloDisponibilidad\Calendario.resx">
+      <DependentUpon>Calendario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloDisponibilidad\InfoFecha.resx">
+      <DependentUpon>InfoFecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloDisponibilidad\MenuDisponibilidad.resx">
+      <DependentUpon>MenuDisponibilidad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ModuloFormularios\FrmCalificacionServicio.resx">
       <DependentUpon>FrmCalificacionServicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -395,10 +424,15 @@
     <None Include="Resources\icons8-cancelar-30.png" />
     <None Include="Resources\icons8-atención-64.png" />
     <None Include="Resources\icons8-encuesta-64.png" />
+    <None Include="Resources\bus1.png" />
+    <None Include="Resources\calendario.png" />
+    <None Include="Resources\carro1.png" />
     <Content Include="Resources\clipboard%281%29.png" />
     <Content Include="Resources\clipboard.png" />
     <Content Include="Resources\clipboard1.2.png" />
     <Content Include="Resources\clipboard1.3.png" />
+    <None Include="Resources\flecha1.png" />
+    <None Include="Resources\leteers.png" />
     <Content Include="Resources\tasks.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">

@@ -2600,3 +2600,6 @@ C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsAppli
 C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.CopyComplete
 C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ModuloDisponibilidad.Calendario.resources
+C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ModuloDisponibilidad.InfoFecha.resources
+C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ModuloDisponibilidad.MenuDisponibilidad.resources
