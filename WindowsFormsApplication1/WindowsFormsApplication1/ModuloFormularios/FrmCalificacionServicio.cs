@@ -15,12 +15,12 @@ namespace ModuloFormularios
     {
         private CSCalificacionDeServicio calificacionServicio;
 
-        public FrmCalificacionServicio(string idUsuario, string [] reservas)
+        public FrmCalificacionServicio(string idUsuario, string nombre, string [] reservas)
         {
             InitializeComponent();
             calificacionServicio = new CSCalificacionDeServicio();
             crearCombo(reservas);
-            txt_nomConductor.Text= idUsuario;
+            txt_nomConductor.Text= nombre;
         }
 
         public void crearCombo(string[] reservas)
@@ -30,8 +30,9 @@ namespace ModuloFormularios
                 cb_reservas.Items.Add(reserva);
                 cb_reservas.SelectedItem = 2;
             }
-        }
 
+        }
+       
         private void obtenerDatos(object sender, EventArgs e)
         {
             if (cb_reservas.SelectedItem != null)
@@ -75,10 +76,13 @@ namespace ModuloFormularios
                 {
                     calificacionServicio.setComentariosAdicionales(txt_comenAdicionales.Text);
                 }
+                else {
+                    calificacionServicio.setComentariosAdicionales(null);
+                }
                 //MessageBox.Show(calificacionServicio.getPuntualAlDestino() + " " + calificacionServicio.getPuntualAlRetorno() + " " +
                 //                    calificacionServicio.getLimpiezaVehiculo() + " " + calificacionServicio.getPuntualSalida() + calificacionServicio.getComentariosAdicionales()
                 //    + " " + txt_nomConductor.Text + " " + cb_reservas.SelectedItem);
-
+                calificacionServicio.guardarEnBase();
             }
             else{ 
                 MessageBox.Show("ERROR AL INGRESAR LOS DATOS");
