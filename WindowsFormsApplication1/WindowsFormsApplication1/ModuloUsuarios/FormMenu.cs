@@ -185,7 +185,7 @@ namespace WindowsFormsApplication1
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
-
+            fm1.mostrarReportes(this);
         }
 
         private void btnVehículos_Click_1(object sender, EventArgs e)
