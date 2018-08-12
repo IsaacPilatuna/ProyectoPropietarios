@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.ModuloReportesEstadisticos
 {
-    public partial class FrmReporteViajes : Form
+    public partial class FrmReporteServicio : Form
     {
-        public FrmReporteViajes()
+        public FrmReporteServicio()
         {
             InitializeComponent();
             SqlDataReader reader = null;
