@@ -21,6 +21,7 @@ namespace WindowsFormsApplication1
         private string estado;
         private int idSolicitante;
         private string nombreSolicitante;
+        private string destino;
         Conexion coneccion;
         Viaje viaje;
 
@@ -140,6 +141,7 @@ namespace WindowsFormsApplication1
         }
 
         public string NombreSolicitante { get => nombreSolicitante; set => nombreSolicitante = value; }
+        public string Destino { get => destino; set => destino = value; }
 
         public bool confirmarViaje()
         {
@@ -173,20 +175,29 @@ namespace WindowsFormsApplication1
             
             if (reserva.confirmarViaje())
             {
+                bool aux = true;
+                String[] destinoAux;
+
                 reserva.Estado = "aprobada2";
                 SqlCommand cmd = new SqlCommand("UPDATE SolicitudReserva SET estadoSolicitud= '" + reserva.Estado + "' WHERE idSolicitudReserva=" + reserva.IdReserva, coneccion.getConnection());
                 cmd.ExecuteNonQuery();
 
+                String reservaAprobada;
+                SqlCommand cmdAux = new SqlCommand("select IDRESERVAAPROB from RESERVAAPROBADA WHERE IDSOLICITUDRESERVA =" + reserva.idReserva, coneccion.getConnection());
+                reservaAprobada=cmdAux.ExecuteScalar().ToString();
 
-                String email;
-                SqlCommand cmdAux = new SqlCommand("select email from Usuarios WHERE IDusuario=" + reserva.IdCategoriaUsuario, coneccion.getConnection());
-                email ="davidmoralesp1995@hotmail.com";//(String)cmdAux.ExecuteScalar();
-
-                Console.WriteLine(email);
+                Console.WriteLine(reservaAprobada);
                 coneccion.Desconectar();
 
+                destinoAux = reserva.Destino.Split(',');
+
+                if (destinoAux.Last() == "Pichincha")
+                {
+                    aux = false;
+                }
+                
                 NotificacionUsuario notificacion = new NotificacionUsuario();
-                //notificacion.NotificacionSolicitudAprobada(email, "Aprobación de reserva", "" + reserva.Estado);
+                notificacion.notificacionReservaAprobada(reservaAprobada,aux);
             }
             else
             {

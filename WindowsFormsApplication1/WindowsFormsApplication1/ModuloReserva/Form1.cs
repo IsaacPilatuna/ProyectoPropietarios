@@ -73,7 +73,12 @@ namespace WindowsFormsApplication1
                 reserva.FechaFin=dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
                 fechaFinaliza.Value = Convert.ToDateTime(reserva.FechaFin);
 
+                reserva.Destino = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                textBox1.Text = reserva.Destino.ToString();
+
                 reserva.Estado = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+
+
 
                 SqlCommand cmdAux1 = new SqlCommand("select nombre from Usuarios WHERE IDusuario=" + reserva.IdCategoriaUsuario, coneccion.getConnection());
                 reserva.NombreSolicitante = (String)cmdAux1.ExecuteScalar();

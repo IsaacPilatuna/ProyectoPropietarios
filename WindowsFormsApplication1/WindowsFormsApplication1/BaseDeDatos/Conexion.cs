@@ -12,7 +12,7 @@ namespace WindowsFormsApplication1
 {
     class Conexion
     {
-        public readonly String stringConexion = "Data Source=localhost,2000;Initial Catalog=sistemaAAP;User ID=sistemaAAP;Password=sistemaAAP;MultipleActiveResultSets=true";
+        public readonly String stringConexion = "Data Source=172.31.101.33;Initial Catalog=sistemaAAP;User ID=sistemaAAP;Password=sistemaAAP;MultipleActiveResultSets=true";
        // public SqlConnection conectarbd = new SqlConnection();
         
         SqlConnection cn;
