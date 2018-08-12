@@ -2609,3 +2609,6 @@ C:\Users\Dany J\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\W
 C:\Users\Cristian Betancourt\Source\Repos\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ModuloDisponibilidad.Calendario.resources
 C:\Users\Cristian Betancourt\Source\Repos\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ModuloDisponibilidad.InfoFecha.resources
 C:\Users\Cristian Betancourt\Source\Repos\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ModuloDisponibilidad.MenuDisponibilidad.resources
+C:\Users\sofi-\Source\Repos\ProyectoPropietarios2\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ModuloDisponibilidad.Calendario.resources
+C:\Users\sofi-\Source\Repos\ProyectoPropietarios2\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ModuloDisponibilidad.InfoFecha.resources
+C:\Users\sofi-\Source\Repos\ProyectoPropietarios2\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ModuloDisponibilidad.MenuDisponibilidad.resources
