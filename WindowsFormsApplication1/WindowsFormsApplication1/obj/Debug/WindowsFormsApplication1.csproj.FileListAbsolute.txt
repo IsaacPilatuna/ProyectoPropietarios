@@ -3397,3 +3397,5 @@ C:\Users\sofi-\Source\Repos\ProyectoPropietarios6\WindowsFormsApplication1\Windo
 C:\Users\sofi-\Source\Repos\ProyectoPropietarios6\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.CopyComplete
 C:\Users\sofi-\Source\Repos\ProyectoPropietarios6\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 C:\Users\sofi-\Source\Repos\ProyectoPropietarios6\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\GMap.NET.Core.dll
+C:\Users\Michael Morales\Documents\GitHub\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\GMap.NET.WindowsForms.dll
