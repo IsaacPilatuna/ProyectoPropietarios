@@ -18,15 +18,14 @@ namespace WindowsFormsApplication1.ModuloFormularios
         private string fechaRetorno;
         private string horaRetorno;
         private string motivo;
-        private int idmotivo;
-        private int idUsuario;
-        private int idLugar;
+        private string idmotivo;
+        private string idUsuario;
         private int numeroPersonas;
         private Conexion cnx = new Conexion();
         private SqlConnection conn;
 
 
-        public CSSolicitudDeViaje(string correoInstitucional, string nombreCompletoSolicitante, string destino, string fechaSalida, string horaSalida, string fechaRetorno, string horaRetorno, string motivo, int numeroPersonas, int idmotivo)
+        public CSSolicitudDeViaje(string correoInstitucional, string nombreCompletoSolicitante, string destino, string fechaSalida, string horaSalida, string fechaRetorno, string horaRetorno, string motivo, int numeroPersonas)
         {
             this.correoInstitucional = correoInstitucional;
             this.nombreCompletoSolicitante = nombreCompletoSolicitante;
@@ -39,6 +38,17 @@ namespace WindowsFormsApplication1.ModuloFormularios
             this.numeroPersonas = numeroPersonas;
         }
 
+        public CSSolicitudDeViaje(string idUsuario,string idmotivo, string destino, string fechaSalida, string horaSalida, string fechaRetorno, string horaRetorno, int numeroPersonas) {
+            this.idUsuario = idUsuario;
+            this.idmotivo = idmotivo;
+            this.destino = destino;
+            this.fechaSalida = fechaSalida;
+            this.horaSalida = horaSalida;
+            this.fechaRetorno = fechaRetorno;
+            this.horaRetorno = horaRetorno;
+            this.numeroPersonas = numeroPersonas;
+        }
+
         public int getNumeroPersonas()
         {
             return this.numeroPersonas;
@@ -47,7 +57,6 @@ namespace WindowsFormsApplication1.ModuloFormularios
         public void setNumeroPersonas(int numeroPersonas)
         {
             this.numeroPersonas = numeroPersonas;
-
         }
 
         public string getMotivo()
@@ -58,7 +67,6 @@ namespace WindowsFormsApplication1.ModuloFormularios
         public void setMotivo(string motivo)
         {
             this.motivo = motivo;
-
         }
 
         public string getHoraRetorno()
@@ -69,7 +77,6 @@ namespace WindowsFormsApplication1.ModuloFormularios
         public void setHoraRetorno(string horaRetorno)
         {
             this.horaRetorno = horaRetorno;
-
         }
 
         public string getFechaRetorno()
@@ -80,7 +87,6 @@ namespace WindowsFormsApplication1.ModuloFormularios
         public void setFechaRetorno(string fechaRetorno)
         {
             this.fechaRetorno = fechaRetorno;
-
         }
 
         public string getHoraSalida()
@@ -91,7 +97,6 @@ namespace WindowsFormsApplication1.ModuloFormularios
         public void setHoraSalida(string horaSalida)
         {
             this.horaSalida = horaSalida;
-
         }
 
         public string getFechaSalida()
@@ -113,7 +118,6 @@ namespace WindowsFormsApplication1.ModuloFormularios
         public void setDestino(string destino)
         {
             this.destino = destino;
-
         }
 
         public string getNombreCompletoSolicitante()
@@ -138,55 +142,26 @@ namespace WindowsFormsApplication1.ModuloFormularios
 
         }
 
-        public void setIDs(int idmotivo,int idUsuario, int idLugar) {
-            this.idmotivo = idmotivo;
-            this.idUsuario = idUsuario;
-            this.idLugar = idLugar;
-        }
 
         public void guardarEnBase() {
-
-            String idSolicitante;
+            DateTime thisDay = DateTime.Today;
+            String sql = "insert into SolicitudReserva(idMotivoViaje,idUsuario,Lugar,numeroPersonas,fechaSalida,fechaRetorno,estadoSolicitud,fechaReserva) " +
+                    "values(" + idmotivo + "," + idUsuario + ",'" + destino + "'," + numeroPersonas + ",'" + fechaSalida + " " + horaSalida + "','" + fechaRetorno + " " + horaRetorno + "','en espera','" + thisDay.ToString() + "')";
             try
             {
-                cnx = new Conexion();
-                conn = new SqlConnection(cnx.stringConexion);
-                SqlDataReader reader = null;
-                String sql = "select idSolicitante from Solicitante where nombreSolicitante='" + nombreCompletoSolicitante + "'";
-                conn.Open();
-                SqlCommand comando = new SqlCommand(sql, conn);
-                reader = comando.ExecuteReader();
-                while (reader.Read())
-                {
-                    idSolicitante = "" + reader[0];
-                }
-                conn.Close();
-            }
-            catch (Exception er)
-            {
-                MessageBox.Show("Error");
-                Console.WriteLine(er.ToString());
-            }
-
-            try
-            {
-                DateTime thisDay = DateTime.Today;
+                
                 cnx = new Conexion();
                 conn = new SqlConnection(cnx.stringConexion);
                 conn.Open();
-                String sql = "insert into SolicitudReserva(idMotivoViaje,idSolicitante,idLugar,numeroPersonas,fechaSalida,fechaRetorno,estadoSolicitud,fechaReserva) " +
-                    "values(" + idmotivo + "," + idUsuario + "," + idLugar + ",'" +  numeroPersonas + "," + fechaSalida +" "+horaSalida+"','" + fechaRetorno + " " + horaRetorno + "','en espera','" +thisDay.ToString() + "')";
                 SqlCommand comando = new SqlCommand(sql, conn);
                 int resultado = comando.ExecuteNonQuery();
-                MessageBox.Show("" + sql);
             }
             catch (Exception er)
             {
+                MessageBox.Show(sql);
                 MessageBox.Show("Error");
                 Console.WriteLine(er.ToString());
             }
-
-
 
         }
     }

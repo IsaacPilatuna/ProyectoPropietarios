@@ -10,6 +10,7 @@ namespace WindowsFormsApplication1.ModuloFormularios
 {
     class CSReporteConductor
     {
+        private string idReservaAprobada;
         private string idConductor;
         private string nombreCompletoConductor;
         private string inconvenientesViaje;
@@ -19,9 +20,9 @@ namespace WindowsFormsApplication1.ModuloFormularios
         private Conexion cnx;
         private SqlConnection conn;
 
-        public CSReporteConductor(string idConductor, string nombreCompletoConductor, string inconvenientesViaje, string descripcionInconveniente, float dineroGastadoEnGasolina, string comportamientoPasajeros)
+        public CSReporteConductor(string idReservaAprobada, string nombreCompletoConductor, string inconvenientesViaje, string descripcionInconveniente, float dineroGastadoEnGasolina, string comportamientoPasajeros)
         {
-            this.idConductor = idConductor;
+            this.idReservaAprobada = idReservaAprobada;
             this.nombreCompletoConductor = nombreCompletoConductor;
             this.inconvenientesViaje = inconvenientesViaje;
             this.descripcionInconveniente = descripcionInconveniente;
@@ -33,6 +34,16 @@ namespace WindowsFormsApplication1.ModuloFormularios
             this.cnx = new Conexion();
 
         }
+        public string getIdReservaAprobada()
+        {
+            return this.idReservaAprobada;
+        }
+
+        public void setIdReservaAprobada(string idReservaAprobada)
+        {
+            this.idReservaAprobada = idReservaAprobada;
+
+        }
         public string getIdConductor()
         {
             return this.idConductor;
@@ -40,7 +51,7 @@ namespace WindowsFormsApplication1.ModuloFormularios
 
         public void setIdConductor(string idConductor)
         {
-            this.idConductor = idConductor;
+            this.idConductor= idConductor;
 
         }
 
@@ -103,6 +114,7 @@ namespace WindowsFormsApplication1.ModuloFormularios
 
         public void guardarEnBase()
         {
+            
             try
             {
                 cnx = new Conexion();
@@ -110,26 +122,31 @@ namespace WindowsFormsApplication1.ModuloFormularios
                 conn.Open();
                 String sql = "";
 
-                if (inconvenientesViaje.Equals("null"))
-                {
 
-                    sql = "insert into ReporteConductor (idchofer, incoveniente,gasto_combustible,comportamiento_pasajeros) values(" + idConductor + ",null," + dineroGastadoEnGasolina + "," + comportamientoPasajeros + ")";
+                if (descripcionInconveniente.Equals("null"))
+                {
+                    sql = "insert into Reporte_Conductor (idReservaAprob, gasto_combustible,comportamiento_pasajeros) values(" + idReservaAprobada + "," + dineroGastadoEnGasolina + "," + comportamientoPasajeros + ")";
                 }
                 else
                 {
-                    sql = "insert into ReporteConductor (idchofer, incoveniente,gasto_combustible,comportamiento_pasajeros) values(" + idConductor + "," + descripcionInconveniente + "," + dineroGastadoEnGasolina + "," + comportamientoPasajeros + ")";
+
+                    sql = "insert into Reporte_Conductor(idReservaAprob, INCONVENIENTE, GASTO_COMBUSTIBLE, COMPORTAMIENTO_PASAJEROS) VALUES(" + idReservaAprobada + ", '" + descripcionInconveniente + "'," + dineroGastadoEnGasolina + "," + comportamientoPasajeros + ")";
                 }
 
                 SqlCommand comando = new SqlCommand(sql, conn);
                 int resultado = comando.ExecuteNonQuery();
-                // Comprobar resultado y mandar mensaje de confirmacion o de reintento
-                MessageBox.Show(resultado + "");
-                MessageBox.Show("" + sql);
+                conn = new SqlConnection(cnx.stringConexion);
+                conn.Open();
+                comando = new SqlCommand("update reservaaprobada set reporteconductor='V' where IDRESERVAAPROB=" + idReservaAprobada, conn);
+                resultado = comando.ExecuteNonQuery();
+
+                MessageBox.Show("REPORTE INGRESADO CORRECTAMENTE");
+
             }
-            catch (Exception er)
+            catch (Exception)
             {
-                MessageBox.Show("ERROR");
-                Console.WriteLine(er.ToString());
+                MessageBox.Show("ERROR AL INGRESAR EL REPORTE");
+                
             }
         }
     }

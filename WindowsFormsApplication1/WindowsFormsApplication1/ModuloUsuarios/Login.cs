@@ -13,7 +13,7 @@ namespace WindowsFormsApplication1
     {
 
         
-        Fachada_Modulo facade;
+        GestiónModulos facade;
         
         Cuenta cuenta = new Cuenta();
         String mensaje;
@@ -49,7 +49,7 @@ namespace WindowsFormsApplication1
         public void iniciarSesion(String user)
         {
           
-            facade = new Fachada_Modulo(new FormMenu(user), user);
+            facade = new GestiónModulos(new FormMenu(user), user);
             
 
         }

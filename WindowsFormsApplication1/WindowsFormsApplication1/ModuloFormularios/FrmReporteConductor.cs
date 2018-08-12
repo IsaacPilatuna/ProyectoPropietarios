@@ -15,61 +15,90 @@ namespace ModuloFormularios
     {
         private CSReporteConductor reporteConductor;
         
-        public Form2(string cedulaConductor, string nombresConductor)
+        public Form2(string idConductor, string nombresConductor, string [] reservas)
         {
             InitializeComponent();
+            crearCombo(reservas);
             reporteConductor = new CSReporteConductor();
-            txt_ciConductor.Text = cedulaConductor;
+            txt_idConductor.Text = idConductor;
             txt_nombreConductor.Text = nombresConductor;
         }
+        public void crearCombo(string[] reservas) {
 
+            foreach (string reserva in reservas)
+            {
+                cb_reservas.Items.Add(reserva);
+            }
+                         
+
+        }
         private void obtenerDatos(object sender, EventArgs e)
         {
             try
             {
-                reporteConductor.setDineroGastadoEnGasolina(Convert.ToSingle(txt_dinCombustible.Text));
-                
-                if (rb_inconvenienteT.Checked)
+                if (cb_reservas.SelectedItem != null)
                 {
-                    reporteConductor.setDescripcionInconveniente(txt_descIncon.Text);
+                    reporteConductor.setIdReservaAprobada(cb_reservas.SelectedItem + "");
+                    reporteConductor.setNombreCompletoConducto(txt_nombreConductor.Text);
+                    reporteConductor.setDineroGastadoEnGasolina(Convert.ToSingle(txt_dinCombustible.Text));
 
-                }
-                else
-                {
-                    reporteConductor.setDescripcionInconveniente("null");
+                    if (rb_inconvenienteT.Checked)
+                    {
+                        reporteConductor.setDescripcionInconveniente(txt_descIncon.Text);
 
-                }
+                    }
+                    else
+                    {
+                        reporteConductor.setDescripcionInconveniente("null");
 
-                if (rb_0.Checked)
-                {
-                    reporteConductor.setComportamientoPasajeros("0");
+                    }
+
+                    if (rb_0.Checked)
+                    {
+                        reporteConductor.setComportamientoPasajeros("0");
+                    }
+                    else if (rb_25.Checked)
+                    {
+                        reporteConductor.setComportamientoPasajeros("25");
+                    }
+                    else if (rb_50.Checked)
+                    {
+                        reporteConductor.setComportamientoPasajeros("50");
+                    }
+                    else if (rb_75.Checked)
+                    {
+                        reporteConductor.setComportamientoPasajeros("75");
+                    }
+                    else
+                    {
+                        reporteConductor.setComportamientoPasajeros("100");
+                    }
+                    reporteConductor.setIdReservaAprobada(cb_reservas.SelectedItem + "");
+                    //MessageBox.Show(reporteConductor.getIdReservaAprobada() + " " + txt_idConductor.Text + " " + reporteConductor.getNombreCompletoConductor()
+                    //  + " " + rb_inconvenienteT.Checked + " " + rb_inconvenienteF.Checked + " " + reporteConductor.getDescripcionInconveniente() + " " +
+                    // reporteConductor.getDineroGastadoEnGasolina() + " " + reporteConductor.getComportameientoPasajeros());
+//
+                    reporteConductor.guardarEnBase();
                 }
-                else if (rb_25.Checked)
-                {
-                    reporteConductor.setComportamientoPasajeros("25");
+                else {
+                    MessageBox.Show("ERROR AL INGRESAR LOS DATOS");
                 }
-                else if (rb_50.Checked)
-                {
-                    reporteConductor.setComportamientoPasajeros("50");
-                }
-                else if (rb_75.Checked)
-                {
-                    reporteConductor.setComportamientoPasajeros("75");
-                }
-                else
-                {
-                    reporteConductor.setComportamientoPasajeros("100");
-                }
-                reporteConductor.setIdConductor(txt_ciConductor.Text);
-                reporteConductor.guardarEnBase();
             }
             catch (Exception er)
             {
-                MessageBox.Show("Error al ingresar los datos");
-                Console.WriteLine(er.ToString());
-            }
+                MessageBox.Show("ERROR AL INGRESAR LOS DATOS");
+                         }
         }
 
+        private void rb_inconvenienteF_CheckedChanged(object sender, EventArgs e)
+        {
+            txt_descIncon.Enabled = false;
+        }
+
+        private void rb_inconvenienteT_CheckedChanged(object sender, EventArgs e)
+        {
+            txt_descIncon.Enabled = true;
+        }
     }
  }
 

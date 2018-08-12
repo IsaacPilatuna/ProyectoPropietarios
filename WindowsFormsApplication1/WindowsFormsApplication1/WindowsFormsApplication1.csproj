@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="GMap.NET.Core, Version=1.7.5.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.WindowsForms.1.7.5\lib\net40\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms, Version=1.7.5.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.WindowsForms.1.7.5\lib\net40\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1000.523\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
     </Reference>
@@ -73,12 +79,50 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseDeDatos\Conexion.cs" />
+    <Compile Include="ModuloDisponibilidad\Calendario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloDisponibilidad\Calendario.designer.cs">
+      <DependentUpon>Calendario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloDisponibilidad\Conexion.cs" />
+    <Compile Include="ModuloDisponibilidad\Consulta.cs" />
+    <Compile Include="ModuloDisponibilidad\InfoFecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloDisponibilidad\InfoFecha.designer.cs">
+      <DependentUpon>InfoFecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloDisponibilidad\MenuDisponibilidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloDisponibilidad\MenuDisponibilidad.designer.cs">
+      <DependentUpon>MenuDisponibilidad.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModuloFormularios\CSCalificacionDeServicio.cs" />
     <Compile Include="ModuloFormularios\CSListaCalificacionServicio.cs" />
     <Compile Include="ModuloFormularios\CSListaReporteConductor.cs" />
     <Compile Include="ModuloFormularios\CSListaSolicitudDeViaje.cs" />
     <Compile Include="ModuloFormularios\CSReporteConductor.cs" />
     <Compile Include="ModuloFormularios\CSSolicitudDeViaje.cs" />
+    <Compile Include="ModuloFormularios\FrmMensajeError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloFormularios\FrmMensajeError.designer.cs">
+      <DependentUpon>FrmMensajeError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloFormularios\FrmPrincipalChofer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloFormularios\FrmPrincipalChofer.designer.cs">
+      <DependentUpon>FrmPrincipalChofer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloFormularios\FrmPrincipalFormularioProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloFormularios\FrmPrincipalFormularioProfesor.designer.cs">
+      <DependentUpon>FrmPrincipalFormularioProfesor.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModuloFormularios\FrmSolicitudDeViaje.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,7 +203,7 @@
     <Compile Include="ModuloUsuarios\Cargo.cs" />
     <Compile Include="ModuloUsuarios\Conexion2.cs" />
     <Compile Include="ModuloUsuarios\Cuenta.cs" />
-    <Compile Include="ModuloUsuarios\Fachada_Modulo.cs" />
+    <Compile Include="ModuloUsuarios\GestiónModulos.cs" />
     <Compile Include="ModuloUsuarios\FormDatos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,14 +224,98 @@
     </Compile>
     <Compile Include="ModuloUsuarios\Login.cs" />
     <Compile Include="ModuloUsuarios\Usuario.cs" />
+    <Compile Include="ModuloVehiculo\Formularios\dataDisponibilidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloVehiculo\Formularios\dataDisponibilidad.Designer.cs">
+      <DependentUpon>dataDisponibilidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloVehiculo\Formularios\dataIncidencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloVehiculo\Formularios\dataIncidencias.Designer.cs">
+      <DependentUpon>dataIncidencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloVehiculo\Formularios\dataMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloVehiculo\Formularios\dataMantenimiento.Designer.cs">
+      <DependentUpon>dataMantenimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloVehiculo\Formularios\dataVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloVehiculo\Formularios\dataVehiculo.Designer.cs">
+      <DependentUpon>dataVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloVehiculo\Formularios\FormDisponibilidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloVehiculo\Formularios\FormDisponibilidad.Designer.cs">
+      <DependentUpon>FormDisponibilidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloVehiculo\Formularios\FormIncidencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloVehiculo\Formularios\FormIncidencia.Designer.cs">
+      <DependentUpon>FormIncidencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloVehiculo\Formularios\FormMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloVehiculo\Formularios\FormMantenimiento.Designer.cs">
+      <DependentUpon>FormMantenimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloVehiculo\Formularios\FormVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloVehiculo\Formularios\FormVehiculo.Designer.cs">
+      <DependentUpon>FormVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloVehiculo\Formularios\mdiModVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloVehiculo\Formularios\mdiModVehiculo.Designer.cs">
+      <DependentUpon>mdiModVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloVehiculo\Formularios\Prueba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloVehiculo\Formularios\Prueba.Designer.cs">
+      <DependentUpon>Prueba.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ModuloReserva\Reserva.cs" />
     <Compile Include="ModuloReserva\Vehiculo.cs" />
     <Compile Include="ModuloReserva\Viaje.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+<<<<<<< HEAD
+=======
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloDisponibilidad\Calendario.resx">
+      <DependentUpon>Calendario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloDisponibilidad\InfoFecha.resx">
+      <DependentUpon>InfoFecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloDisponibilidad\MenuDisponibilidad.resx">
+      <DependentUpon>MenuDisponibilidad.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> master
     <EmbeddedResource Include="ModuloFormularios\FrmCalificacionServicio.resx">
       <DependentUpon>FrmCalificacionServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloFormularios\FrmMensajeError.resx">
+      <DependentUpon>FrmMensajeError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloFormularios\FrmPrincipalChofer.resx">
+      <DependentUpon>FrmPrincipalChofer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloFormularios\FrmPrincipalFormularioProfesor.resx">
+      <DependentUpon>FrmPrincipalFormularioProfesor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModuloFormularios\FrmReporteConductor.resx">
       <DependentUpon>FrmReporteConductor.cs</DependentUpon>
@@ -220,6 +348,36 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModuloUsuarios\FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloVehiculo\Formularios\dataDisponibilidad.resx">
+      <DependentUpon>dataDisponibilidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloVehiculo\Formularios\dataIncidencias.resx">
+      <DependentUpon>dataIncidencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloVehiculo\Formularios\dataMantenimiento.resx">
+      <DependentUpon>dataMantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloVehiculo\Formularios\dataVehiculo.resx">
+      <DependentUpon>dataVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloVehiculo\Formularios\FormDisponibilidad.resx">
+      <DependentUpon>FormDisponibilidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloVehiculo\Formularios\FormIncidencia.resx">
+      <DependentUpon>FormIncidencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloVehiculo\Formularios\FormMantenimiento.resx">
+      <DependentUpon>FormMantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloVehiculo\Formularios\FormVehiculo.resx">
+      <DependentUpon>FormVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloVehiculo\Formularios\mdiModVehiculo.resx">
+      <DependentUpon>mdiModVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloVehiculo\Formularios\Prueba.resx">
+      <DependentUpon>Prueba.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -271,6 +429,24 @@
     <None Include="Resources\epnlogo.png" />
     <None Include="Resources\epn2.png" />
     <None Include="Resources\epn2 %282%29.png" />
+    <None Include="Resources\exito.png" />
+    <None Include="Resources\icons8-comprobado-30.png" />
+    <None Include="Resources\icons8-cancelar-16.png" />
+    <None Include="Resources\icons8-cancelar-40.png" />
+    <None Include="Resources\icons8-comprobado-301.png" />
+    <None Include="Resources\icons8-cancelar-30.png" />
+    <None Include="Resources\icons8-atención-64.png" />
+    <None Include="Resources\icons8-encuesta-64.png" />
+    <None Include="Resources\bus1.png" />
+    <None Include="Resources\calendario.png" />
+    <None Include="Resources\carro1.png" />
+    <Content Include="Resources\clipboard%281%29.png" />
+    <Content Include="Resources\clipboard.png" />
+    <Content Include="Resources\clipboard1.2.png" />
+    <Content Include="Resources\clipboard1.3.png" />
+    <None Include="Resources\flecha1.png" />
+    <None Include="Resources\leteers.png" />
+    <Content Include="Resources\tasks.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -291,6 +467,7 @@
   <ItemGroup>
     <None Include="Resources\epn.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
