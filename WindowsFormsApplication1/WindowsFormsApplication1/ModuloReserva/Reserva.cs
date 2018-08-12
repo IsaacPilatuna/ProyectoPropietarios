@@ -180,7 +180,7 @@ namespace WindowsFormsApplication1
 
                 String email;
                 SqlCommand cmdAux = new SqlCommand("select email from Usuarios WHERE IDusuario=" + reserva.IdCategoriaUsuario, coneccion.getConnection());
-                email =(String)cmdAux.ExecuteScalar();
+                email ="davidmoralesp1995@hotmail.com";//(String)cmdAux.ExecuteScalar();
 
                 Console.WriteLine(email);
                 coneccion.Desconectar();
@@ -197,7 +197,7 @@ namespace WindowsFormsApplication1
                 String email;
                 SqlCommand cmdAux = new SqlCommand("select email from Usuarios WHERE IDusuario=" + reserva.IdCategoriaUsuario, coneccion.getConnection());
 
-                email = (String)cmdAux.ExecuteScalar();
+                email = "davidmoralesp1995@hotmail.com";// (String)cmdAux.ExecuteScalar();
                 coneccion.Desconectar();
 
 

@@ -17,79 +17,19 @@ namespace WindowsFormsApplication1
         Reserva reserva;
         Conexion coneccion;
 
-        
+
         public Form1()
         {
             InitializeComponent();
             confirmarBtn.Enabled = false;
             coneccion = new Conexion();
-            reserva= new Reserva();
-            coneccion.CargarDatos("select*from solicitudReserva where estadoSolicitud='aprobada1'", dataGridView1);
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tipoUsuario_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void reservacion_Click(object sender, EventArgs e)
-        {
-            
+            reserva = new Reserva();
 
             coneccion.Conectar();
-            SqlCommand cmd = new SqlCommand("select * from SolicitudReserva WHERE idSolicitudReserva ="+ numReservaTxt.Text+"and estadoSolicitud = 'aprobada1'", coneccion.getConnection());
-            SqlDataReader reader = cmd.ExecuteReader();
-
-            if (reader.HasRows)
-            {
-                while (reader.Read())
-                {
-
-
-                    reserva.IdReserva = reader.GetInt32(0);
-                    numReservaTxt.Text = reserva.IdReserva.ToString();
-
-                    reserva.NumeroPersonas = reader.GetInt32(4);
-                    numPersonas.Value = reserva.NumeroPersonas;
-
-                    reserva.IdMotivoViaje = reader.GetInt32(2);
-                    motivoViajeTxt.Text = reserva.IdMotivoViaje.ToString();
-
-                    reserva.IdCategoriaUsuario = reader.GetInt32(1);
-                    tipoUsr.Text = reserva.IdCategoriaUsuario.ToString();
-
-                    reserva.FechaInicio = reader.GetDateTime(5).ToString();
-                    fechaIni.Value = Convert.ToDateTime(reserva.FechaInicio);
-
-                    reserva.FechaFin = reader.GetDateTime(6).ToString();
-                    fechaFinaliza.Value = Convert.ToDateTime(reserva.FechaFin);
-
-                    reserva.Estado = reader.GetString(7);
-
-                    Console.WriteLine(reserva.FechaInicio);                    
-
-                    confirmarBtn.Enabled = true;
-                }
-
-                SqlCommand cmdAux1 = new SqlCommand("select nombre from Usuarios WHERE IDusuario=" + reserva.IdCategoriaUsuario, coneccion.getConnection());
-                reserva.NombreSolicitante = (String)cmdAux1.ExecuteScalar();
-                nombreText.Text = reserva.NombreSolicitante.ToString();
-
-            }
-            else
-            {
-                MessageBox.Show("No existe reserva", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                numPersonas.Value = 0;
-                confirmarBtn.Enabled = false;
-            }
-            coneccion.Desconectar();
-
+            coneccion.CargarDatos2("select*from SolicitudReserva where estadoSolicitud='aprobada1'", dataGridView1);
         }
+
+        
 
         private void confirmarBtn_Click(object sender, EventArgs e)
         {
@@ -99,11 +39,54 @@ namespace WindowsFormsApplication1
             numPersonas.Value = 0;
             motivoViajeTxt.Clear();
             tipoUsr.Clear();
+            nombreText.Clear();
             fechaIni.Value = DateTime.Today;
             fechaFinaliza.Value = DateTime.Today;
+            confirmarBtn.Enabled = false;
+            coneccion.CargarDatos2("select*from SolicitudReserva where estadoSolicitud='aprobada1'", dataGridView1);
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                coneccion.Conectar();
+
+                reserva.IdReserva= Int32.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+                numReservaTxt.Text = reserva.IdReserva.ToString();
+
+                reserva.NumeroPersonas= Int32.Parse(dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString());
+                numPersonas.Value = reserva.NumeroPersonas;
+
+                reserva.IdMotivoViaje= Int32.Parse(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
+                SqlCommand cmdAux2 = new SqlCommand("select descripcion from MotivoViaje WHERE idMotivoViaje=" + reserva.IdMotivoViaje, coneccion.getConnection());
+                String motivo= (String)cmdAux2.ExecuteScalar();
+                motivoViajeTxt.Text = motivo;
+                
+                reserva.IdCategoriaUsuario = Int32.Parse(dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString());
+                tipoUsr.Text = reserva.IdCategoriaUsuario.ToString();
+
+                reserva.FechaInicio= dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                fechaIni.Value = Convert.ToDateTime(reserva.FechaInicio);
+
+                reserva.FechaFin=dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+                fechaFinaliza.Value = Convert.ToDateTime(reserva.FechaFin);
+
+                reserva.Estado = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+
+                SqlCommand cmdAux1 = new SqlCommand("select nombre from Usuarios WHERE IDusuario=" + reserva.IdCategoriaUsuario, coneccion.getConnection());
+                reserva.NombreSolicitante = (String)cmdAux1.ExecuteScalar();
+                nombreText.Text = reserva.NombreSolicitante.ToString();
+
+                coneccion.Desconectar();
+                confirmarBtn.Enabled = true;
+            }
+
             
 
         }
+
         
     }
 }

@@ -67,6 +67,35 @@ namespace WindowsFormsApplication1
 
 
         }
+
+        public void CargarDatos2(String consulta, DataGridView tabla)
+        {
+            try
+            {
+                
+                var dataAdapter = new SqlDataAdapter(consulta, this.getConnection());
+                var ds = new DataTable();
+                dataAdapter.Fill(ds);
+                BindingSource bsSource = new BindingSource();
+                bsSource.DataSource = ds;
+                tabla.ReadOnly = true;
+                tabla.DataSource = bsSource;
+                this.Desconectar();
+
+                tabla.Columns[0].Visible = false;
+                tabla.Columns[1].Visible = false;
+                tabla.Columns[2].Visible = false;
+                tabla.Columns[7].Visible = false;
+                tabla.Columns[8].Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("no se pudo llenar la tabla");
+                MessageBox.Show(Convert.ToString(ex));
+            }
+
+
+        }
         //me retorna una tabla con los valores de solicitados en la consulta
 
         public  DataTable Buscar(string idsolicitante, string consulta)
@@ -80,15 +109,7 @@ namespace WindowsFormsApplication1
             return dt2;
         }
 
-
-
-
-
-
-
-
-
-
+        
 
         public void Conectar()
         {
