@@ -233,6 +233,66 @@ namespace WindowsFormsApplication1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap if_199_CircledPlus_183316 {
+            get {
+                object obj = ResourceManager.GetObject("if_199_CircledPlus_183316", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_67_171426 {
+            get {
+                object obj = ResourceManager.GetObject("if_67_171426", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_common_logout_signout_exit_glyph_763291 {
+            get {
+                object obj = ResourceManager.GetObject("if_common-logout-signout-exit-glyph_763291", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_cross_24_103181 {
+            get {
+                object obj = ResourceManager.GetObject("if_cross-24_103181", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_f_cross_256_282471 {
+            get {
+                object obj = ResourceManager.GetObject("if_f-cross_256_282471", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_sign_add_299068 {
+            get {
+                object obj = ResourceManager.GetObject("if_sign-add_299068", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap leteers {
             get {
                 object obj = ResourceManager.GetObject("leteers", resourceCulture);

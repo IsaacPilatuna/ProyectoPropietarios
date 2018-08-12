@@ -223,6 +223,36 @@
     </Compile>
     <Compile Include="ModuloUsuarios\Login.cs" />
     <Compile Include="ModuloUsuarios\Usuario.cs" />
+    <Compile Include="ModuloVehiculo-Grupo7\Clases\Disponibilidad.cs" />
+    <Compile Include="ModuloVehiculo-Grupo7\Clases\Incidencia.cs" />
+    <Compile Include="ModuloVehiculo-Grupo7\Clases\ListaVehiculos.cs" />
+    <Compile Include="ModuloVehiculo-Grupo7\Clases\Mantenimiento.cs" />
+    <Compile Include="ModuloVehiculo-Grupo7\Clases\Program.cs" />
+    <Compile Include="ModuloVehiculo-Grupo7\Clases\Vehiculo.cs" />
+    <Compile Include="ModuloVehiculo-Grupo7\Interfaz\FormularioIngresoIM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloVehiculo-Grupo7\Interfaz\FormularioIngresoIM.Designer.cs">
+      <DependentUpon>FormularioIngresoIM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloVehiculo-Grupo7\Interfaz\Inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloVehiculo-Grupo7\Interfaz\Inicio.Designer.cs">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloVehiculo-Grupo7\Interfaz\VehiculoFormulario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloVehiculo-Grupo7\Interfaz\VehiculoFormulario.Designer.cs">
+      <DependentUpon>VehiculoFormulario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloVehiculo-Grupo7\Interfaz\VehiculosDelte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloVehiculo-Grupo7\Interfaz\VehiculosDelte.Designer.cs">
+      <DependentUpon>VehiculosDelte.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModuloVehiculo\Formularios\dataDisponibilidad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -342,6 +372,18 @@
     <EmbeddedResource Include="ModuloUsuarios\FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ModuloVehiculo-Grupo7\Interfaz\FormularioIngresoIM.resx">
+      <DependentUpon>FormularioIngresoIM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloVehiculo-Grupo7\Interfaz\Inicio.resx">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloVehiculo-Grupo7\Interfaz\VehiculoFormulario.resx">
+      <DependentUpon>VehiculoFormulario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloVehiculo-Grupo7\Interfaz\VehiculosDelte.resx">
+      <DependentUpon>VehiculosDelte.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ModuloVehiculo\Formularios\dataDisponibilidad.resx">
       <DependentUpon>dataDisponibilidad.cs</DependentUpon>
     </EmbeddedResource>
@@ -433,6 +475,12 @@
     <None Include="Resources\bus1.png" />
     <None Include="Resources\calendario.png" />
     <None Include="Resources\carro1.png" />
+    <Content Include="ModuloVehiculo-Grupo7\Icons\if_199_CircledPlus_183316.png" />
+    <Content Include="ModuloVehiculo-Grupo7\Icons\if_67_171426.png" />
+    <Content Include="ModuloVehiculo-Grupo7\Icons\if_common-logout-signout-exit-glyph_763291.png" />
+    <Content Include="ModuloVehiculo-Grupo7\Icons\if_cross-24_103181.png" />
+    <Content Include="ModuloVehiculo-Grupo7\Icons\if_f-cross_256_282471.png" />
+    <Content Include="ModuloVehiculo-Grupo7\Icons\if_sign-add_299068.png" />
     <Content Include="Resources\clipboard%281%29.png" />
     <Content Include="Resources\clipboard.png" />
     <Content Include="Resources\clipboard1.2.png" />
