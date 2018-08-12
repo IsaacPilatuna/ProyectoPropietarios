@@ -162,6 +162,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="ModuloReportesEstadisticos\DataSetViajes.cs">
+      <DependentUpon>DataSetViajes.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ModuloReportesEstadisticos\DataSetViajes.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

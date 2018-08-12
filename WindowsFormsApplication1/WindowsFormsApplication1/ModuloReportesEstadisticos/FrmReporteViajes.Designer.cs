@@ -254,8 +254,7 @@
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "WindowsFormsApplication1.ModuloReportesEstadisticos.ReporteHistorialKilometraje.r" +
-    "dlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "WindowsFormsApplication1.ModuloReportesEstadisticos.ReporteViajes.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
@@ -271,6 +270,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmReporteViajes";
             this.Text = "FrmReporteViajes";
+            this.Load += new System.EventHandler(this.FrmReporteViajes_Load);
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);

@@ -70,34 +70,39 @@ namespace WindowsFormsApplication1.ModuloReportesEstadisticos
 
         private void btnGenerarReporte_Click(object sender, EventArgs e)
         {
-            String consulta = "SELECT fecha, kilometraje, vehiculo.idVehiculo, dbo.vehiculo.PLACAVEHICULO FROM HistorialKilometraje join vehiculo on HistorialKilometraje.idVehiculo = vehiculo.idvehiculo";
+            String consulta = "SELECT solicitudreserva.lugar, reservaaprobada.fechasalida, reservaaprobada.fecharetorno, usuarios.nombre, reservaaprobada.numeropersonas FROM reservaaprobada join solicitudreserva on reservaaprobada.idreservaaprob = solicitudreserva.idsolicitudreserva JOIN usuarios on solicitudreserva.idusuario = usuarios.idusuario";
             if (checkBoxSolicitante.Checked)
             {
-                int idVehiculo = (int)comboBoxSolicitantes.SelectedItem.GetType().GetProperty("Value").GetValue(comboBoxSolicitantes.SelectedItem);
-                consulta += " WHERE vehiculo.idVehiculo =" + idVehiculo;
+                int idSolicitante = (int)comboBoxSolicitantes.SelectedItem.GetType().GetProperty("Value").GetValue(comboBoxSolicitantes.SelectedItem);
+                consulta += " WHERE usuarios.idusuario =" + idSolicitante;
                 if (checkBoxFecha.Checked)
                 {
-                    consulta += " AND fecha BETWEEN '" + dateTimePickerDesde.Value.ToShortDateString() + "' AND '" + dateTimePickerHasta.Value.ToShortDateString() + "' ";
+                    consulta += " AND reservaaprobada.fechasalida BETWEEN '" + dateTimePickerDesde.Value.ToShortDateString() + "' AND '" + dateTimePickerHasta.Value.ToShortDateString() + "' ";
                 }
             }
             else
             {
                 if (checkBoxFecha.Checked)
                 {
-                    consulta += " WHERE fecha BETWEEN '" + dateTimePickerDesde.Value.ToShortDateString() + "' AND '" + dateTimePickerHasta.Value.ToShortDateString() + "' ";
+                    consulta += " WHERE reservaaprobada.fechasalida BETWEEN '" + dateTimePickerDesde.Value.ToShortDateString() + "' AND '" + dateTimePickerHasta.Value.ToShortDateString() + "' ";
                 }
             }
 
-            consulta += " order BY vehiculo.idVehiculo, kilometraje";
-            DataSetHistorialKilometraje dsKilometraje = new DataSetHistorialKilometraje();
+            consulta += " order BY usuarios.nombre, reservaaprobada.fechasalida";
+            DataSetViajes dsViajes = new DataSetViajes();
             SqlConnection cn = new SqlConnection(new Conexion().stringConexion);
             SqlDataAdapter da = new SqlDataAdapter(consulta, cn);
-            da.Fill(dsKilometraje, dsKilometraje.Tables[0].TableName);
-            ReportDataSource rds = new ReportDataSource("DataSetHistorialKilometraje", dsKilometraje.Tables[0]);
+            da.Fill(dsViajes, dsViajes.Tables[0].TableName);
+            ReportDataSource rds = new ReportDataSource("DataSetViajes", dsViajes.Tables[0]);
             this.reportViewer1.LocalReport.DataSources.Clear();
             this.reportViewer1.LocalReport.DataSources.Add(rds);
             this.reportViewer1.LocalReport.Refresh();
             this.reportViewer1.RefreshReport();
+        }
+
+        private void FrmReporteViajes_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
