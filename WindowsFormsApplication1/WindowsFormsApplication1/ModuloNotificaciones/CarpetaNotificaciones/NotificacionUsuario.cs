@@ -25,6 +25,7 @@ namespace WindowsFormsApplication1
         {
             c.enviarCorreoNotificacion(correo, "RESERVA ARPOBADA", cuerpo);
         }
+        //
         public void notificacioReservaRechazada(String correo, String cuerpo)
         {
             c.enviarCorreoNotificacion(correo, "RESERVA RECHAZADA", cuerpo);
