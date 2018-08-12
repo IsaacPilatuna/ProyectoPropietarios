@@ -21,7 +21,7 @@ namespace WindowsFormsApplication1
         String aux;
         FrmPrincipalChofer frmConductor;
         FrmPrincipalFormularioProfesor frmProfesor;
-
+        FrmMenuPrincipalReportes frmReportes;
 
         //FrmReporteHistorialKilometraje frmRep
 
@@ -160,6 +160,12 @@ namespace WindowsFormsApplication1
             frmMenú.panelContenedor.Controls.Add(fh);
             frmMenú.panelContenedor.Tag = fh;
             fh.Show();
+        }
+
+        public void mostrarReportes(FormMenu formMenu)
+        {
+            frmReportes = new FrmMenuPrincipalReportes();
+            mostrarMódulo(formMenu,frmReportes);
         }
 
         public void mostrarFormularios(FormMenu frmMenu)
