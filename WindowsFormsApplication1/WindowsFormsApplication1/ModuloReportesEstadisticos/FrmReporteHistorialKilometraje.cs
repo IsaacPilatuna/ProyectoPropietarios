@@ -24,6 +24,7 @@ namespace WindowsFormsApplication1.ModuloReportesEstadisticos
                 conn.Open();
                 SqlCommand comando = new SqlCommand("SELECT idVehiculo, PLACAVEHICULO FROM dbo.vehiculo", conn);
                 reader = comando.ExecuteReader();
+                
                 comboBoxPlacas.DisplayMember = "Text";
                 comboBoxPlacas.ValueMember = "Value";
                 while (reader.Read())
@@ -32,9 +33,11 @@ namespace WindowsFormsApplication1.ModuloReportesEstadisticos
 
                 }
                 comboBoxPlacas.SelectedIndex = 0;
+                conn.Close();
             }
             catch (Exception e)
             {
+                conn.Close();
                 Console.WriteLine(e.ToString());
             }
         }

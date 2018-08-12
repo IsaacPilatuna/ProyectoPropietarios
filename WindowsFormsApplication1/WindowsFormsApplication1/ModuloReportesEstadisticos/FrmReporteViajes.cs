@@ -22,8 +22,9 @@ namespace WindowsFormsApplication1.ModuloReportesEstadisticos
             try
             {
                 conn.Open();
-                SqlCommand comando = new SqlCommand("SELECT idSolicitante, nombreSolicitante FROM dbo.Solicitante", conn);
+                SqlCommand comando = new SqlCommand("SELECT distinct reservaaprobada.idSolicitante, usuarios.nombre FROM dbo.reservaaprobada,dbo.usuarios where dbo.reservaaprobada.idsolicitante=dbo.usuarios.idusuario", conn);
                 reader = comando.ExecuteReader();
+               
                 comboBoxSolicitantes.DisplayMember = "Text";
                 comboBoxSolicitantes.ValueMember = "Value";
                 while (reader.Read())
@@ -32,9 +33,11 @@ namespace WindowsFormsApplication1.ModuloReportesEstadisticos
 
                 }
                 comboBoxSolicitantes.SelectedIndex = 0;
+                conn.Close();
             }
             catch (Exception e)
             {
+                conn.Close();
                 Console.WriteLine(e.ToString());
             }
         }
