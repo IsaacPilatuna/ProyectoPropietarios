@@ -1,0 +1,472 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8D34CA62-5C07-4DA7-8B7F-9F9AA1C6D125}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsApplication1</RootNamespace>
+    <AssemblyName>WindowsFormsApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GMap.NET.Core, Version=1.7.5.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.WindowsForms.1.7.5\lib\net40\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms, Version=1.7.5.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.WindowsForms.1.7.5\lib\net40\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1000.523\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1000.523\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1000.523\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1000.523\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1000.523\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1000.523\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1000.523\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseDeDatos\Conexion.cs" />
+    <Compile Include="ModuloDisponibilidad\Calendario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloDisponibilidad\Calendario.designer.cs">
+      <DependentUpon>Calendario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloDisponibilidad\Conexion.cs" />
+    <Compile Include="ModuloDisponibilidad\Consulta.cs" />
+    <Compile Include="ModuloDisponibilidad\InfoFecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloDisponibilidad\InfoFecha.designer.cs">
+      <DependentUpon>InfoFecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloDisponibilidad\MenuDisponibilidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloDisponibilidad\MenuDisponibilidad.designer.cs">
+      <DependentUpon>MenuDisponibilidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloFormularios\CSCalificacionDeServicio.cs" />
+    <Compile Include="ModuloFormularios\CSListaCalificacionServicio.cs" />
+    <Compile Include="ModuloFormularios\CSListaReporteConductor.cs" />
+    <Compile Include="ModuloFormularios\CSListaSolicitudDeViaje.cs" />
+    <Compile Include="ModuloFormularios\CSReporteConductor.cs" />
+    <Compile Include="ModuloFormularios\CSSolicitudDeViaje.cs" />
+    <Compile Include="ModuloFormularios\FrmMensajeError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloFormularios\FrmMensajeError.designer.cs">
+      <DependentUpon>FrmMensajeError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloFormularios\FrmPrincipalChofer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloFormularios\FrmPrincipalChofer.designer.cs">
+      <DependentUpon>FrmPrincipalChofer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloFormularios\FrmPrincipalFormularioProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloFormularios\FrmPrincipalFormularioProfesor.designer.cs">
+      <DependentUpon>FrmPrincipalFormularioProfesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloFormularios\FrmSolicitudDeViaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloFormularios\FrmSolicitudDeViaje.designer.cs">
+      <DependentUpon>FrmSolicitudDeViaje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloFormularios\Notificacion.cs" />
+    <Compile Include="ModuloNotificaciones\CarpetaNotificaciones\NotificacionMantenimiento.cs" />
+    <Compile Include="ModuloNotificaciones\CarpetaNotificaciones\NotificacionRuta.cs" />
+    <Compile Include="ModuloNotificaciones\CarpetaNotificaciones\NotificacionUsuario.cs" />
+    <Compile Include="ModuloNotificaciones\CarpetaSolicitud\Autorizacion.cs" />
+    <Compile Include="ModuloNotificaciones\CarpetaSolicitud\Solicitud.cs" />
+    <Compile Include="ModuloNotificaciones\EnviarCorreo\Correo.cs" />
+    <Compile Include="ModuloFormularios\FrmCalificacionServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloFormularios\FrmCalificacionServicio.Designer.cs">
+      <DependentUpon>FrmCalificacionServicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloFormularios\FrmReporteConductor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloFormularios\FrmReporteConductor.Designer.cs">
+      <DependentUpon>FrmReporteConductor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloNotificaciones\Vista\solicitudesPendientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloNotificaciones\Vista\solicitudesPendientes.Designer.cs">
+      <DependentUpon>solicitudesPendientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloReportesEstadisticos\DataSetHistorialKilometraje.cs">
+      <DependentUpon>DataSetHistorialKilometraje.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloReportesEstadisticos\DataSetHistorialKilometraje.Designer.cs">
+      <DependentUpon>DataSetHistorialKilometraje.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ModuloReportesEstadisticos\DataSetViajes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetViajes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloReportesEstadisticos\FrmMenuPrincipalReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloReportesEstadisticos\FrmMenuPrincipalReportes.Designer.cs">
+      <DependentUpon>FrmMenuPrincipalReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloReportesEstadisticos\FrmReporteHistorialKilometraje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloReportesEstadisticos\FrmReporteHistorialKilometraje.Designer.cs">
+      <DependentUpon>FrmReporteHistorialKilometraje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloReportesEstadisticos\FrmReporteViajes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloReportesEstadisticos\FrmReporteViajes.Designer.cs">
+      <DependentUpon>FrmReporteViajes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloReserva\Calendario.cs" />
+    <Compile Include="ModuloReserva\Chofer.cs" />
+    <Compile Include="ModuloReserva\Fecha.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloReserva\Notificacion.cs" />
+    <Compile Include="ModuloNotificaciones\Patrón\Aprobado.cs" />
+    <Compile Include="ModuloNotificaciones\Patrón\Estado.cs" />
+    <Compile Include="ModuloNotificaciones\Patrón\Pendiente.cs" />
+    <Compile Include="ModuloNotificaciones\Patrón\Rechazado.cs" />
+    <Compile Include="ModuloUsuarios\Cargo.cs" />
+    <Compile Include="ModuloUsuarios\Conexion2.cs" />
+    <Compile Include="ModuloUsuarios\Cuenta.cs" />
+    <Compile Include="ModuloUsuarios\GestiónModulos.cs" />
+    <Compile Include="ModuloUsuarios\FormDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloUsuarios\FormDatos.designer.cs">
+      <DependentUpon>FormDatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloUsuarios\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloUsuarios\FormLogin.designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloUsuarios\FormMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloUsuarios\FormMenu.designer.cs">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloUsuarios\Login.cs" />
+    <Compile Include="ModuloUsuarios\Usuario.cs" />
+    <Compile Include="ModuloVehiculo\Formularios\dataDisponibilidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloVehiculo\Formularios\dataDisponibilidad.Designer.cs">
+      <DependentUpon>dataDisponibilidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloVehiculo\Formularios\dataIncidencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloVehiculo\Formularios\dataIncidencias.Designer.cs">
+      <DependentUpon>dataIncidencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloVehiculo\Formularios\dataMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloVehiculo\Formularios\dataMantenimiento.Designer.cs">
+      <DependentUpon>dataMantenimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloVehiculo\Formularios\dataVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloVehiculo\Formularios\dataVehiculo.Designer.cs">
+      <DependentUpon>dataVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloVehiculo\Formularios\FormDisponibilidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloVehiculo\Formularios\FormDisponibilidad.Designer.cs">
+      <DependentUpon>FormDisponibilidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloVehiculo\Formularios\FormIncidencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloVehiculo\Formularios\FormIncidencia.Designer.cs">
+      <DependentUpon>FormIncidencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloVehiculo\Formularios\FormMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloVehiculo\Formularios\FormMantenimiento.Designer.cs">
+      <DependentUpon>FormMantenimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloVehiculo\Formularios\FormVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloVehiculo\Formularios\FormVehiculo.Designer.cs">
+      <DependentUpon>FormVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloVehiculo\Formularios\mdiModVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloVehiculo\Formularios\mdiModVehiculo.Designer.cs">
+      <DependentUpon>mdiModVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloVehiculo\Formularios\Prueba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloVehiculo\Formularios\Prueba.Designer.cs">
+      <DependentUpon>Prueba.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ModuloReserva\Reserva.cs" />
+    <Compile Include="ModuloReserva\Vehiculo.cs" />
+    <Compile Include="ModuloReserva\Viaje.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloDisponibilidad\Calendario.resx">
+      <DependentUpon>Calendario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloDisponibilidad\InfoFecha.resx">
+      <DependentUpon>InfoFecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloDisponibilidad\MenuDisponibilidad.resx">
+      <DependentUpon>MenuDisponibilidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloFormularios\FrmCalificacionServicio.resx">
+      <DependentUpon>FrmCalificacionServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloFormularios\FrmMensajeError.resx">
+      <DependentUpon>FrmMensajeError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloFormularios\FrmPrincipalChofer.resx">
+      <DependentUpon>FrmPrincipalChofer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloFormularios\FrmPrincipalFormularioProfesor.resx">
+      <DependentUpon>FrmPrincipalFormularioProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloFormularios\FrmReporteConductor.resx">
+      <DependentUpon>FrmReporteConductor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloFormularios\FrmSolicitudDeViaje.resx">
+      <DependentUpon>FrmSolicitudDeViaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloNotificaciones\Vista\solicitudesPendientes.resx">
+      <DependentUpon>solicitudesPendientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloReportesEstadisticos\FrmMenuPrincipalReportes.resx">
+      <DependentUpon>FrmMenuPrincipalReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloReportesEstadisticos\FrmReporteHistorialKilometraje.resx">
+      <DependentUpon>FrmReporteHistorialKilometraje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloReportesEstadisticos\FrmReporteViajes.resx">
+      <DependentUpon>FrmReporteViajes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloReportesEstadisticos\ReporteHistorialKilometraje.rdlc" />
+    <EmbeddedResource Include="ModuloReportesEstadisticos\ReporteViajes.rdlc" />
+    <EmbeddedResource Include="ModuloUsuarios\FormDatos.resx">
+      <DependentUpon>FormDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloUsuarios\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloUsuarios\FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloVehiculo\Formularios\dataDisponibilidad.resx">
+      <DependentUpon>dataDisponibilidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloVehiculo\Formularios\dataIncidencias.resx">
+      <DependentUpon>dataIncidencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloVehiculo\Formularios\dataMantenimiento.resx">
+      <DependentUpon>dataMantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloVehiculo\Formularios\dataVehiculo.resx">
+      <DependentUpon>dataVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloVehiculo\Formularios\FormDisponibilidad.resx">
+      <DependentUpon>FormDisponibilidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloVehiculo\Formularios\FormIncidencia.resx">
+      <DependentUpon>FormIncidencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloVehiculo\Formularios\FormMantenimiento.resx">
+      <DependentUpon>FormMantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloVehiculo\Formularios\FormVehiculo.resx">
+      <DependentUpon>FormVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloVehiculo\Formularios\mdiModVehiculo.resx">
+      <DependentUpon>mdiModVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloVehiculo\Formularios\Prueba.resx">
+      <DependentUpon>Prueba.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="ModuloReportesEstadisticos\DataSetHistorialKilometraje.xsc">
+      <DependentUpon>DataSetHistorialKilometraje.xsd</DependentUpon>
+    </None>
+    <None Include="ModuloReportesEstadisticos\DataSetHistorialKilometraje.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetHistorialKilometraje.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ModuloReportesEstadisticos\DataSetHistorialKilometraje.xss">
+      <DependentUpon>DataSetHistorialKilometraje.xsd</DependentUpon>
+    </None>
+    <None Include="ModuloReportesEstadisticos\DataSetViajes.xsc">
+      <DependentUpon>DataSetViajes.xsd</DependentUpon>
+    </None>
+    <None Include="ModuloReportesEstadisticos\DataSetViajes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetViajes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ModuloReportesEstadisticos\DataSetViajes.xss">
+      <DependentUpon>DataSetViajes.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\epnlogo.png" />
+    <None Include="Resources\epn2.png" />
+    <None Include="Resources\epn2 %282%29.png" />
+    <None Include="Resources\exito.png" />
+    <None Include="Resources\icons8-comprobado-30.png" />
+    <None Include="Resources\icons8-cancelar-16.png" />
+    <None Include="Resources\icons8-cancelar-40.png" />
+    <None Include="Resources\icons8-comprobado-301.png" />
+    <None Include="Resources\icons8-cancelar-30.png" />
+    <None Include="Resources\icons8-atención-64.png" />
+    <None Include="Resources\icons8-encuesta-64.png" />
+    <None Include="Resources\bus1.png" />
+    <None Include="Resources\calendario.png" />
+    <None Include="Resources\carro1.png" />
+    <Content Include="Resources\clipboard%281%29.png" />
+    <Content Include="Resources\clipboard.png" />
+    <Content Include="Resources\clipboard1.2.png" />
+    <Content Include="Resources\clipboard1.3.png" />
+    <None Include="Resources\flecha1.png" />
+    <None Include="Resources\leteers.png" />
+    <Content Include="Resources\tasks.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9085d70f74eff5766f1529bcdc28b806.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\epn.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
