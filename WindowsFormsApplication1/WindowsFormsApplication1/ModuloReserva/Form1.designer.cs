@@ -47,6 +47,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.nombreText = new System.Windows.Forms.TextBox();
             this.nombreLabel = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numPersonas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +56,7 @@
             // numeroPersonas
             // 
             this.numeroPersonas.AutoSize = true;
-            this.numeroPersonas.Location = new System.Drawing.Point(281, 283);
+            this.numeroPersonas.Location = new System.Drawing.Point(281, 336);
             this.numeroPersonas.Name = "numeroPersonas";
             this.numeroPersonas.Size = new System.Drawing.Size(106, 13);
             this.numeroPersonas.TabIndex = 0;
@@ -63,7 +65,7 @@
             // tipoUsuario
             // 
             this.tipoUsuario.AutoSize = true;
-            this.tipoUsuario.Location = new System.Drawing.Point(281, 382);
+            this.tipoUsuario.Location = new System.Drawing.Point(281, 435);
             this.tipoUsuario.Name = "tipoUsuario";
             this.tipoUsuario.Size = new System.Drawing.Size(80, 13);
             this.tipoUsuario.TabIndex = 1;
@@ -72,7 +74,7 @@
             // fechaInicio
             // 
             this.fechaInicio.AutoSize = true;
-            this.fechaInicio.Location = new System.Drawing.Point(283, 436);
+            this.fechaInicio.Location = new System.Drawing.Point(283, 489);
             this.fechaInicio.Name = "fechaInicio";
             this.fechaInicio.Size = new System.Drawing.Size(84, 13);
             this.fechaInicio.TabIndex = 2;
@@ -81,7 +83,7 @@
             // fechaFin
             // 
             this.fechaFin.AutoSize = true;
-            this.fechaFin.Location = new System.Drawing.Point(283, 491);
+            this.fechaFin.Location = new System.Drawing.Point(283, 544);
             this.fechaFin.Name = "fechaFin";
             this.fechaFin.Size = new System.Drawing.Size(93, 13);
             this.fechaFin.TabIndex = 3;
@@ -89,21 +91,21 @@
             // 
             // numPersonas
             // 
-            this.numPersonas.Location = new System.Drawing.Point(404, 283);
+            this.numPersonas.Location = new System.Drawing.Point(404, 336);
             this.numPersonas.Name = "numPersonas";
             this.numPersonas.Size = new System.Drawing.Size(315, 20);
             this.numPersonas.TabIndex = 4;
             // 
             // fechaIni
             // 
-            this.fechaIni.Location = new System.Drawing.Point(404, 436);
+            this.fechaIni.Location = new System.Drawing.Point(404, 489);
             this.fechaIni.Name = "fechaIni";
             this.fechaIni.Size = new System.Drawing.Size(315, 20);
             this.fechaIni.TabIndex = 6;
             // 
             // fechaFinaliza
             // 
-            this.fechaFinaliza.Location = new System.Drawing.Point(404, 491);
+            this.fechaFinaliza.Location = new System.Drawing.Point(404, 544);
             this.fechaFinaliza.Name = "fechaFinaliza";
             this.fechaFinaliza.Size = new System.Drawing.Size(315, 20);
             this.fechaFinaliza.TabIndex = 7;
@@ -111,7 +113,7 @@
             // numReserva
             // 
             this.numReserva.AutoSize = true;
-            this.numReserva.Location = new System.Drawing.Point(281, 233);
+            this.numReserva.Location = new System.Drawing.Point(281, 286);
             this.numReserva.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.numReserva.Name = "numReserva";
             this.numReserva.Size = new System.Drawing.Size(102, 13);
@@ -120,7 +122,7 @@
             // 
             // numReservaTxt
             // 
-            this.numReservaTxt.Location = new System.Drawing.Point(404, 233);
+            this.numReservaTxt.Location = new System.Drawing.Point(404, 286);
             this.numReservaTxt.Margin = new System.Windows.Forms.Padding(2);
             this.numReservaTxt.Name = "numReservaTxt";
             this.numReservaTxt.Size = new System.Drawing.Size(315, 20);
@@ -128,7 +130,7 @@
             // 
             // confirmarBtn
             // 
-            this.confirmarBtn.Location = new System.Drawing.Point(471, 554);
+            this.confirmarBtn.Location = new System.Drawing.Point(479, 592);
             this.confirmarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.confirmarBtn.Name = "confirmarBtn";
             this.confirmarBtn.Size = new System.Drawing.Size(92, 20);
@@ -139,7 +141,7 @@
             // 
             // tipoUsr
             // 
-            this.tipoUsr.Location = new System.Drawing.Point(404, 382);
+            this.tipoUsr.Location = new System.Drawing.Point(404, 435);
             this.tipoUsr.Margin = new System.Windows.Forms.Padding(2);
             this.tipoUsr.Name = "tipoUsr";
             this.tipoUsr.Size = new System.Drawing.Size(315, 20);
@@ -148,7 +150,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(281, 333);
+            this.label1.Location = new System.Drawing.Point(281, 386);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 13);
             this.label1.TabIndex = 13;
@@ -156,7 +158,7 @@
             // 
             // motivoViajeTxt
             // 
-            this.motivoViajeTxt.Location = new System.Drawing.Point(404, 330);
+            this.motivoViajeTxt.Location = new System.Drawing.Point(404, 383);
             this.motivoViajeTxt.Name = "motivoViajeTxt";
             this.motivoViajeTxt.Size = new System.Drawing.Size(315, 20);
             this.motivoViajeTxt.TabIndex = 14;
@@ -172,7 +174,7 @@
             // 
             // nombreText
             // 
-            this.nombreText.Location = new System.Drawing.Point(404, 185);
+            this.nombreText.Location = new System.Drawing.Point(404, 238);
             this.nombreText.Margin = new System.Windows.Forms.Padding(2);
             this.nombreText.Name = "nombreText";
             this.nombreText.Size = new System.Drawing.Size(315, 20);
@@ -181,18 +183,38 @@
             // nombreLabel
             // 
             this.nombreLabel.AutoSize = true;
-            this.nombreLabel.Location = new System.Drawing.Point(281, 192);
+            this.nombreLabel.Location = new System.Drawing.Point(281, 245);
             this.nombreLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.nombreLabel.Name = "nombreLabel";
             this.nombreLabel.Size = new System.Drawing.Size(113, 13);
             this.nombreLabel.TabIndex = 16;
             this.nombreLabel.Text = "Nombre del Solicitante";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(281, 203);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 13);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Destino:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(404, 200);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(315, 20);
+            this.textBox1.TabIndex = 19;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(904, 681);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.nombreText);
             this.Controls.Add(this.nombreLabel);
             this.Controls.Add(this.dataGridView1);
@@ -236,6 +258,8 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox nombreText;
         private System.Windows.Forms.Label nombreLabel;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
