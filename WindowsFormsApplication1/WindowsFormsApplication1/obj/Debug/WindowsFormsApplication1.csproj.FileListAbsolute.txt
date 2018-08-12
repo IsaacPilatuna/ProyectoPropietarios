@@ -2612,3 +2612,5 @@ C:\Users\Cristian Betancourt\Source\Repos\ProyectoPropietarios\WindowsFormsAppli
 C:\Users\sofi-\Source\Repos\ProyectoPropietarios2\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ModuloDisponibilidad.Calendario.resources
 C:\Users\sofi-\Source\Repos\ProyectoPropietarios2\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ModuloDisponibilidad.InfoFecha.resources
 C:\Users\sofi-\Source\Repos\ProyectoPropietarios2\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ModuloDisponibilidad.MenuDisponibilidad.resources
+C:\Users\sofi-\Source\Repos\ProyectoPropietarios2\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\GMap.NET.Core.dll
+C:\Users\sofi-\Source\Repos\ProyectoPropietarios2\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\GMap.NET.WindowsForms.dll
