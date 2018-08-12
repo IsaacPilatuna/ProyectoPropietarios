@@ -15,6 +15,12 @@ namespace WindowsFormsApplication1.ModuloReportesEstadisticos
         public FrmMenuPrincipalReportes()
         {
             InitializeComponent();
+            FrmReporteServicio frmServicio = new FrmReporteServicio();
+            frmServicio.TopLevel = false;
+            frmServicio.FormBorderStyle = FormBorderStyle.None;
+            frmServicio.Dock = DockStyle.Fill;
+            tabControl1.TabPages[1].Controls.Add(frmServicio);
+            frmServicio.Show();
             FrmReporteViajes frmViajes = new FrmReporteViajes();
             frmViajes.TopLevel = false;
             frmViajes.FormBorderStyle = FormBorderStyle.None;

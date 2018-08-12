@@ -22,17 +22,17 @@ namespace WindowsFormsApplication1.ModuloReportesEstadisticos
             try
             {
                 conn.Open();
-                SqlCommand comando = new SqlCommand("SELECT distinct reservaaprobada.idSolicitante, usuarios.nombre FROM dbo.reservaaprobada,dbo.usuarios where dbo.reservaaprobada.idsolicitante=dbo.usuarios.idusuario", conn);
+                SqlCommand comando = new SqlCommand("SELECT distinct reservaaprobada.idChofer, chofer.nombrecompleto FROM dbo.reservaaprobada,dbo.chofer where dbo.reservaaprobada.idchofer=dbo.chofer.idchofer", conn);
                 reader = comando.ExecuteReader();
 
-                comboBoxSolicitantes.DisplayMember = "Text";
-                comboBoxSolicitantes.ValueMember = "Value";
+                comboBoxChoferes.DisplayMember = "Text";
+                comboBoxChoferes.ValueMember = "Value";
                 while (reader.Read())
                 {
-                    comboBoxSolicitantes.Items.Add(new { Text = reader[1], Value = reader[0] });
+                    comboBoxChoferes.Items.Add(new { Text = reader[1], Value = reader[0] });
 
                 }
-                comboBoxSolicitantes.SelectedIndex = 0;
+                comboBoxChoferes.SelectedIndex = 0;
                 conn.Close();
             }
             catch (Exception e)
@@ -46,11 +46,11 @@ namespace WindowsFormsApplication1.ModuloReportesEstadisticos
         {
             if (checkBoxSolicitante.Checked)
             {
-                comboBoxSolicitantes.Enabled = true;
+                comboBoxChoferes.Enabled = true;
             }
             else
             {
-                comboBoxSolicitantes.Enabled = false;
+                comboBoxChoferes.Enabled = false;
             }
         }
 
@@ -73,7 +73,7 @@ namespace WindowsFormsApplication1.ModuloReportesEstadisticos
             String consulta = "SELECT solicitudreserva.lugar, reservaaprobada.fechasalida, reservaaprobada.fecharetorno, usuarios.nombre, reservaaprobada.numeropersonas FROM reservaaprobada inner join solicitudreserva on reservaaprobada.idsolicitudreserva = solicitudreserva.idsolicitudreserva inner JOIN usuarios on solicitudreserva.idusuario = usuarios.idusuario";
             if (checkBoxSolicitante.Checked)
             {
-                int idSolicitante = (int)comboBoxSolicitantes.SelectedItem.GetType().GetProperty("Value").GetValue(comboBoxSolicitantes.SelectedItem);
+                int idSolicitante = (int)comboBoxChoferes.SelectedItem.GetType().GetProperty("Value").GetValue(comboBoxChoferes.SelectedItem);
                 consulta += " WHERE usuarios.idusuario =" + idSolicitante;
                 if (checkBoxFecha.Checked)
                 {
