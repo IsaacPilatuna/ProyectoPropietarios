@@ -177,16 +177,17 @@ namespace WindowsFormsApplication1
                 SqlCommand cmd = new SqlCommand("UPDATE SolicitudReserva SET estadoSolicitud= '" + reserva.Estado + "' WHERE idSolicitudReserva=" + reserva.IdReserva, coneccion.getConnection());
                 cmd.ExecuteNonQuery();
 
+                String reservaAprobada;
+                SqlCommand cmdAux = new SqlCommand("select IDRESERVAAPROB from RESERVAAPROBADA WHERE IDSOLICITUDRESERVA =" + reserva.idReserva, coneccion.getConnection());
+                reservaAprobada=cmdAux.ExecuteScalar().ToString();
 
-                String email;
-                SqlCommand cmdAux = new SqlCommand("select email from Usuarios WHERE IDusuario=" + reserva.IdCategoriaUsuario, coneccion.getConnection());
-                email ="davidmoralesp1995@hotmail.com";//(String)cmdAux.ExecuteScalar();
-
-                Console.WriteLine(email);
+                Console.WriteLine(reservaAprobada);
                 coneccion.Desconectar();
 
+
+
                 NotificacionUsuario notificacion = new NotificacionUsuario();
-                //notificacion.NotificacionSolicitudAprobada(email, "Aprobación de reserva", "" + reserva.Estado);
+                notificacion.notificacionReservaAprobada(reservaAprobada,true);
             }
             else
             {
