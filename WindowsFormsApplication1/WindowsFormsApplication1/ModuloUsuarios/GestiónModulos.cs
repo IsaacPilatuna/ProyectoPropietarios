@@ -17,6 +17,8 @@ namespace WindowsFormsApplication1
         Usuario usuario = new Usuario();
         FormDatos frmDatos = new FormDatos();
         mdiModVehiculo frmVehi = new mdiModVehiculo();
+        Form1 reservas = new Form1();
+
         solicitudesPendientes solicitudes;
         String aux;
         FrmPrincipalChofer frmConductor;
@@ -198,6 +200,11 @@ namespace WindowsFormsApplication1
 
         }
 
+        public void mostrarFormReservas(FormMenu frmMenu)
+        {
+            
+            mostrarMódulo(frmMenu, reservas);
+        }
 
 
 

@@ -188,20 +188,24 @@
     <Compile Include="ModuloReportesEstadisticos\FrmReporteViajes.Designer.cs">
       <DependentUpon>FrmReporteViajes.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModuloReserva\Calendario.cs" />
-    <Compile Include="ModuloReserva\Chofer.cs" />
-    <Compile Include="ModuloReserva\Fecha.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ModuloReserva\Notificacion.cs" />
     <Compile Include="ModuloNotificaciones\Patrón\Aprobado.cs" />
     <Compile Include="ModuloNotificaciones\Patrón\Estado.cs" />
     <Compile Include="ModuloNotificaciones\Patrón\Pendiente.cs" />
     <Compile Include="ModuloNotificaciones\Patrón\Rechazado.cs" />
+    <Compile Include="ModuloReserva\Calendario.cs" />
+    <Compile Include="ModuloReserva\Chofer.cs" />
+    <Compile Include="ModuloReserva\ConexionSQL.cs" />
+    <Compile Include="ModuloReserva\Fecha.cs" />
+    <Compile Include="ModuloReserva\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloReserva\Form1.designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloReserva\Notificacion.cs" />
+    <Compile Include="ModuloReserva\Reserva.cs" />
+    <Compile Include="ModuloReserva\Vehiculo.cs" />
+    <Compile Include="ModuloReserva\Viaje.cs" />
     <Compile Include="ModuloUsuarios\Cargo.cs" />
     <Compile Include="ModuloUsuarios\Conexion2.cs" />
     <Compile Include="ModuloUsuarios\Cuenta.cs" />
@@ -288,13 +292,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ModuloReserva\Reserva.cs" />
-    <Compile Include="ModuloReserva\Vehiculo.cs" />
-    <Compile Include="ModuloReserva\Viaje.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ModuloDisponibilidad\Calendario.resx">
       <DependentUpon>Calendario.cs</DependentUpon>
     </EmbeddedResource>
@@ -336,6 +334,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModuloReportesEstadisticos\ReporteHistorialKilometraje.rdlc" />
     <EmbeddedResource Include="ModuloReportesEstadisticos\ReporteViajes.rdlc" />
+    <EmbeddedResource Include="ModuloReserva\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ModuloUsuarios\FormDatos.resx">
       <DependentUpon>FormDatos.cs</DependentUpon>
     </EmbeddedResource>
