@@ -39,6 +39,10 @@ namespace WindowsFormsApplication1
         public FormMenu(String user)
         {
             InitializeComponent();
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+            iconmaximizar.Visible = false;
+            iconrestaurar.Visible = true;
             auxuser = user;
 
         }
@@ -86,10 +90,10 @@ namespace WindowsFormsApplication1
             //Para guardar la posicion del tamaño con el que inicia
             //Esto nos sirve luego para el restaurar.
 
-            LX = this.Location.X;
-            LY = this.Location.Y;
-            SW = this.Size.Width;
-            SH = this.Size.Height;
+            //LX = this.Location.X;
+            //LY = this.Location.Y;
+            //SW = this.Size.Width;
+            //SH = this.Size.Height;
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             this.Location = Screen.PrimaryScreen.WorkingArea.Location;
             iconmaximizar.Visible = false;
@@ -98,9 +102,9 @@ namespace WindowsFormsApplication1
 
         private void iconrestaurar_Click(object sender, EventArgs e)
         {
-            //this.WindowState = FormWindowState.Normal;
-            this.Size = new Size(SW, SH);
-            this.Location = new Point(LX, LY);
+            this.WindowState = FormWindowState.Normal;
+            this.Size = new Size(1040, 640);
+            this.Location = new Point(50, 50);
             iconmaximizar.Visible = true;
             iconrestaurar.Visible = false;
         }
@@ -147,19 +151,6 @@ namespace WindowsFormsApplication1
         private const int HTBOTTOMRIGHT = 17;
         private Rectangle sizeGripRectangle;
 
-        private void btnCerrarSesión_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnUser_Click(object sender, EventArgs e)
-        {
-            fm1.mostrarDatos(this);
-        }
-
-
-
-
 
 
         private void FormMenu_Load(object sender, EventArgs e)
@@ -183,12 +174,26 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void btnReservas_Click(object sender, EventArgs e)
+       
+        // public void mostrarReportes(FormMenu frmMenu)
+ 
+
+        private void btnForm_Click(object sender, EventArgs e)
+        {
+            fm1.mostrarFormularios(this);
+        }
+
+        private void btnReportes_Click(object sender, EventArgs e)
         {
 
         }
-        // public void mostrarReportes(FormMenu frmMenu)
-        private void btnNotificaciones_Click(object sender, EventArgs e)
+
+        private void btnVehículos_Click_1(object sender, EventArgs e)
+        {
+            fm1.mostrarModvehiculo(this);
+        }
+
+        private void btnNotificaciones_Click_1(object sender, EventArgs e)
         {
             Conexion cn = new Conexion();
 
@@ -203,28 +208,6 @@ namespace WindowsFormsApplication1
                 // solicitudesPendientes sol = new solicitudesPendientes(auxuser);
                 //sol.ShowDialog();
             }
-
-
-        }
-
-        private void lbNombre_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbCorreo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnVehículos_Click(object sender, EventArgs e)
-        {
-            fm1.mostrarModvehiculo(this);
-        }
-
-        private void btn_formularios_Click(object sender, EventArgs e)
-        {
-            fm1.mostrarFormularios(this);
         }
 
         protected override void WndProc(ref Message m)

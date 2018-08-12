@@ -20,7 +20,7 @@ namespace WindowsFormsApplication1
         solicitudesPendientes solicitudes;
         String aux;
         FrmPrincipalChofer frmConductor;
-       FrmPrincipalFormularioProfesor frmProfesor;
+        FrmPrincipalFormularioProfesor frmProfesor;
 
 
         //FrmReporteHistorialKilometraje frmRep
@@ -34,10 +34,10 @@ namespace WindowsFormsApplication1
             obtenerDatosUsuario(user);
             aux = user;
 
-            FormMenu frm1 = new FormMenu(user);
+            //FormMenu frm1 = new FormMenu(user);
             privilegiosMenu(frm);
-            frm1.iniciar(this);
-            frm1.Show();
+            frm.iniciar(this);
+            frm.Show();
 
         }
 
@@ -141,7 +141,7 @@ namespace WindowsFormsApplication1
 
         }
 
-    
+
         //*********************************************************************ATENCION***********************
         // AVISO
 
@@ -153,7 +153,7 @@ namespace WindowsFormsApplication1
             if (frmMenú.panelContenedor.Controls.Count > 0)
                 frmMenú.panelContenedor.Controls.RemoveAt(0);
             Form fh = formHijo as Form;
-      
+
             fh.TopLevel = false;
             fh.FormBorderStyle = FormBorderStyle.None;
             fh.Dock = DockStyle.Fill;
@@ -184,12 +184,6 @@ namespace WindowsFormsApplication1
             mostrarMódulo(frmMenu, solicitudes);
         }
 
-        public void mostrarDatos(FormMenu frmMenú)
-        {
-
-            privilegiosDatos();
-            mostrarMódulo(frmMenú, frmDatos);
-        }
 
 
         public void mostrarModvehiculo(FormMenu frmMenú)
@@ -199,43 +193,10 @@ namespace WindowsFormsApplication1
         }
 
 
-        public void privilegiosDatos()
-        {
-            if (cargo.IDcargo1 == 1)
-            {
-                frmDatos.bGuardar.Visible = true;
-                frmDatos.btnLimpiar.Visible = true;
-               
 
 
-            }
-            else if (cargo.IDcargo1 == 2)
-            {
-                frmDatos.bGuardar.Visible = false;
-                frmDatos.btnLimpiar.Visible = false;
-
-            }
-            else if (cargo.IDcargo1 == 3)
-            {
-                frmDatos.bGuardar.Visible = false;
-                frmDatos.btnLimpiar.Visible = false;
-            }
-            else if (cargo.IDcargo1 == 4)
-            {
-                frmDatos.bGuardar.Visible = false;
-                frmDatos.btnLimpiar.Visible = false;
-            }
-            else
-            {
-                frmDatos.bGuardar.Visible = false;
-                frmDatos.btnLimpiar.Visible = false;
-            }
-
-           
 
 
-        }
     }
-
-
 }
+

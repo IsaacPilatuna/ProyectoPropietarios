@@ -41,11 +41,11 @@ namespace WindowsFormsApplication1.ModuloVehiculo.Formularios
             this.mantenimientoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.disponibilidadToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.incidenciasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pruebaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pruebaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.pruebaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pruebaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -141,6 +141,21 @@ namespace WindowsFormsApplication1.ModuloVehiculo.Formularios
             this.incidenciasToolStripMenuItem1.Text = "Incidencias";
             this.incidenciasToolStripMenuItem1.Click += new System.EventHandler(this.incidenciasToolStripMenuItem1_Click);
             // 
+            // pruebaToolStripMenuItem
+            // 
+            this.pruebaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pruebaToolStripMenuItem1});
+            this.pruebaToolStripMenuItem.Name = "pruebaToolStripMenuItem";
+            this.pruebaToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.pruebaToolStripMenuItem.Text = "Prueba";
+            // 
+            // pruebaToolStripMenuItem1
+            // 
+            this.pruebaToolStripMenuItem1.Name = "pruebaToolStripMenuItem1";
+            this.pruebaToolStripMenuItem1.Size = new System.Drawing.Size(111, 22);
+            this.pruebaToolStripMenuItem1.Text = "Prueba";
+            this.pruebaToolStripMenuItem1.Click += new System.EventHandler(this.pruebaToolStripMenuItem1_Click);
+            // 
             // statusStrip
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -157,21 +172,6 @@ namespace WindowsFormsApplication1.ModuloVehiculo.Formularios
             this.toolStripStatusLabel.Size = new System.Drawing.Size(42, 17);
             this.toolStripStatusLabel.Text = "Estado";
             // 
-            // pruebaToolStripMenuItem
-            // 
-            this.pruebaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pruebaToolStripMenuItem1});
-            this.pruebaToolStripMenuItem.Name = "pruebaToolStripMenuItem";
-            this.pruebaToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
-            this.pruebaToolStripMenuItem.Text = "Prueba";
-            // 
-            // pruebaToolStripMenuItem1
-            // 
-            this.pruebaToolStripMenuItem1.Name = "pruebaToolStripMenuItem1";
-            this.pruebaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.pruebaToolStripMenuItem1.Text = "Prueba";
-            this.pruebaToolStripMenuItem1.Click += new System.EventHandler(this.pruebaToolStripMenuItem1_Click);
-            // 
             // mdiModVehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -179,6 +179,7 @@ namespace WindowsFormsApplication1.ModuloVehiculo.Formularios
             this.ClientSize = new System.Drawing.Size(991, 453);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;
             this.Name = "mdiModVehiculo";

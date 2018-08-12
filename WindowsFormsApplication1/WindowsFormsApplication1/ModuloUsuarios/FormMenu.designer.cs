@@ -206,6 +206,7 @@
             this.btnReportes.TabIndex = 10;
             this.btnReportes.Text = "Reportes Estadísticos";
             this.btnReportes.UseVisualStyleBackColor = false;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // btnForm
             // 
@@ -226,6 +227,7 @@
             this.btnForm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnForm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnForm.UseVisualStyleBackColor = false;
+            this.btnForm.Click += new System.EventHandler(this.btnForm_Click);
             // 
             // lbCorreo
             // 
@@ -333,6 +335,7 @@
             this.btnNotificaciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNotificaciones.UseMnemonic = false;
             this.btnNotificaciones.UseVisualStyleBackColor = false;
+            this.btnNotificaciones.Click += new System.EventHandler(this.btnNotificaciones_Click_1);
             // 
             // btnRutas
             // 
@@ -371,6 +374,7 @@
             this.btnVehículos.Text = "          Vehículos        ";
             this.btnVehículos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVehículos.UseVisualStyleBackColor = false;
+            this.btnVehículos.Click += new System.EventHandler(this.btnVehículos_Click_1);
             // 
             // btnIncidencias
             // 
@@ -390,7 +394,6 @@
             this.btnIncidencias.Text = "           Incidencias          ";
             this.btnIncidencias.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnIncidencias.UseVisualStyleBackColor = false;
-            this.btnIncidencias.Click += new System.EventHandler(this.btnUser_Click);
             // 
             // toolCerrar
             // 
@@ -402,7 +405,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1040, 640);
             this.Controls.Add(this.panelprincipal);
@@ -411,6 +414,7 @@
             this.Name = "FormMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "formPRINCIPAL";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormMenu_Load);
             this.panelprincipal.ResumeLayout(false);
             this.panelHeader.ResumeLayout(false);
