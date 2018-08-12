@@ -54,7 +54,7 @@
             // numeroPersonas
             // 
             this.numeroPersonas.AutoSize = true;
-            this.numeroPersonas.Location = new System.Drawing.Point(8, 249);
+            this.numeroPersonas.Location = new System.Drawing.Point(281, 283);
             this.numeroPersonas.Name = "numeroPersonas";
             this.numeroPersonas.Size = new System.Drawing.Size(106, 13);
             this.numeroPersonas.TabIndex = 0;
@@ -63,7 +63,7 @@
             // tipoUsuario
             // 
             this.tipoUsuario.AutoSize = true;
-            this.tipoUsuario.Location = new System.Drawing.Point(8, 310);
+            this.tipoUsuario.Location = new System.Drawing.Point(281, 382);
             this.tipoUsuario.Name = "tipoUsuario";
             this.tipoUsuario.Size = new System.Drawing.Size(80, 13);
             this.tipoUsuario.TabIndex = 1;
@@ -72,7 +72,7 @@
             // fechaInicio
             // 
             this.fechaInicio.AutoSize = true;
-            this.fechaInicio.Location = new System.Drawing.Point(10, 344);
+            this.fechaInicio.Location = new System.Drawing.Point(283, 436);
             this.fechaInicio.Name = "fechaInicio";
             this.fechaInicio.Size = new System.Drawing.Size(84, 13);
             this.fechaInicio.TabIndex = 2;
@@ -81,7 +81,7 @@
             // fechaFin
             // 
             this.fechaFin.AutoSize = true;
-            this.fechaFin.Location = new System.Drawing.Point(10, 375);
+            this.fechaFin.Location = new System.Drawing.Point(283, 491);
             this.fechaFin.Name = "fechaFin";
             this.fechaFin.Size = new System.Drawing.Size(93, 13);
             this.fechaFin.TabIndex = 3;
@@ -89,21 +89,21 @@
             // 
             // numPersonas
             // 
-            this.numPersonas.Location = new System.Drawing.Point(131, 249);
+            this.numPersonas.Location = new System.Drawing.Point(404, 283);
             this.numPersonas.Name = "numPersonas";
             this.numPersonas.Size = new System.Drawing.Size(315, 20);
             this.numPersonas.TabIndex = 4;
             // 
             // fechaIni
             // 
-            this.fechaIni.Location = new System.Drawing.Point(131, 344);
+            this.fechaIni.Location = new System.Drawing.Point(404, 436);
             this.fechaIni.Name = "fechaIni";
             this.fechaIni.Size = new System.Drawing.Size(315, 20);
             this.fechaIni.TabIndex = 6;
             // 
             // fechaFinaliza
             // 
-            this.fechaFinaliza.Location = new System.Drawing.Point(131, 375);
+            this.fechaFinaliza.Location = new System.Drawing.Point(404, 491);
             this.fechaFinaliza.Name = "fechaFinaliza";
             this.fechaFinaliza.Size = new System.Drawing.Size(315, 20);
             this.fechaFinaliza.TabIndex = 7;
@@ -111,7 +111,7 @@
             // numReserva
             // 
             this.numReserva.AutoSize = true;
-            this.numReserva.Location = new System.Drawing.Point(8, 215);
+            this.numReserva.Location = new System.Drawing.Point(281, 233);
             this.numReserva.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.numReserva.Name = "numReserva";
             this.numReserva.Size = new System.Drawing.Size(102, 13);
@@ -120,7 +120,7 @@
             // 
             // numReservaTxt
             // 
-            this.numReservaTxt.Location = new System.Drawing.Point(131, 215);
+            this.numReservaTxt.Location = new System.Drawing.Point(404, 233);
             this.numReservaTxt.Margin = new System.Windows.Forms.Padding(2);
             this.numReservaTxt.Name = "numReservaTxt";
             this.numReservaTxt.Size = new System.Drawing.Size(315, 20);
@@ -128,7 +128,7 @@
             // 
             // confirmarBtn
             // 
-            this.confirmarBtn.Location = new System.Drawing.Point(179, 419);
+            this.confirmarBtn.Location = new System.Drawing.Point(471, 554);
             this.confirmarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.confirmarBtn.Name = "confirmarBtn";
             this.confirmarBtn.Size = new System.Drawing.Size(92, 20);
@@ -139,7 +139,7 @@
             // 
             // tipoUsr
             // 
-            this.tipoUsr.Location = new System.Drawing.Point(131, 310);
+            this.tipoUsr.Location = new System.Drawing.Point(404, 382);
             this.tipoUsr.Margin = new System.Windows.Forms.Padding(2);
             this.tipoUsr.Name = "tipoUsr";
             this.tipoUsr.Size = new System.Drawing.Size(315, 20);
@@ -148,7 +148,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 280);
+            this.label1.Location = new System.Drawing.Point(281, 333);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 13);
             this.label1.TabIndex = 13;
@@ -156,7 +156,7 @@
             // 
             // motivoViajeTxt
             // 
-            this.motivoViajeTxt.Location = new System.Drawing.Point(131, 277);
+            this.motivoViajeTxt.Location = new System.Drawing.Point(404, 330);
             this.motivoViajeTxt.Name = "motivoViajeTxt";
             this.motivoViajeTxt.Size = new System.Drawing.Size(315, 20);
             this.motivoViajeTxt.TabIndex = 14;
@@ -164,15 +164,15 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 13);
+            this.dataGridView1.Location = new System.Drawing.Point(284, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(433, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(435, 155);
             this.dataGridView1.TabIndex = 15;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // nombreText
             // 
-            this.nombreText.Location = new System.Drawing.Point(131, 186);
+            this.nombreText.Location = new System.Drawing.Point(404, 185);
             this.nombreText.Margin = new System.Windows.Forms.Padding(2);
             this.nombreText.Name = "nombreText";
             this.nombreText.Size = new System.Drawing.Size(315, 20);
@@ -181,7 +181,7 @@
             // nombreLabel
             // 
             this.nombreLabel.AutoSize = true;
-            this.nombreLabel.Location = new System.Drawing.Point(8, 193);
+            this.nombreLabel.Location = new System.Drawing.Point(281, 192);
             this.nombreLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.nombreLabel.Name = "nombreLabel";
             this.nombreLabel.Size = new System.Drawing.Size(113, 13);
@@ -192,7 +192,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(469, 450);
+            this.ClientSize = new System.Drawing.Size(904, 681);
             this.Controls.Add(this.nombreText);
             this.Controls.Add(this.nombreLabel);
             this.Controls.Add(this.dataGridView1);
