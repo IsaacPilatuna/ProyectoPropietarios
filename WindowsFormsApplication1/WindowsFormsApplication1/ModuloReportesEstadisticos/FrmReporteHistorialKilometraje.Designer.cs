@@ -31,9 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmReporteHistorialKilometraje));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.buttonGuardar = new System.Windows.Forms.Button();
-            this.buttonCancelar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.checkBoxFecha = new System.Windows.Forms.CheckBox();
@@ -46,13 +43,11 @@
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.comboBoxPlacas = new System.Windows.Forms.ComboBox();
             this.btnGenerarReporte = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -78,73 +73,25 @@
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox5, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.groupBox2, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.groupBox5, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 20);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.821211F));
+            this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.7947F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 66.62515F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.758939F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(844, 680);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Controls.Add(this.buttonGuardar, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.buttonCancelar, 1, 0);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 649);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(838, 28);
-            this.tableLayoutPanel3.TabIndex = 3;
-            // 
-            // buttonGuardar
-            // 
-            this.buttonGuardar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonGuardar.AutoSize = true;
-            this.buttonGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonGuardar.Image = ((System.Drawing.Image)(resources.GetObject("buttonGuardar.Image")));
-            this.buttonGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonGuardar.Location = new System.Drawing.Point(138, 3);
-            this.buttonGuardar.Name = "buttonGuardar";
-            this.buttonGuardar.Size = new System.Drawing.Size(142, 22);
-            this.buttonGuardar.TabIndex = 4;
-            this.buttonGuardar.Text = "Nuevo Reporte";
-            this.buttonGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonGuardar.UseVisualStyleBackColor = true;
-            // 
-            // buttonCancelar
-            // 
-            this.buttonCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonCancelar.AutoSize = true;
-            this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelar.Image = ((System.Drawing.Image)(resources.GetObject("buttonCancelar.Image")));
-            this.buttonCancelar.Location = new System.Drawing.Point(569, 3);
-            this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(119, 22);
-            this.buttonCancelar.TabIndex = 3;
-            this.buttonCancelar.Text = "Cancelar";
-            this.buttonCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonCancelar.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.tableLayoutPanel2);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(3, 35);
+            this.groupBox2.Location = new System.Drawing.Point(3, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(838, 155);
+            this.groupBox2.Size = new System.Drawing.Size(838, 172);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Parámetros ";
@@ -167,13 +114,13 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.94805F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.05195F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(832, 132);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(832, 149);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // checkBoxFecha
             // 
             this.checkBoxFecha.AutoSize = true;
-            this.checkBoxFecha.Location = new System.Drawing.Point(4, 52);
+            this.checkBoxFecha.Location = new System.Drawing.Point(4, 61);
             this.checkBoxFecha.Name = "checkBoxFecha";
             this.checkBoxFecha.Size = new System.Drawing.Size(120, 22);
             this.checkBoxFecha.TabIndex = 1;
@@ -200,11 +147,11 @@
             this.tableLayoutPanel4.Controls.Add(this.groupBox3, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.groupBox4, 1, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(217, 52);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(217, 61);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(611, 37);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(611, 45);
             this.tableLayoutPanel4.TabIndex = 4;
             // 
             // groupBox3
@@ -213,7 +160,7 @@
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(3, 3);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(299, 31);
+            this.groupBox3.Size = new System.Drawing.Size(299, 39);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Desde:";
@@ -233,7 +180,7 @@
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox4.Location = new System.Drawing.Point(308, 3);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(300, 31);
+            this.groupBox4.Size = new System.Drawing.Size(300, 39);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Hasta:";
@@ -258,7 +205,7 @@
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(611, 41);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(611, 50);
             this.tableLayoutPanel5.TabIndex = 5;
             // 
             // comboBoxPlacas
@@ -275,7 +222,7 @@
             // 
             this.btnGenerarReporte.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGenerarReporte.Image = ((System.Drawing.Image)(resources.GetObject("btnGenerarReporte.Image")));
-            this.btnGenerarReporte.Location = new System.Drawing.Point(446, 96);
+            this.btnGenerarReporte.Location = new System.Drawing.Point(446, 113);
             this.btnGenerarReporte.Name = "btnGenerarReporte";
             this.btnGenerarReporte.Size = new System.Drawing.Size(152, 32);
             this.btnGenerarReporte.TabIndex = 6;
@@ -284,25 +231,13 @@
             this.btnGenerarReporte.UseVisualStyleBackColor = true;
             this.btnGenerarReporte.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(838, 24);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "REPORTE HISTORIAL KILOMETRAJE";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.panel1);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox5.Location = new System.Drawing.Point(3, 196);
+            this.groupBox5.Location = new System.Drawing.Point(3, 181);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(838, 447);
+            this.groupBox5.Size = new System.Drawing.Size(838, 496);
             this.groupBox5.TabIndex = 6;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Reporte Generado:";
@@ -313,7 +248,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 20);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(832, 424);
+            this.panel1.Size = new System.Drawing.Size(832, 473);
             this.panel1.TabIndex = 0;
             // 
             // reportViewer1
@@ -324,7 +259,7 @@
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(832, 424);
+            this.reportViewer1.Size = new System.Drawing.Size(832, 473);
             this.reportViewer1.TabIndex = 0;
             // 
             // FrmReporteHistorialKilometraje
@@ -333,15 +268,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(850, 703);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmReporteHistorialKilometraje";
             this.Text = "ReporteHistorialKilometraje";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmReporteHistorialKilometraje_Load);
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
@@ -359,12 +292,8 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button buttonCancelar;
-        private System.Windows.Forms.Button buttonGuardar;
         private System.Windows.Forms.CheckBox checkBoxFecha;
         private System.Windows.Forms.CheckBox checkBoxPlaca;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
