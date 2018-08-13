@@ -96,7 +96,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1363, 741);
+            this.tabControl1.Size = new System.Drawing.Size(1443, 741);
             this.tabControl1.TabIndex = 5;
             this.tabControl1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabControl1_MouseClick);
             // 
@@ -115,14 +115,14 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(1355, 709);
+            this.tabPage1.Size = new System.Drawing.Size(1435, 709);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "SOLICITUDES PENDIENTES";
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::WindowsFormsApplication1.Properties.Resources.epn;
-            this.pictureBox4.Location = new System.Drawing.Point(472, 60);
+            this.pictureBox4.Location = new System.Drawing.Point(538, 63);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(768, 261);
@@ -377,7 +377,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1363, 741);
+            this.panel1.Size = new System.Drawing.Size(1443, 741);
             this.panel1.TabIndex = 6;
             // 
             // solicitudesPendientes
@@ -385,7 +385,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(65)))), ((int)(((byte)(91)))));
-            this.ClientSize = new System.Drawing.Size(1363, 741);
+            this.ClientSize = new System.Drawing.Size(1443, 741);
             this.Controls.Add(this.panel1);
             this.Location = new System.Drawing.Point(0, 100);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
