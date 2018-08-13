@@ -118,9 +118,9 @@ namespace WindowsFormsApplication1.ModuloFormularios
                 }
                 else
                 {
-                    sql = "insert into Calificacion_Servicio (idReservaAprob, puntualSalida, limpieza, puntualDestino, puntualRetorno, comentarioAdicional) values(" + idReserva + ",'" + puntualSalida + "','" + limpiezaVehiculo + ",'" + puntualAlDestino + "','" + puntualAlRetorno + "','"+ comentariosAdicionales+"')";
+                    sql = "insert into Calificacion_Servicio (idReservaAprob, puntualSalida, limpieza, puntualDestino, puntualRetorno, comentarioAdicional) values(" + idReserva + ",'" + puntualSalida + "','" + limpiezaVehiculo + "','" + puntualAlDestino + "','" + puntualAlRetorno + "','"+ comentariosAdicionales+"')";
                 }
-                MessageBox.Show("" + sql);
+                
                 
                 SqlCommand comando = new SqlCommand(sql, conn);
                 int resultado = comando.ExecuteNonQuery();
