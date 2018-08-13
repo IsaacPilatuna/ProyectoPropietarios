@@ -45,7 +45,7 @@
             this.incidenciasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.datosVehiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xXXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -61,6 +61,7 @@
             this.menuStrip.Size = new System.Drawing.Size(632, 24);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
+            this.menuStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip_ItemClicked);
             // 
             // statusStrip
             // 
@@ -94,24 +95,28 @@
             this.vehiculoToolStripMenuItem.Name = "vehiculoToolStripMenuItem";
             this.vehiculoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.vehiculoToolStripMenuItem.Text = "Vehiculo";
+            this.vehiculoToolStripMenuItem.Click += new System.EventHandler(this.vehiculoToolStripMenuItem_Click);
             // 
             // mantenimientoToolStripMenuItem
             // 
             this.mantenimientoToolStripMenuItem.Name = "mantenimientoToolStripMenuItem";
             this.mantenimientoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.mantenimientoToolStripMenuItem.Text = "Mantenimiento";
+            this.mantenimientoToolStripMenuItem.Click += new System.EventHandler(this.mantenimientoToolStripMenuItem_Click);
             // 
             // disponibilidadToolStripMenuItem
             // 
             this.disponibilidadToolStripMenuItem.Name = "disponibilidadToolStripMenuItem";
             this.disponibilidadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.disponibilidadToolStripMenuItem.Text = "Disponibilidad";
+            this.disponibilidadToolStripMenuItem.Click += new System.EventHandler(this.disponibilidadToolStripMenuItem_Click);
             // 
             // incidenciasToolStripMenuItem
             // 
             this.incidenciasToolStripMenuItem.Name = "incidenciasToolStripMenuItem";
             this.incidenciasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.incidenciasToolStripMenuItem.Text = "Incidencias";
+            this.incidenciasToolStripMenuItem.Click += new System.EventHandler(this.incidenciasToolStripMenuItem_Click);
             // 
             // listasToolStripMenuItem
             // 
@@ -129,30 +134,33 @@
             this.vehiculoToolStripMenuItem1.Name = "vehiculoToolStripMenuItem1";
             this.vehiculoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.vehiculoToolStripMenuItem1.Text = "Vehiculo";
+            this.vehiculoToolStripMenuItem1.Click += new System.EventHandler(this.vehiculoToolStripMenuItem1_Click);
             // 
             // mantenimientoToolStripMenuItem1
             // 
             this.mantenimientoToolStripMenuItem1.Name = "mantenimientoToolStripMenuItem1";
             this.mantenimientoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.mantenimientoToolStripMenuItem1.Text = "Mantenimiento";
+            this.mantenimientoToolStripMenuItem1.Click += new System.EventHandler(this.mantenimientoToolStripMenuItem1_Click);
             // 
             // disponibilidadToolStripMenuItem1
             // 
             this.disponibilidadToolStripMenuItem1.Name = "disponibilidadToolStripMenuItem1";
             this.disponibilidadToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.disponibilidadToolStripMenuItem1.Text = "Disponibilidad";
+            this.disponibilidadToolStripMenuItem1.Click += new System.EventHandler(this.disponibilidadToolStripMenuItem1_Click);
             // 
             // incidenciasToolStripMenuItem1
             // 
             this.incidenciasToolStripMenuItem1.Name = "incidenciasToolStripMenuItem1";
             this.incidenciasToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.incidenciasToolStripMenuItem1.Text = "Incidencias";
+            this.incidenciasToolStripMenuItem1.Click += new System.EventHandler(this.incidenciasToolStripMenuItem1_Click);
             // 
             // datosVehiculoToolStripMenuItem
             // 
             this.datosVehiculoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.buscarDatosToolStripMenuItem,
-            this.xXXToolStripMenuItem});
+            this.buscarDatosToolStripMenuItem});
             this.datosVehiculoToolStripMenuItem.Name = "datosVehiculoToolStripMenuItem";
             this.datosVehiculoToolStripMenuItem.Size = new System.Drawing.Size(97, 20);
             this.datosVehiculoToolStripMenuItem.Text = "Datos Vehiculo";
@@ -162,24 +170,31 @@
             this.buscarDatosToolStripMenuItem.Name = "buscarDatosToolStripMenuItem";
             this.buscarDatosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.buscarDatosToolStripMenuItem.Text = "Buscar Datos";
+            this.buscarDatosToolStripMenuItem.Click += new System.EventHandler(this.buscarDatosToolStripMenuItem_Click);
             // 
-            // xXXToolStripMenuItem
+            // panel1
             // 
-            this.xXXToolStripMenuItem.Name = "xXXToolStripMenuItem";
-            this.xXXToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.xXXToolStripMenuItem.Text = "XXX";
+            this.panel1.AutoSize = true;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
+            this.panel1.Location = new System.Drawing.Point(12, 48);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(608, 378);
+            this.panel1.TabIndex = 4;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // mdiModVehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
             this.ClientSize = new System.Drawing.Size(632, 453);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip);
-            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;
             this.Name = "mdiModVehiculo";
-            this.Text = "mdiModVehiculo";
+            this.Text = "Modulo Vehiculo";
+            this.Load += new System.EventHandler(this.mdiModVehiculo_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.statusStrip.ResumeLayout(false);
@@ -207,7 +222,7 @@
         private System.Windows.Forms.ToolStripMenuItem incidenciasToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem datosVehiculoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarDatosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem xXXToolStripMenuItem;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

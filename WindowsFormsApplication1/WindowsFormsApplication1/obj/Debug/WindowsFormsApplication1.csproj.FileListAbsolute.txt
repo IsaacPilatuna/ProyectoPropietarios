@@ -598,10 +598,10 @@ C:\Users\USER\Source\Repos\ProyectoPropietarios4\WindowsFormsApplication1\Window
 C:\Users\USER\Source\Repos\ProyectoPropietarios4\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ModuloVehiculo.Formularios.FormMantenimiento.resources
 C:\Users\USER\Source\Repos\ProyectoPropietarios4\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ModuloVehiculo.Formularios.FormVehiculo.resources
 C:\Users\USER\Source\Repos\ProyectoPropietarios4\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ModuloVehiculo.Formularios.mdiModVehiculo.resources
-C:\Users\USER\Source\Repos\ProyectoPropietarios4\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ModuloVehiculo.Formularios.Prueba.resources
 C:\Users\USER\Source\Repos\ProyectoPropietarios4\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
 C:\Users\USER\Source\Repos\ProyectoPropietarios4\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.cache
 C:\Users\USER\Source\Repos\ProyectoPropietarios4\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.CoreCompileInputs.cache
 C:\Users\USER\Source\Repos\ProyectoPropietarios4\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.CopyComplete
 C:\Users\USER\Source\Repos\ProyectoPropietarios4\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 C:\Users\USER\Source\Repos\ProyectoPropietarios4\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\USER\Source\Repos\ProyectoPropietarios4\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ModuloVehiculo.Formularios.Buscar_Datos.resources

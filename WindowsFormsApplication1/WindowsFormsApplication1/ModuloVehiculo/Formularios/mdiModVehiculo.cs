@@ -68,12 +68,12 @@ namespace WindowsFormsApplication1.ModuloVehiculo.Formularios
 
         private void ToolBarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            toolStrip.Visible = toolBarToolStripMenuItem.Checked;
+           // toolStrip.Visible = toolBarToolStripMenuItem.Checked;
         }
 
         private void StatusBarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            statusStrip.Visible = statusBarToolStripMenuItem.Checked;
+            //statusStrip.Visible = statusBarToolStripMenuItem.Checked;
         }
 
         private void CascadeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -102,6 +102,79 @@ namespace WindowsFormsApplication1.ModuloVehiculo.Formularios
             {
                 childForm.Close();
             }
+        }
+        private void AbrirFormularioHijo(object formhija)
+        {
+            if (this.panel1.Controls.Count > 0)
+                this.panel1.Controls.RemoveAt(0);
+            Form fh = formhija as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.panel1.Controls.Add(fh);
+            this.panel1.Tag = fh;
+            fh.Show();
+        }
+
+        private void vehiculoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+              AbrirFormularioHijo(new FormVehiculo());
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+        }
+
+        private void mantenimientoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new FormMantenimiento());
+        }
+
+        private void disponibilidadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new FormDisponibilidad());
+        }
+
+        private void incidenciasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new FormIncidencia());
+        }
+
+        private void vehiculoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new dataVehiculo());
+        }
+
+        private void mantenimientoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new dataMantenimiento());
+        }
+
+        private void disponibilidadToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new dataMantenimiento());
+        }
+
+        private void incidenciasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new dataIncidencias());
+        }
+
+        private void buscarDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new Buscar_Datos());
+        }
+
+        private void menuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void mdiModVehiculo_Load(object sender, EventArgs e)
+        {
+            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
         }
     }
 }

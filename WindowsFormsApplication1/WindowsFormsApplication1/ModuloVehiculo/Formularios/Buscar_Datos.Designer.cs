@@ -42,6 +42,7 @@
             this.btnBuscar.TabIndex = 0;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // pLACAVEHICULOLabel
             // 
@@ -72,6 +73,7 @@
             this.Controls.Add(this.btnBuscar);
             this.Name = "Buscar_Datos";
             this.Text = "Buscar_Datos";
+            this.Load += new System.EventHandler(this.Buscar_Datos_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
