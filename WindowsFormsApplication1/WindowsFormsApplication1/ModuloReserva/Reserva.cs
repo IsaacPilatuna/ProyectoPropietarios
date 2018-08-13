@@ -198,6 +198,9 @@ namespace WindowsFormsApplication1
                 
                 NotificacionUsuario notificacion = new NotificacionUsuario();
                 notificacion.notificacionReservaAprobada(reservaAprobada,aux);
+
+                MessageBox.Show("Reserva Aprobada", "Aprobada",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -206,6 +209,9 @@ namespace WindowsFormsApplication1
                 
                 NotificacionUsuario notificacion = new NotificacionUsuario();
                 notificacion.notificacioReservaRechazada(reserva.IdReserva.ToString());
+
+                MessageBox.Show("Reserva rechazada", "Reserva",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
