@@ -133,7 +133,7 @@ namespace WindowsFormsApplication1.ModuloFormularios
                 return true;
             }
         }
-<<<<<<< HEAD
+
 
         private void label6_Click(object sender, EventArgs e)
         {
@@ -145,9 +145,7 @@ namespace WindowsFormsApplication1.ModuloFormularios
             MenuDisponibilidad disponibilidad = new MenuDisponibilidad();
             disponibilidad.Show();
         }
-=======
-       
->>>>>>> master
+
     }
 }
 
