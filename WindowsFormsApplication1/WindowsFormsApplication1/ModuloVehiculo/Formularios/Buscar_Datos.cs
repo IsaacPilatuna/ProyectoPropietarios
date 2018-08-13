@@ -98,11 +98,11 @@ namespace WindowsFormsApplication1.ModuloVehiculo.Formularios
 
                 if (anioVehiculo > 5)
                 {
-                    MessageBox.Show("El vehiculo con placas: " + matricula + " debe ser REEMPLAZADO");
+                   // MessageBox.Show("El vehiculo con placas: " + matricula + " debe ser REEMPLAZADO");
                 }
                 else
                 {
-                    MessageBox.Show(" El vehiculo con placas: " + matricula + " puede continuar brindando servicio en la EPN");
+                   // MessageBox.Show(" El vehiculo con placas: " + matricula + " puede continuar brindando servicio en la EPN");
                 }
 
 
