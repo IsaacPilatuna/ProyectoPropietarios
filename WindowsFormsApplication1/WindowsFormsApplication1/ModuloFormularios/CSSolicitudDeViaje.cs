@@ -144,7 +144,7 @@ namespace WindowsFormsApplication1.ModuloFormularios
 
 
         public void guardarEnBase() {
-            DateTime thisDay = DateTime.Today;
+            DateTime thisDay = DateTime.Now;
             String sql = "insert into SolicitudReserva(idMotivoViaje,idUsuario,Lugar,numeroPersonas,fechaSalida,fechaRetorno,estadoSolicitud,fechaReserva) " +
                     "values(" + idmotivo + "," + idUsuario + ",'" + destino + "'," + numeroPersonas + ",'" + fechaSalida + " " + horaSalida + "','" + fechaRetorno + " " + horaRetorno + "','en espera','" + thisDay.ToString() + "')";
             try
