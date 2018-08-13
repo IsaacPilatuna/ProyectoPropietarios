@@ -217,6 +217,37 @@
     <Compile Include="ModuloReserva\Reserva.cs" />
     <Compile Include="ModuloReserva\Vehiculo.cs" />
     <Compile Include="ModuloReserva\Viaje.cs" />
+    <Compile Include="ModuloRutas\Clases\Conexion.cs" />
+    <Compile Include="ModuloRutas\Formularios\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloRutas\Formularios\Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloRutas\Formularios\Incidencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloRutas\Formularios\Incidencia.Designer.cs">
+      <DependentUpon>Incidencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloRutas\Formularios\Kilometraje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloRutas\Formularios\Kilometraje.Designer.cs">
+      <DependentUpon>Kilometraje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloRutas\Formularios\MDIRutaChofer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloRutas\Formularios\MDIRutaChofer.Designer.cs">
+      <DependentUpon>MDIRutaChofer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloRutas\Formularios\MDIRutaSecretaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloRutas\Formularios\MDIRutaSecretaria.Designer.cs">
+      <DependentUpon>MDIRutaSecretaria.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModuloUsuarios\Cargo.cs" />
     <Compile Include="ModuloUsuarios\Conexion2.cs" />
     <Compile Include="ModuloUsuarios\Cuenta.cs" />
@@ -351,6 +382,21 @@
     <EmbeddedResource Include="ModuloReportesEstadisticos\ReporteViajes.rdlc" />
     <EmbeddedResource Include="ModuloReserva\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloRutas\Formularios\Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloRutas\Formularios\Incidencia.resx">
+      <DependentUpon>Incidencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloRutas\Formularios\Kilometraje.resx">
+      <DependentUpon>Kilometraje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloRutas\Formularios\MDIRutaChofer.resx">
+      <DependentUpon>MDIRutaChofer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloRutas\Formularios\MDIRutaSecretaria.resx">
+      <DependentUpon>MDIRutaSecretaria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModuloUsuarios\FormDatos.resx">
       <DependentUpon>FormDatos.cs</DependentUpon>
