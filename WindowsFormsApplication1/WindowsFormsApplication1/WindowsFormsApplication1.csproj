@@ -427,6 +427,8 @@
     <None Include="Resources\bus1.png" />
     <None Include="Resources\calendario.png" />
     <None Include="Resources\carro1.png" />
+    <None Include="Resources\calendario1.png" />
+    <None Include="Resources\calendarioPeque.png" />
     <Content Include="Resources\clipboard%281%29.png" />
     <Content Include="Resources\clipboard.png" />
     <Content Include="Resources\clipboard1.2.png" />

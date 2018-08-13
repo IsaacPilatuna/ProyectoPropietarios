@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApplication1.ModuloDisponibilidad;
 
 namespace WindowsFormsApplication1.ModuloFormularios
 {
@@ -142,6 +143,17 @@ namespace WindowsFormsApplication1.ModuloFormularios
             {
                 return true;
             }
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MenuDisponibilidad disponibilidad = new MenuDisponibilidad();
+            disponibilidad.Show();
         }
     }
 }

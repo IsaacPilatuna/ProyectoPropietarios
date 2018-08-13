@@ -18,8 +18,8 @@ namespace WindowsFormsApplication1.ModuloDisponibilidad
         Color marcar = new Color();
 
 
-        //String aConsultar ="Select V.TIPOVEHICULO AS \"TIPO DE VEHICULO\", V.PLACAVEHICULO AS \"PLACA\", CH.NOMBRECHOFER+CH.APELLIDOCHOFER AS \"NOMBRES DEL CHOFER\", FECHASALIDA AS \"FECHA DE SALIDA\", FECHARETORNO AS \"FECHA DE REGRESO\" From RESERVAAPROBADA RA, CHOFER CH, VEHICULO V where CH.IDCHOFER = RA.IDCHOFER AND V.IDVEHICULO = RA.IDVEHICULO";
-        String aConsultar = "Select IDCHOFER AS \"CHOFER\", IDVEHICULO AS \"VEHICULO\", FECHASALIDA AS \"FECHA DE SALIDA\", FECHARETORNO AS \"FECHA DE RETORNO\", ESTADOSOLICITUD AS \"ESTADO DE LA SOLICITUD\"  from RESERVAAPROBADA";//para pasar los datos al data grid view
+        String aConsultar = "Select V.TIPOVEHICULO AS \"TIPO DE VEHICULO\", V.PLACAVEHICULO AS \"PLACA\", CH.NOMBRECOMPLETO AS \"NOMBRES DEL CHOFER\", FECHASALIDA AS \"FECHA DE SALIDA\", FECHARETORNO AS \"FECHA DE REGRESO\" From RESERVAAPROBADA RA, CHOFER CH, VEHICULO V where CH.IDCHOFER = RA.IDCHOFER AND V.IDVEHICULO = RA.IDVEHICULO AND V.TIPOVEHICULO='AUTO'";
+        //String aConsultar = "Select IDCHOFER AS \"CHOFER\", IDVEHICULO AS \"VEHICULO\", FECHASALIDA AS \"FECHA DE SALIDA\", FECHARETORNO AS \"FECHA DE RETORNO\", ESTADOSOLICITUD AS \"ESTADO DE LA SOLICITUD\"  from RESERVAAPROBADA";//para pasar los datos al data grid view
 
         String fechasConsultadas = "select FECHASALIDA as f_i, FECHARETORNO as f_f FROM RESERVAAPROBADA";
 
@@ -38,7 +38,8 @@ namespace WindowsFormsApplication1.ModuloDisponibilidad
         }
         public Calendario(int tipo) {
             if (tipo == 1) {
-                this.aConsultar ="Select IDCHOFER AS \"CHOFERRR\", IDVEHICULO AS \"VEHICULO\", FECHASALIDA AS \"FECHA DE SALIDA\", FECHARETORNO AS \"FECHA DE RETORNO\", ESTADOSOLICITUD AS \"ESTADO DE LA SOLICITUD\"  from RESERVAAPROBADA";//para pasar los datos al data grid view
+                this.aConsultar = "Select V.TIPOVEHICULO AS \"TIPO DE VEHICULO\", V.PLACAVEHICULO AS \"PLACA\", CH.NOMBRECOMPLETO AS \"NOMBRES DEL CHOFER\", FECHASALIDA AS \"FECHA DE SALIDA\", FECHARETORNO AS \"FECHA DE REGRESO\" From RESERVAAPROBADA RA, CHOFER CH, VEHICULO V where CH.IDCHOFER = RA.IDCHOFER AND V.IDVEHICULO = RA.IDVEHICULO AND V.TIPOVEHICULO='BUS'";
+                ;//para pasar los datos al data grid view
 
 
             }
@@ -187,7 +188,10 @@ namespace WindowsFormsApplication1.ModuloDisponibilidad
 
             consulta.cargarDatos(aConsultar, dataGridView1);
             DataTable fechas = consulta.tablaConsulta(fechasConsultadas);
+
+
            DataTable fueraDeRango = new DataTable();
+
            fueraDeRango.Columns.Add("f_i",typeof(DateTime));
            fueraDeRango.Columns.Add("f_f", typeof(DateTime));
 
@@ -201,13 +205,14 @@ namespace WindowsFormsApplication1.ModuloDisponibilidad
               FueraDeRango(f_i, f_f,fueraDeRango);
                 pintar(f_i, f_f);
                pintarFechasFueraDeRango(fueraDeRango );
+
                
             }
 
             
 
             // textBox4.Text = Convert.ToString(f_i.TimeOfDay);
-            //dataGridView1.DataSource = fechas;
+          //  dataGridView1.DataSource = fechas;
 
         }
 
@@ -265,18 +270,22 @@ namespace WindowsFormsApplication1.ModuloDisponibilidad
             DateTime aux = primerDiaSemana(monthCalendar1);
 
             int h_i = Convert.ToInt32(f_i.Hour);
+          
             int h_f = Convert.ToInt32(f_f.Hour);
             //textBox4.Text = Convert.ToString(f_i) + f_f;
             
                 if (f_i.Date == f_f.Date)
                 {//valida si la fecha de inicio es = a la de fin
+           
                     for (int i = 0; i <= 6; i++)
                     {//contador para que auxiliar aumente
                         if (aux.AddDays(i) == f_i.Date)
                         {//valida que auxiliar sea igual a las fechas de inicio y fin(xq las dos son iguales)
-                            //textBox5.Text = "Si es igual y estoy en la otra parte zorro";
-                            for (int j = h_i; j < h_f; j++)
+                        
+                        //textBox5.Text = "Si es igual y estoy en la otra parte zorro";
+                        for (int j = h_i; j < h_f; j++)
                             {
+
                                 tableLayoutPanel1.GetControlFromPosition(i + 1, j+1).BackColor = Color.Orange;
                             }
                         }
@@ -1061,8 +1070,7 @@ namespace WindowsFormsApplication1.ModuloDisponibilidad
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Calendario a = new Calendario();
-            a.Show();
+            
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -1085,8 +1093,8 @@ namespace WindowsFormsApplication1.ModuloDisponibilidad
 
         private void panel60_DoubleClick(object sender, EventArgs e)
         {
-            InfoFecha a = new InfoFecha();
-            a.Show();
+           
+            mostrarInformación(panel60);
         }
 
         private void panel84_Paint(object sender, PaintEventArgs e)
@@ -1119,7 +1127,7 @@ namespace WindowsFormsApplication1.ModuloDisponibilidad
 
             marcar = panel60.BackColor;
 
-            panel.BackColor = Color.Blue;
+            panel.BackColor = System.Drawing.Color.FromArgb(3,2,65);
 
 
 
@@ -1130,6 +1138,27 @@ namespace WindowsFormsApplication1.ModuloDisponibilidad
             panel.BackColor = marcar;
 
         }
+        public void mostrarInfo(String textoFecha, DateTime date) {
+
+            InfoFecha a = new InfoFecha(textoFecha,date );
+            a.Show();
+        }
+
+        public void mostrarInformación(Panel panel) {
+            DateTime aux = primerDiaSemana(monthCalendar1);
+            
+
+            tableLayoutPanel1.GetPositionFromControl(panel);
+            TableLayoutPanelCellPosition pos = tableLayoutPanel1.GetPositionFromControl(panel);
+            String textoFecha = tableLayoutPanel1.GetControlFromPosition(pos.Column, 0).Text;
+            mostrarInfo(textoFecha, aux.AddDays(pos.Column-1));
+
+
+
+
+        }
+
+
 
         private void panel76_Paint(object sender, PaintEventArgs e)
         {
@@ -1139,6 +1168,1264 @@ namespace WindowsFormsApplication1.ModuloDisponibilidad
         private void panel60_MouseHover(object sender, EventArgs e)
         {
             marcarPanel(panel60);
+        }
+
+        private void tableLayoutPanel1_MouseEnter(object sender, EventArgs e)
+        {
+            
+            
+        }
+        
+
+        private void tableLayoutPanel1_MouseLeave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel61_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void panel68_DoubleClick(object sender, EventArgs e)
+        {
+            mostrarInformación(panel68);
+        }
+
+        private void panel75_DoubleClick(object sender, EventArgs e)
+        {
+            mostrarInformación(panel75);
+        }
+
+        private void panel91_DoubleClick(object sender, EventArgs e)
+        {
+            mostrarInformación(panel91);
+        }
+
+        private void panel92_DoubleClick(object sender, EventArgs e)
+        {
+            mostrarInformación(panel92);
+        }
+
+        private void panel16_DoubleClick(object sender, EventArgs e)
+        {
+            mostrarInformación(panel16);
+        }
+
+        private void panel120_DoubleClick(object sender, EventArgs e)
+        {
+            mostrarInformación(panel120);
+        }
+
+        private void panel61_DoubleClick(object sender, EventArgs e)
+        {
+            mostrarInformación(panel60);
+        }
+
+        private void panel80_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void panel76_DoubleClick(object sender, EventArgs e)
+        {
+            mostrarInformación(panel76);
+        }
+
+        private void panel119_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel61_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel61_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel60);
+        }
+
+        private void panel61_MouseEnter_1(object sender, EventArgs e)
+        {
+            marcarPanel(panel61);
+        }
+
+        private void panel62_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel62);
+        }
+
+        private void panel63_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel63);
+        }
+
+        private void panel61_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel61);
+        }
+
+        private void panel62_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel62);
+        }
+
+        private void panel63_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel63);
+        }
+
+        private void panel64_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel64);
+        }
+
+        private void panel119_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel119);
+        }
+
+        private void panel118_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel118);
+        }
+
+        private void panel117_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel117);
+        }
+
+        private void p1_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p1);
+        }
+
+        private void p8_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p8);
+        }
+
+        private void p15_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p15);
+        }
+
+        private void p22_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p22);
+        }
+
+        private void p29_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p29);
+        }
+
+        private void p36_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p36);
+        }
+
+        private void p43_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p43);
+        }
+
+        private void p50_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel50);
+        }
+
+        private void panel3_MouseEnter_1(object sender, EventArgs e)
+        {
+            marcarPanel(panel3);
+        }
+
+        private void panel7_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel7);
+        }
+
+        private void panel13_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel13);
+        }
+
+        private void panel19_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel9);
+        }
+
+        private void panel22_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel22);
+        }
+
+        private void panel23_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel23);
+        }
+
+        private void panel25_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel25);
+        }
+
+        private void panel109_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel109);
+        }
+
+        private void panel119_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel119);
+        }
+
+        private void panel118_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel118);
+        }
+
+        private void panel117_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel117);
+        }
+
+        private void p1_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p1);
+        }
+
+        private void p8_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p8);
+        }
+
+        private void p15_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p15);
+        }
+
+        private void p22_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p22);
+        }
+
+        private void p29_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p29);
+            
+        }
+
+        private void p36_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p36);
+        }
+
+        private void p43_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p43);
+        }
+
+        private void p50_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p50);
+        }
+
+        private void panel3_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel3);
+        }
+
+        private void panel7_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel17);
+        }
+
+        private void panel13_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel13);
+        }
+
+        private void panel19_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel19);
+        }
+
+        private void panel22_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p22);
+        }
+
+        private void panel23_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p22);
+        }
+
+        private void panel25_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel25);
+        }
+
+        private void panel109_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel109);
+        }
+
+        private void panel68_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel68);
+        }
+
+        private void panel80_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel80);
+        }
+
+        private void panel70_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel70);
+        }
+
+        private void panel108_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel108);
+        }
+
+        private void panel71_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel71);
+        }
+
+        private void panel72_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel72);
+        }
+
+        private void panel73_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel73);
+        }
+
+        private void panel74_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void p2_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p2);
+        }
+
+        private void p9_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p9);
+        }
+
+        private void p16_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p16);
+        }
+
+        private void p23_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p23);
+        }
+
+        private void p30_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p30);
+        }
+
+        private void p37_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p37);
+        }
+
+        private void p44_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p44);
+        }
+
+        private void panel75_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel75);
+        }
+
+        private void panel76_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel76);
+        }
+
+        private void panel77_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel77);
+        }
+
+        private void panel78_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel78);
+        }
+
+        private void panel79_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel79);
+        }
+
+        private void panel81_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel81);
+        }
+
+        private void panel82_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel82);
+        }
+
+        private void panel83_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel83);
+        }
+
+        private void p3_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p3);
+        }
+
+        private void p10_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p10);
+        }
+
+        private void p17_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p17);
+        }
+
+        private void p24_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p24);
+        }
+
+        private void p31_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p31);
+        }
+
+        private void p38_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p38);
+        }
+
+        private void p45_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p45);
+        }
+
+        private void panel68_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel68);
+        }
+
+        private void panel91_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel91);
+        }
+
+        private void panel92_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel92);
+        }
+
+        private void panel16_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel16);
+        }
+
+        private void panel120_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel120);
+        }
+
+        private void panel123_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel123);
+        }
+
+        private void panel124_Paint(object sender, PaintEventArgs e)
+        {
+           
+        }
+
+        private void panel125_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel125);
+        }
+
+        private void panel124_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel124);
+        }
+
+        private void panel126_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel126);
+        }
+
+        private void panel127_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel127);
+        }
+
+        private void panel128_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel128_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel128);
+        }
+
+        private void panel129_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void panel130_Paint(object sender, PaintEventArgs e)
+        {
+           
+        }
+
+        private void panel130_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel130);
+        }
+
+        private void panel129_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel129);
+        }
+
+        private void p11_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p11);
+        }
+
+        private void p18_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p18);
+        }
+
+        private void p25_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p25);
+        }
+
+        private void p32_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p32);
+        }
+
+        private void p39_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p39);
+        }
+
+        private void p46_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p46);
+        }
+
+        private void panel93_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel93);
+        }
+
+        private void panel94_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel94);
+        }
+
+        private void panel95_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel95);
+        }
+
+        private void panel96_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel96);
+        }
+
+        private void panel97_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel97_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel97);
+        }
+
+        private void panel98_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel98);
+        }
+
+        private void panel99_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel99);
+        }
+
+        private void p5_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p5);
+        }
+
+        private void p12_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p12);
+        }
+
+        private void p19_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p19);
+        }
+
+        private void p26_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p26);
+        }
+
+        private void p33_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p33);
+        }
+
+        private void p40_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p40);
+        }
+
+        private void p47_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p47);
+        }
+
+        private void panel69_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel69);
+        }
+
+        private void panel59_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel59);
+        }
+
+        private void panel100_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel100);
+        }
+
+        private void panel110_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel110);
+        }
+
+        private void panel101_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel101);
+        }
+
+        private void panel111_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel111);
+        }
+
+        private void panel102_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel102);
+        }
+
+        private void panel112_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel112);
+        }
+
+        private void panel104_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel104);
+        }
+
+        private void panel67_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel67);
+        }
+
+        private void panel105_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel105);
+        }
+
+        private void panel66_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel66);
+        }
+
+        private void panel106_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel106);
+        }
+
+        private void panel65_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel65);
+        }
+
+        private void panel107_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel107);
+        }
+
+        private void p7_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p7);
+        }
+
+        private void p13_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p13);
+        }
+
+        private void p14_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p14);
+        }
+
+        private void p20_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p20);
+        }
+
+        private void p21_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p21);
+        }
+
+        private void p27_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p27);
+        }
+
+        private void p28_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p28);
+        }
+
+        private void p34_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p34);
+        }
+
+        private void p35_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p35);
+        }
+
+        private void p41_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p41);
+        }
+
+        private void p42_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p42);
+        }
+
+        private void p48_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p48);
+        }
+
+        private void p49_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(p49);
+        }
+
+        private void panel80_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel80);
+        }
+
+        private void panel70_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel70);
+        }
+
+        private void panel108_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel108);
+        }
+
+        private void panel71_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel71);
+        }
+
+        private void panel72_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel72);
+        }
+
+        private void panel73_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel73);
+        }
+
+        private void panel74_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel74);
+        }
+
+        private void panel74_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel74);
+        }
+
+        private void p2_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p2);
+        }
+
+        private void p9_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p9);
+        }
+
+        private void p16_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p16);
+        }
+
+        private void p23_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p23);
+        }
+
+        private void p30_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p30);
+        }
+
+        private void p37_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p37);
+        }
+
+        private void p44_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p44);
+        }
+
+        private void panel75_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel75);
+        }
+
+        private void panel76_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel76);
+        }
+
+        private void panel77_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel77);
+        }
+
+        private void panel78_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel78);
+        }
+
+        private void panel79_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel79);
+        }
+
+        private void panel81_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel81);
+        }
+
+        private void panel82_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel82);
+        }
+
+        private void panel83_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel83);
+        }
+
+        private void p3_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p3);
+        }
+
+        private void p10_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p10);
+        }
+
+        private void p17_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p17);
+        }
+
+        private void p24_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p24);
+        }
+
+        private void p31_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p31);
+        }
+
+        private void p38_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p38);
+        }
+
+        private void p45_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p45);
+        }
+
+        private void panel91_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel91);
+        }
+
+        private void panel123_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel123);
+        }
+
+        private void panel124_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel124);
+        }
+
+        private void panel125_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel125);
+        }
+
+        private void panel126_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel126);
+        }
+
+        private void panel127_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel127);
+        }
+
+        private void panel128_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel128);
+        }
+
+        private void panel129_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel129);
+        }
+
+        private void panel130_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel130);
+        }
+
+        private void p11_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p11);
+        }
+
+        private void p18_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p18);
+        }
+
+        private void p25_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p25);
+        }
+
+        private void p32_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p32);
+        }
+
+        private void p39_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p39);
+        }
+
+        private void p46_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p46);
+        }
+
+        private void panel92_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel92);
+        }
+
+        private void panel93_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel93);
+        }
+
+        private void panel94_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel94);
+        }
+
+        private void panel95_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel95);
+        }
+
+        private void panel96_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel96_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel96);
+        }
+
+        private void panel97_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel97);
+        }
+
+        private void panel98_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel98);
+        }
+
+        private void panel99_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel99);
+        }
+
+        private void p5_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p5);
+        }
+
+        private void p12_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p12);
+        }
+
+        private void p19_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p19);
+        }
+
+        private void p26_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p26);
+        }
+
+        private void p33_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p33);
+        }
+
+        private void p40_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p40);
+        }
+
+        private void p47_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p47);
+        }
+
+        private void panel16_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel16);
+        }
+
+        private void panel120_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel120);
+        }
+
+        private void panel69_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel69);
+        }
+
+        private void panel59_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel59);
+        }
+
+        private void panel100_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel100);
+        }
+
+        private void panel110_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel110);
+        }
+
+        private void panel101_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel101);
+        }
+
+        private void panel111_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel111);
+        }
+
+        private void panel102_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel102);
+        }
+
+        private void panel112_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel112_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel112);
+        }
+
+        private void panel104_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel104);
+        }
+
+        private void panel67_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel67);
+        }
+
+        private void panel105_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel105);
+        }
+
+        private void panel66_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel66_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel66);
+        }
+
+        private void panel106_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel106);
+        }
+
+        private void panel65_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel65);
+        }
+
+        private void panel107_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(panel107);
+        }
+
+        private void p7_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p7);
+        }
+
+        private void p13_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p13);
+        }
+
+        private void p14_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p14);
+        }
+
+        private void p20_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p20);
+        }
+
+        private void p21_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p21);
+        }
+
+        private void p27_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p27);
+        }
+
+        private void p28_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p28);
+        }
+
+        private void p34_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p34);
+        }
+
+        private void p35_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p35);
+        }
+
+        private void p41_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p41);
+        }
+
+        private void p42_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p42);
+        }
+
+        private void p48_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p48);
+        }
+
+        private void p49_MouseLeave(object sender, EventArgs e)
+        {
+            desmarcarPanel(p49);
+        }
+
+        private void panel91_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel64_MouseEnter(object sender, EventArgs e)
+        {
+            marcarPanel(panel64);
         }
     }
 }

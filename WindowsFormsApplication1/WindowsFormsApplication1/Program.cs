@@ -7,7 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApplication1.ModuloReportesEstadisticos;
-
+//using WindowsFormsApplication1.ModuloDisponibilidad;
 
 namespace WindowsFormsApplication1
 {
@@ -21,7 +21,7 @@ namespace WindowsFormsApplication1
         {
             Correo cor = new Correo();
 
-            Conexion conect = new Conexion();
+           Conexion conect = new Conexion();
             //simuladorLogin log = new simuladorLogin();
             // log.ShowDialog();
             // Hola a todos esta es la tercera prueba
@@ -40,15 +40,16 @@ namespace WindowsFormsApplication1
             //log.ShowDialog();
 
 
-           Application.Run(new FormLogin());
-       
+            Application.Run(new FormLogin());
+
+            //Application.Run(new MenuDisponibilidad());
 
 
 
             //SIMULACION LOGIN
 
-            
-        
+
+
 
         }
     }
