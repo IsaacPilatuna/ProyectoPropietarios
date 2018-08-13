@@ -24,7 +24,8 @@ namespace WindowsFormsApplication1
         FrmPrincipalChofer frmConductor;
         FrmPrincipalFormularioProfesor frmProfesor;
         FrmMenuPrincipalReportes frmReportes;
-
+        ModuloRutas.Formularios.MDIRutaSecretaria frmDIRutaSecretaria;
+        ModuloRutas.Formularios.MDIRutaChofer frmDIRutaChofer;
         //FrmReporteHistorialKilometraje frmRep
 
 
@@ -186,6 +187,22 @@ namespace WindowsFormsApplication1
 
             }
         }
+
+        public void mostrarRutas(FormMenu frmMenu)
+        {
+            if (usuario.IDcargo1 == 2)
+            {
+                frmDIRutaSecretaria = new ModuloRutas.Formularios.MDIRutaSecretaria();
+                mostrarMódulo(frmMenu, frmDIRutaSecretaria);
+            }
+            else if(usuario.IDcargo1 == 5)
+            {
+                frmDIRutaChofer = new ModuloRutas.Formularios.MDIRutaChofer();
+                mostrarMódulo(frmMenu, frmDIRutaChofer);
+            }
+            
+        }
+
         public void mostrarNotificaciones(FormMenu frmMenu)
         {
             solicitudes = new solicitudesPendientes(aux);

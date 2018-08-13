@@ -99,7 +99,7 @@ namespace WindowsFormsApplication1.ModuloRutas.Formularios
         private void historialKilometrajeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Kilometraje km = new Kilometraje ();
-            km.MdiParent = this;
+            //km.MdiParent = this;
             km.Show();
 
         }
@@ -128,21 +128,21 @@ namespace WindowsFormsApplication1.ModuloRutas.Formularios
         private void incidenciaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Incidencia formInci = new Incidencia();
-            formInci.MdiParent = this;
+            //formInci.MdiParent = this;
             formInci.Show();
         }
 
         private void historialKiometrajeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DatosKilometraje datK = new DatosKilometraje();
-            datK.MdiParent = this;
+            //datK.MdiParent = this;
             datK.Show();
         }
 
         private void incidenciaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             DatosIncidencia datI = new DatosIncidencia();
-            datI.MdiParent = this;
+            //datI.MdiParent = this;
             datI.Show();
         }
 
