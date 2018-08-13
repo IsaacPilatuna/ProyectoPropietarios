@@ -469,6 +469,9 @@
     <Content Include="Resources\clipboard1.3.png" />
     <None Include="Resources\flecha1.png" />
     <None Include="Resources\leteers.png" />
+    <None Include="Resources\poli %282%29 %281%29.png" />
+    <None Include="Resources\poli %282%29.png" />
+    <None Include="Resources\ground-transportation %282%29.png" />
     <Content Include="Resources\tasks.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
