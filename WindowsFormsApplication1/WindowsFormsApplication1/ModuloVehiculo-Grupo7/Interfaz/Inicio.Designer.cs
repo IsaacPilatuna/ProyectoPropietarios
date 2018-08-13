@@ -31,10 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnExit = new System.Windows.Forms.Button();
             this.bntQuery = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnADD = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -43,7 +43,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(242, 23);
+            this.label1.Location = new System.Drawing.Point(375, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(296, 37);
             this.label1.TabIndex = 1;
@@ -51,17 +51,22 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.AutoSize = true;
             this.groupBox1.Controls.Add(this.btnExit);
             this.groupBox1.Controls.Add(this.bntQuery);
             this.groupBox1.Controls.Add(this.btnDelete);
             this.groupBox1.Controls.Add(this.btnADD);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(48, 86);
+            this.groupBox1.Location = new System.Drawing.Point(131, 145);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(708, 339);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "BIENVENIDO AL MÓDULO DE VEHICULO";
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.IsBalloon = true;
             // 
             // btnExit
             // 
@@ -98,10 +103,6 @@
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // toolTip1
-            // 
-            this.toolTip1.IsBalloon = true;
-            // 
             // btnADD
             // 
             this.btnADD.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.if_199_CircledPlus_183316;
@@ -117,7 +118,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.AutoSize = true;
+            this.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.ClientSize = new System.Drawing.Size(945, 624);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "Inicio";

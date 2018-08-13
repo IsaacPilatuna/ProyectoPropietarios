@@ -37,11 +37,11 @@ namespace WindowsFormsApplication1
                 MessageBox.Show("no se conecto a la base");
 
             }
-
+            
 
 
         }
-        public void query(String consulta)
+        public string query(string consulta)
         {
             try
             {
@@ -52,6 +52,44 @@ namespace WindowsFormsApplication1
             {
                 MessageBox.Show("no se conecto no hice la consulta" + ex.ToString());
             }
+            return "";
+        }
+        public string query1(string consulta, string campo)
+        {
+            try
+            {
+                cmd = new SqlCommand(consulta, cn);
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    Console.WriteLine(Convert.ToString(dr[campo]));
+                    return Convert.ToString(dr[campo]);
+                }
+               
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("no se conecto no hice la consulta" + ex.ToString());
+            }
+            return "";
+        }
+        public void ingresardatos(string datos)
+        {
+            try
+            {
+                int retorno = 0;
+                cmd = cn.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = string.Format(datos);
+                retorno = cmd.ExecuteNonQuery();
+            }
+            catch
+            {
+
+            }
+            
+
         }
         public void CargarDatos(String consulta, DataGridView tabla)
         {

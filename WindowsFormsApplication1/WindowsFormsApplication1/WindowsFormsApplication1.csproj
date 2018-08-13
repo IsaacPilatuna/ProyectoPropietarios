@@ -223,17 +223,29 @@
     </Compile>
     <Compile Include="ModuloUsuarios\Login.cs" />
     <Compile Include="ModuloUsuarios\Usuario.cs" />
+    <Compile Include="ModuloVehiculo-Grupo7\Clases\Conexion3.cs" />
     <Compile Include="ModuloVehiculo-Grupo7\Clases\Disponibilidad.cs" />
     <Compile Include="ModuloVehiculo-Grupo7\Clases\Incidencia.cs" />
     <Compile Include="ModuloVehiculo-Grupo7\Clases\ListaVehiculos.cs" />
     <Compile Include="ModuloVehiculo-Grupo7\Clases\Mantenimiento.cs" />
-    <Compile Include="ModuloVehiculo-Grupo7\Clases\Program.cs" />
     <Compile Include="ModuloVehiculo-Grupo7\Clases\Vehiculo.cs" />
     <Compile Include="ModuloVehiculo-Grupo7\Interfaz\FormularioIngresoIM.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ModuloVehiculo-Grupo7\Interfaz\FormularioIngresoIM.Designer.cs">
       <DependentUpon>FormularioIngresoIM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloVehiculo-Grupo7\Interfaz\HistoMan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloVehiculo-Grupo7\Interfaz\HistoMan.Designer.cs">
+      <DependentUpon>HistoMan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloVehiculo-Grupo7\Interfaz\HistorialIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloVehiculo-Grupo7\Interfaz\HistorialIn.Designer.cs">
+      <DependentUpon>HistorialIn.cs</DependentUpon>
     </Compile>
     <Compile Include="ModuloVehiculo-Grupo7\Interfaz\Inicio.cs">
       <SubType>Form</SubType>
@@ -318,6 +330,11 @@
     <Compile Include="ModuloReserva\Reserva.cs" />
     <Compile Include="ModuloReserva\Vehiculo.cs" />
     <Compile Include="ModuloReserva\Viaje.cs" />
+    <Compile Include="sistemaAAPDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sistemaAAPDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -374,6 +391,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModuloVehiculo-Grupo7\Interfaz\FormularioIngresoIM.resx">
       <DependentUpon>FormularioIngresoIM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloVehiculo-Grupo7\Interfaz\HistoMan.resx">
+      <DependentUpon>HistoMan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloVehiculo-Grupo7\Interfaz\HistorialIn.resx">
+      <DependentUpon>HistorialIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModuloVehiculo-Grupo7\Interfaz\Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
@@ -456,6 +479,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="sistemaAAPDataSet.xsc">
+      <DependentUpon>sistemaAAPDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="sistemaAAPDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sistemaAAPDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sistemaAAPDataSet.xss">
+      <DependentUpon>sistemaAAPDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -475,6 +509,8 @@
     <None Include="Resources\bus1.png" />
     <None Include="Resources\calendario.png" />
     <None Include="Resources\carro1.png" />
+    <None Include="ModuloVehiculo-Grupo7\Icons\7.jpg" />
+    <None Include="ModuloVehiculo-Grupo7\Icons\1492844339_61.jpg" />
     <Content Include="ModuloVehiculo-Grupo7\Icons\if_199_CircledPlus_183316.png" />
     <Content Include="ModuloVehiculo-Grupo7\Icons\if_67_171426.png" />
     <Content Include="ModuloVehiculo-Grupo7\Icons\if_common-logout-signout-exit-glyph_763291.png" />

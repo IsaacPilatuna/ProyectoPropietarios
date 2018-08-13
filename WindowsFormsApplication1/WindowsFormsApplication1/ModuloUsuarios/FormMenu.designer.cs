@@ -35,32 +35,32 @@
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panelHeader = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.MenuVertical = new System.Windows.Forms.Panel();
+            this.lbCorreo = new System.Windows.Forms.Label();
+            this.lbID = new System.Windows.Forms.Label();
+            this.lbNombre = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.toolCerrar = new System.Windows.Forms.ToolTip(this.components);
             this.iconMinimizar = new System.Windows.Forms.PictureBox();
             this.iconrestaurar = new System.Windows.Forms.PictureBox();
             this.iconmaximizar = new System.Windows.Forms.PictureBox();
             this.iconCerrar = new System.Windows.Forms.PictureBox();
-            this.MenuVertical = new System.Windows.Forms.Panel();
             this.btnReportes = new System.Windows.Forms.Button();
             this.btnForm = new System.Windows.Forms.Button();
-            this.lbCorreo = new System.Windows.Forms.Label();
-            this.lbID = new System.Windows.Forms.Label();
-            this.lbNombre = new System.Windows.Forms.Label();
             this.cerrarSesión = new System.Windows.Forms.PictureBox();
             this.btnReservas = new System.Windows.Forms.Button();
             this.btnmenu = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnNotificaciones = new System.Windows.Forms.Button();
             this.btnRutas = new System.Windows.Forms.Button();
             this.btnVehículos = new System.Windows.Forms.Button();
             this.btnIncidencias = new System.Windows.Forms.Button();
-            this.toolCerrar = new System.Windows.Forms.ToolTip(this.components);
             this.panelprincipal.SuspendLayout();
             this.panelHeader.SuspendLayout();
+            this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconrestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconmaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCerrar)).BeginInit();
-            this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cerrarSesión)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnmenu)).BeginInit();
             this.SuspendLayout();
@@ -104,13 +104,86 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(122, 11);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(553, 36);
+            this.label3.Size = new System.Drawing.Size(526, 33);
             this.label3.TabIndex = 7;
             this.label3.Text = "Sistema de Gestión de Transporte EPN";
+            // 
+            // MenuVertical
+            // 
+            this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
+            this.MenuVertical.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.MenuVertical.Controls.Add(this.btnReportes);
+            this.MenuVertical.Controls.Add(this.btnForm);
+            this.MenuVertical.Controls.Add(this.lbCorreo);
+            this.MenuVertical.Controls.Add(this.lbID);
+            this.MenuVertical.Controls.Add(this.lbNombre);
+            this.MenuVertical.Controls.Add(this.cerrarSesión);
+            this.MenuVertical.Controls.Add(this.btnReservas);
+            this.MenuVertical.Controls.Add(this.btnmenu);
+            this.MenuVertical.Controls.Add(this.label1);
+            this.MenuVertical.Controls.Add(this.btnNotificaciones);
+            this.MenuVertical.Controls.Add(this.btnRutas);
+            this.MenuVertical.Controls.Add(this.btnVehículos);
+            this.MenuVertical.Controls.Add(this.btnIncidencias);
+            this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
+            this.MenuVertical.Location = new System.Drawing.Point(0, 0);
+            this.MenuVertical.Name = "MenuVertical";
+            this.MenuVertical.Size = new System.Drawing.Size(250, 640);
+            this.MenuVertical.TabIndex = 6;
+            // 
+            // lbCorreo
+            // 
+            this.lbCorreo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbCorreo.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCorreo.ForeColor = System.Drawing.Color.White;
+            this.lbCorreo.Location = new System.Drawing.Point(67, 612);
+            this.lbCorreo.Name = "lbCorreo";
+            this.lbCorreo.Size = new System.Drawing.Size(180, 15);
+            this.lbCorreo.TabIndex = 17;
+            this.lbCorreo.Text = "Correo";
+            // 
+            // lbID
+            // 
+            this.lbID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbID.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbID.ForeColor = System.Drawing.Color.White;
+            this.lbID.Location = new System.Drawing.Point(67, 558);
+            this.lbID.Name = "lbID";
+            this.lbID.Size = new System.Drawing.Size(180, 15);
+            this.lbID.TabIndex = 16;
+            this.lbID.Text = "Departamento";
+            // 
+            // lbNombre
+            // 
+            this.lbNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbNombre.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNombre.ForeColor = System.Drawing.Color.White;
+            this.lbNombre.Location = new System.Drawing.Point(67, 573);
+            this.lbNombre.Name = "lbNombre";
+            this.lbNombre.Size = new System.Drawing.Size(180, 30);
+            this.lbNombre.TabIndex = 15;
+            this.lbNombre.Text = "Nombre";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(60, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(187, 29);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Menu Principal";
+            // 
+            // toolCerrar
+            // 
+            this.toolCerrar.IsBalloon = true;
+            this.toolCerrar.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolCerrar.ToolTipTitle = "Cerrar Sesión";
             // 
             // iconMinimizar
             // 
@@ -165,29 +238,6 @@
             this.iconCerrar.TabStop = false;
             this.iconCerrar.Click += new System.EventHandler(this.iconCerrar_Click);
             // 
-            // MenuVertical
-            // 
-            this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
-            this.MenuVertical.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.MenuVertical.Controls.Add(this.btnReportes);
-            this.MenuVertical.Controls.Add(this.btnForm);
-            this.MenuVertical.Controls.Add(this.lbCorreo);
-            this.MenuVertical.Controls.Add(this.lbID);
-            this.MenuVertical.Controls.Add(this.lbNombre);
-            this.MenuVertical.Controls.Add(this.cerrarSesión);
-            this.MenuVertical.Controls.Add(this.btnReservas);
-            this.MenuVertical.Controls.Add(this.btnmenu);
-            this.MenuVertical.Controls.Add(this.label1);
-            this.MenuVertical.Controls.Add(this.btnNotificaciones);
-            this.MenuVertical.Controls.Add(this.btnRutas);
-            this.MenuVertical.Controls.Add(this.btnVehículos);
-            this.MenuVertical.Controls.Add(this.btnIncidencias);
-            this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
-            this.MenuVertical.Location = new System.Drawing.Point(0, 0);
-            this.MenuVertical.Name = "MenuVertical";
-            this.MenuVertical.Size = new System.Drawing.Size(250, 640);
-            this.MenuVertical.TabIndex = 6;
-            // 
             // btnReportes
             // 
             this.btnReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
@@ -228,39 +278,6 @@
             this.btnForm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnForm.UseVisualStyleBackColor = false;
             this.btnForm.Click += new System.EventHandler(this.btnForm_Click);
-            // 
-            // lbCorreo
-            // 
-            this.lbCorreo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbCorreo.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCorreo.ForeColor = System.Drawing.Color.White;
-            this.lbCorreo.Location = new System.Drawing.Point(67, 612);
-            this.lbCorreo.Name = "lbCorreo";
-            this.lbCorreo.Size = new System.Drawing.Size(180, 15);
-            this.lbCorreo.TabIndex = 17;
-            this.lbCorreo.Text = "Correo";
-            // 
-            // lbID
-            // 
-            this.lbID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbID.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbID.ForeColor = System.Drawing.Color.White;
-            this.lbID.Location = new System.Drawing.Point(67, 558);
-            this.lbID.Name = "lbID";
-            this.lbID.Size = new System.Drawing.Size(180, 15);
-            this.lbID.TabIndex = 16;
-            this.lbID.Text = "Departamento";
-            // 
-            // lbNombre
-            // 
-            this.lbNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbNombre.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNombre.ForeColor = System.Drawing.Color.White;
-            this.lbNombre.Location = new System.Drawing.Point(67, 573);
-            this.lbNombre.Name = "lbNombre";
-            this.lbNombre.Size = new System.Drawing.Size(180, 30);
-            this.lbNombre.TabIndex = 15;
-            this.lbNombre.Text = "Nombre";
             // 
             // cerrarSesión
             // 
@@ -304,17 +321,6 @@
             this.btnmenu.TabIndex = 4;
             this.btnmenu.TabStop = false;
             this.btnmenu.Click += new System.EventHandler(this.btnmenu_Click_1);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(60, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(184, 28);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Menu Principal";
             // 
             // btnNotificaciones
             // 
@@ -374,7 +380,7 @@
             this.btnVehículos.Text = "          Vehículos        ";
             this.btnVehículos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVehículos.UseVisualStyleBackColor = false;
-            this.btnVehículos.Click += new System.EventHandler(this.btnVehículos_Click_1);
+            this.btnVehículos.Click += new System.EventHandler(this.btnVehículos_Click);
             // 
             // btnIncidencias
             // 
@@ -395,12 +401,6 @@
             this.btnIncidencias.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnIncidencias.UseVisualStyleBackColor = false;
             // 
-            // toolCerrar
-            // 
-            this.toolCerrar.IsBalloon = true;
-            this.toolCerrar.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.toolCerrar.ToolTipTitle = "Cerrar Sesión";
-            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -419,12 +419,12 @@
             this.panelprincipal.ResumeLayout(false);
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
+            this.MenuVertical.ResumeLayout(false);
+            this.MenuVertical.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconrestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconmaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCerrar)).EndInit();
-            this.MenuVertical.ResumeLayout(false);
-            this.MenuVertical.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cerrarSesión)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnmenu)).EndInit();
             this.ResumeLayout(false);

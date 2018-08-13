@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-
+using System.Threading;
 
 namespace WindowsFormsApplication1
 
@@ -20,6 +20,7 @@ namespace WindowsFormsApplication1
 
         GestiónModulos fm1;
         String auxuser;
+        
 
 
 
@@ -188,11 +189,20 @@ namespace WindowsFormsApplication1
             fm1.mostrarReportes(this);
         }
 
-        private void btnVehículos_Click_1(object sender, EventArgs e)
+        private void btnVehículos_Click(object sender, EventArgs e)
         {
-            fm1.mostrarModvehiculo(this);
-        }
+            DialogResult mss =MessageBox.Show("Ud. Pertenece al Grupo 5", "Elegir Grupo", MessageBoxButtons.YesNoCancel);
+            if (mss == System.Windows.Forms.DialogResult.Yes)
+            {
+                fm1.mostrarModvehiculo(this);
+            }
+            else if (mss == System.Windows.Forms.DialogResult.No)
+            {
+                fm1.mostrarInicioVehiculo(this);
+            }
 
+        }
+       
         private void btnNotificaciones_Click_1(object sender, EventArgs e)
         {
             Conexion cn = new Conexion();

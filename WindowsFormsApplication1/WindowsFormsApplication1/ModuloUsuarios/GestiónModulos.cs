@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ModuloVehiculo.Interfaz;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -7,6 +8,7 @@ using System.Windows.Forms;
 using WindowsFormsApplication1.ModuloFormularios;
 using WindowsFormsApplication1.ModuloReportesEstadisticos;
 using WindowsFormsApplication1.ModuloVehiculo.Formularios;
+
 
 namespace WindowsFormsApplication1
 {
@@ -22,7 +24,8 @@ namespace WindowsFormsApplication1
         FrmPrincipalChofer frmConductor;
         FrmPrincipalFormularioProfesor frmProfesor;
         FrmMenuPrincipalReportes frmReportes;
-
+        Inicio frmVehiculos7= new Inicio();
+       
         //FrmReporteHistorialKilometraje frmRep
 
 
@@ -198,10 +201,12 @@ namespace WindowsFormsApplication1
 
         }
 
+        public void mostrarInicioVehiculo(FormMenu frmMenu)
+        {
+            mostrarMódulo(frmMenu, frmVehiculos7);
+        }
 
-
-
-
+        
 
     }
 }

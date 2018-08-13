@@ -30,13 +30,15 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.txtTUso = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.datFecha = new System.Windows.Forms.DateTimePicker();
+            this.txtEA = new System.Windows.Forms.TextBox();
+            this.txtKilometraje = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnAceptar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,9 +54,11 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtTUso);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.datFecha);
+            this.groupBox1.Controls.Add(this.txtEA);
+            this.groupBox1.Controls.Add(this.txtKilometraje);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -64,16 +68,59 @@
             this.groupBox1.Size = new System.Drawing.Size(353, 187);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "¿ SE HA REALIZADO ALGÚN MANTENIMIENTO?";
+            this.groupBox1.Text = "INGRESE EL ÚLTIMO MANTENIMIENTO";
             // 
-            // label2
+            // txtTUso
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 103);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Kilometraje:";
+            this.txtTUso.Location = new System.Drawing.Point(212, 123);
+            this.txtTUso.Name = "txtTUso";
+            this.txtTUso.Size = new System.Drawing.Size(135, 20);
+            this.txtTUso.TabIndex = 8;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(18, 123);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(96, 13);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Tiempo de Uso:";
+            // 
+            // datFecha
+            // 
+            this.datFecha.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.datFecha.CustomFormat = "yyyy-MM-dd";
+            this.datFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.datFecha.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.datFecha.Location = new System.Drawing.Point(212, 60);
+            this.datFecha.Name = "datFecha";
+            this.datFecha.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.datFecha.Size = new System.Drawing.Size(135, 20);
+            this.datFecha.TabIndex = 6;
+            this.datFecha.Value = new System.DateTime(2018, 8, 12, 0, 0, 0, 0);
+            // 
+            // txtEA
+            // 
+            this.txtEA.Location = new System.Drawing.Point(212, 152);
+            this.txtEA.Name = "txtEA";
+            this.txtEA.Size = new System.Drawing.Size(135, 20);
+            this.txtEA.TabIndex = 5;
+            // 
+            // txtKilometraje
+            // 
+            this.txtKilometraje.Location = new System.Drawing.Point(212, 86);
+            this.txtKilometraje.Name = "txtKilometraje";
+            this.txtKilometraje.Size = new System.Drawing.Size(135, 20);
+            this.txtKilometraje.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(18, 152);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(111, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Estado del Aceite:";
             // 
             // label3
             // 
@@ -84,51 +131,31 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Fecha:";
             // 
-            // label4
+            // label2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 148);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Estado del Aceite:";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(18, 89);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Kilometraje:";
             // 
-            // button2
+            // btnAceptar
             // 
-            this.button2.Location = new System.Drawing.Point(176, 290);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Aceptar";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(233, 100);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(114, 20);
-            this.textBox2.TabIndex = 4;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(233, 145);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(114, 20);
-            this.textBox3.TabIndex = 5;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(106, 48);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(241, 20);
-            this.dateTimePicker1.TabIndex = 6;
+            this.btnAceptar.Location = new System.Drawing.Point(176, 290);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.TabIndex = 4;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // FormularioIngresoIM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(429, 325);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "FormularioIngresoIM";
@@ -147,9 +174,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.DateTimePicker datFecha;
+        private System.Windows.Forms.TextBox txtEA;
+        private System.Windows.Forms.TextBox txtKilometraje;
+        private System.Windows.Forms.TextBox txtTUso;
+        private System.Windows.Forms.Label label5;
     }
 }
