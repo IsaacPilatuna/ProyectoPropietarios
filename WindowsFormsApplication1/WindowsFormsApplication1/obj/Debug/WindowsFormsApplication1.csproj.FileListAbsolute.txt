@@ -297,3 +297,5 @@ C:\Users\Primario\Documents\Ingeniería de Software\ProyectoPropietarios\Windows
 C:\Users\Primario\Documents\Ingeniería de Software\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ModuloRutas.Formularios.Incidencia.resources
 C:\Users\Primario\Documents\Ingeniería de Software\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ModuloRutas.Formularios.Kilometraje.resources
 C:\Users\Primario\Documents\Ingeniería de Software\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.CopyComplete
+C:\Users\Primario\Documents\Ingeniería de Software\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ModuloRutas.Formularios.DatosIncidencia.resources
+C:\Users\Primario\Documents\Ingeniería de Software\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ModuloRutas.Formularios.DatosKilometraje.resources

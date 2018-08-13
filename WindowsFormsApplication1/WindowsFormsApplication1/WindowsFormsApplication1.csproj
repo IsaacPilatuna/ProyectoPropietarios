@@ -218,6 +218,18 @@
     <Compile Include="ModuloReserva\Vehiculo.cs" />
     <Compile Include="ModuloReserva\Viaje.cs" />
     <Compile Include="ModuloRutas\Clases\Conexion.cs" />
+    <Compile Include="ModuloRutas\Formularios\DatosIncidencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloRutas\Formularios\DatosIncidencia.Designer.cs">
+      <DependentUpon>DatosIncidencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloRutas\Formularios\DatosKilometraje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloRutas\Formularios\DatosKilometraje.Designer.cs">
+      <DependentUpon>DatosKilometraje.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModuloRutas\Formularios\Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -382,6 +394,12 @@
     <EmbeddedResource Include="ModuloReportesEstadisticos\ReporteViajes.rdlc" />
     <EmbeddedResource Include="ModuloReserva\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloRutas\Formularios\DatosIncidencia.resx">
+      <DependentUpon>DatosIncidencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloRutas\Formularios\DatosKilometraje.resx">
+      <DependentUpon>DatosKilometraje.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModuloRutas\Formularios\Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
