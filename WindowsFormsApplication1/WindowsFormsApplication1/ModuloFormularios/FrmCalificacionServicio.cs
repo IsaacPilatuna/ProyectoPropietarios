@@ -90,5 +90,75 @@ namespace ModuloFormularios
 
             }
         }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btn_guardar_Click(object sender, EventArgs e)
+        {
+            if (cb_reservas.SelectedItem != null)
+            {
+                calificacionServicio.setIdReserva(cb_reservas.SelectedItem + "");
+                if (rb_puntSalidaT.Checked)
+                {
+                    calificacionServicio.setPuntualSalida("SI");
+                }
+                else
+                {
+                    calificacionServicio.setPuntualSalida("NO");
+                }
+
+                if (rb_limpiezaT.Checked)
+                {
+                    calificacionServicio.setLimpiezaVehiculo("SI");
+                }
+                else
+                {
+                    calificacionServicio.setLimpiezaVehiculo("NO");
+                }
+                if (rb_puntLlegadaT.Checked)
+                {
+                    calificacionServicio.setPuntualAlDestino("SI");
+                }
+                else
+                {
+                    calificacionServicio.setPuntualAlDestino("NO");
+                }
+
+                if (rb_puntRetornoT.Checked)
+                {
+                    calificacionServicio.setPuntualAlRetorno("SI");
+                }
+                else
+                {
+                    calificacionServicio.setPuntualAlRetorno("NO");
+                }
+                if (!txt_comenAdicionales.Text.Equals(""))
+                {
+                    calificacionServicio.setComentariosAdicionales(txt_comenAdicionales.Text);
+                }
+                else
+                {
+                    calificacionServicio.setComentariosAdicionales(null);
+                }
+                //MessageBox.Show(calificacionServicio.getPuntualAlDestino() + " " + calificacionServicio.getPuntualAlRetorno() + " " +
+                //                    calificacionServicio.getLimpiezaVehiculo() + " " + calificacionServicio.getPuntualSalida() + calificacionServicio.getComentariosAdicionales()
+                //    + " " + txt_nomConductor.Text + " " + cb_reservas.SelectedItem);
+                calificacionServicio.guardarEnBase();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("ERROR AL INGRESAR LOS DATOS");
+
+            }
+        }
     }
 }

@@ -120,7 +120,7 @@ namespace WindowsFormsApplication1.ModuloFormularios
                 {
                     sql = "insert into Calificacion_Servicio (idReservaAprob, puntualSalida, limpieza, puntualDestino, puntualRetorno, comentarioAdicional) values(" + idReserva + ",'" + puntualSalida + "','" + limpiezaVehiculo + "','" + puntualAlDestino + "','" + puntualAlRetorno + "','"+ comentariosAdicionales+"')";
                 }
-                MessageBox.Show("" + sql);
+               // MessageBox.Show("" + sql);
                 
                 SqlCommand comando = new SqlCommand(sql, conn);
                 int resultado = comando.ExecuteNonQuery();

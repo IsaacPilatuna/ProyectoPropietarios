@@ -79,6 +79,7 @@ namespace ModuloFormularios
                     // reporteConductor.getDineroGastadoEnGasolina() + " " + reporteConductor.getComportameientoPasajeros());
 //
                     reporteConductor.guardarEnBase();
+                    this.Close();
                 }
                 else {
                     MessageBox.Show("ERROR AL INGRESAR LOS DATOS");
@@ -103,6 +104,16 @@ namespace ModuloFormularios
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close(); 
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
  }
