@@ -79,7 +79,7 @@ namespace WindowsFormsApplication1.ModuloFormularios
 
             string sql = "select count(*) from reservaaprobada where idchofer="+idUsuario + " and reporteconductor is null and estadosolicitud like 'aprobada2'";
             valor = "";
-            MessageBox.Show(sql + "");
+            //MessageBox.Show(sql + "");
             conn = new SqlConnection(cnx.stringConexion);
             try
             {
@@ -97,7 +97,7 @@ namespace WindowsFormsApplication1.ModuloFormularios
                 valor = "0";
                 return false;
             }
-            MessageBox.Show(valor);
+          //  MessageBox.Show(valor);
             if (valor == "0")
             {
                 return false;

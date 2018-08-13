@@ -100,9 +100,6 @@
       <DependentUpon>MenuDisponibilidad.cs</DependentUpon>
     </Compile>
     <Compile Include="ModuloFormularios\CSCalificacionDeServicio.cs" />
-    <Compile Include="ModuloFormularios\CSListaCalificacionServicio.cs" />
-    <Compile Include="ModuloFormularios\CSListaReporteConductor.cs" />
-    <Compile Include="ModuloFormularios\CSListaSolicitudDeViaje.cs" />
     <Compile Include="ModuloFormularios\CSReporteConductor.cs" />
     <Compile Include="ModuloFormularios\CSSolicitudDeViaje.cs" />
     <Compile Include="ModuloFormularios\FrmMensajeError.cs">
