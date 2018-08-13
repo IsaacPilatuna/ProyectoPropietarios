@@ -179,6 +179,17 @@
     </Compile>
     <Compile Include="ModuloUsuarios\Login.cs" />
     <Compile Include="ModuloUsuarios\Usuario.cs" />
+    <Compile Include="ModuloVehiculo\DataSetVehiculo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetVehiculo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloVehiculo\Formularios\Buscar_Datos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloVehiculo\Formularios\Buscar_Datos.Designer.cs">
+      <DependentUpon>Buscar_Datos.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModuloVehiculo\Formularios\dataDisponibilidad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,12 +244,6 @@
     <Compile Include="ModuloVehiculo\Formularios\mdiModVehiculo.Designer.cs">
       <DependentUpon>mdiModVehiculo.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModuloVehiculo\Formularios\Prueba.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModuloVehiculo\Formularios\Prueba.Designer.cs">
-      <DependentUpon>Prueba.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ModuloReserva\Reserva.cs" />
@@ -280,6 +285,9 @@
     <EmbeddedResource Include="ModuloUsuarios\FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ModuloVehiculo\Formularios\Buscar_Datos.resx">
+      <DependentUpon>Buscar_Datos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ModuloVehiculo\Formularios\dataDisponibilidad.resx">
       <DependentUpon>dataDisponibilidad.cs</DependentUpon>
     </EmbeddedResource>
@@ -306,9 +314,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModuloVehiculo\Formularios\mdiModVehiculo.resx">
       <DependentUpon>mdiModVehiculo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ModuloVehiculo\Formularios\Prueba.resx">
-      <DependentUpon>Prueba.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -341,6 +346,17 @@
     </None>
     <None Include="ModuloReportesEstadisticos\DataSetViajes.xss">
       <DependentUpon>DataSetViajes.xsd</DependentUpon>
+    </None>
+    <None Include="ModuloVehiculo\DataSetVehiculo.xsc">
+      <DependentUpon>DataSetVehiculo.xsd</DependentUpon>
+    </None>
+    <None Include="ModuloVehiculo\DataSetVehiculo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetVehiculo.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ModuloVehiculo\DataSetVehiculo.xss">
+      <DependentUpon>DataSetVehiculo.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

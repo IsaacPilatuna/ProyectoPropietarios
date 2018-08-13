@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\WindowsFormsApplication1",
-    "\\WindowsFormsApplication1\\WindowsFormsApplication1"
+    "\\WindowsFormsApplication1\\WindowsFormsApplication1",
+    "\\WindowsFormsApplication1\\WindowsFormsApplication1\\ModuloVehiculo",
+    "\\WindowsFormsApplication1\\WindowsFormsApplication1\\ModuloVehiculo\\Formularios"
   ],
-  "SelectedNode": "\\WindowsFormsApplication1\\WindowsFormsApplication1\\ModuloFormularios",
+  "SelectedNode": "\\WindowsFormsApplication1\\WindowsFormsApplication1.sln",
   "PreviewInSolutionExplorer": false
 }

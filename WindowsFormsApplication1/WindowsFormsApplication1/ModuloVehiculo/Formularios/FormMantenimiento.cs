@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsFormsApplication1;
+
 namespace WindowsFormsApplication1.ModuloVehiculo.Formularios
 {
     public partial class FormMantenimiento : Form
@@ -21,54 +21,25 @@ namespace WindowsFormsApplication1.ModuloVehiculo.Formularios
         {
             this.Validate();
             this.mantenimientoBindingSource.EndEdit();
-            // this.tableAdapterManager.UpdateAll(this.sistemaAAPDataSet);
+            this.tableAdapterManager.UpdateAll(this.dataSetVehiculo);
 
         }
 
         private void FormMantenimiento_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'sistemaAAPDataSet.HistorialKilometraje' Puede moverla o quitarla según sea necesario.
-            // this.historialKilometrajeTableAdapter.Fill(this.sistemaAAPDataSet.HistorialKilometraje);
-            // TODO: esta línea de código carga datos en la tabla 'sistemaAAPDataSet.Mantenimiento' Puede moverla o quitarla según sea necesario.
-            //this.mantenimientoTableAdapter.Fill(this.sistemaAAPDataSet.Mantenimiento);
-            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
-            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
-        }
+            // TODO: esta línea de código carga datos en la tabla 'dataSetVehiculo.Mantenimiento' Puede moverla o quitarla según sea necesario.
+            this.mantenimientoTableAdapter.Fill(this.dataSetVehiculo.Mantenimiento);
 
-        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.Validate();
-                this.mantenimientoBindingSource.EndEdit();
-                //  this.tableAdapterManager.UpdateAll(this.sistemaAAPDataSet);
-            }
-            catch
-            {
-                MessageBox.Show("Necesario dejar almenos un registro ", "Vehiculo",
-MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
-
-            }
         }
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        private void kilometrajeComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
         }
 
-        private void iDVEHICULOLabel_Click(object sender, EventArgs e)
+        private void idMantenimientoTextBox_TextChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void idVehiculoLabel_Click_1(object sender, EventArgs e)
-        {
-
+            idMantenimientoTextBox.BackColor = Color.White;
         }
     }
 }

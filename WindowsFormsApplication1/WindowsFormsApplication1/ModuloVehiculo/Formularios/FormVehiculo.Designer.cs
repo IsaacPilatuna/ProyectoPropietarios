@@ -1,5 +1,4 @@
-﻿using WindowsFormsApplication1;
-namespace WindowsFormsApplication1.ModuloVehiculo.Formularios
+﻿namespace WindowsFormsApplication1.ModuloVehiculo.Formularios
 {
     partial class FormVehiculo
     {
@@ -30,16 +29,17 @@ namespace WindowsFormsApplication1.ModuloVehiculo.Formularios
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label iDVEHICULOLabel;
             System.Windows.Forms.Label tIPOVEHICULOLabel;
             System.Windows.Forms.Label pLACAVEHICULOLabel;
             System.Windows.Forms.Label matriculaLabel;
             System.Windows.Forms.Label numeroPasajerosLabel;
+            System.Windows.Forms.Label anioVehiculoLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVehiculo));
-            System.Windows.Forms.Label iDVEHICULOLabel;
-            // this.sistemaAAPDataSet = new MODULO_VEHICULO.sistemaAAPDataSet();
+            this.dataSetVehiculo = new WindowsFormsApplication1.ModuloVehiculo.DataSetVehiculo();
             this.vEHICULOBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            //this.vEHICULOTableAdapter = new MODULO_VEHICULO.sistemaAAPDataSetTableAdapters.VEHICULOTableAdapter();
-            //this.tableAdapterManager = new MODULO_VEHICULO.sistemaAAPDataSetTableAdapters.TableAdapterManager();
+            this.vEHICULOTableAdapter = new WindowsFormsApplication1.ModuloVehiculo.DataSetVehiculoTableAdapters.VEHICULOTableAdapter();
+            this.tableAdapterManager = new WindowsFormsApplication1.ModuloVehiculo.DataSetVehiculoTableAdapters.TableAdapterManager();
             this.vEHICULOBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -53,26 +53,37 @@ namespace WindowsFormsApplication1.ModuloVehiculo.Formularios
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.vEHICULOBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.iDVEHICULOTextBox = new System.Windows.Forms.TextBox();
             this.tIPOVEHICULOTextBox = new System.Windows.Forms.TextBox();
             this.pLACAVEHICULOTextBox = new System.Windows.Forms.TextBox();
             this.matriculaTextBox = new System.Windows.Forms.TextBox();
             this.numeroPasajerosTextBox = new System.Windows.Forms.TextBox();
-            this.iDVEHICULOTextBox = new System.Windows.Forms.TextBox();
+            this.anioVehiculoTextBox = new System.Windows.Forms.TextBox();
+            iDVEHICULOLabel = new System.Windows.Forms.Label();
             tIPOVEHICULOLabel = new System.Windows.Forms.Label();
             pLACAVEHICULOLabel = new System.Windows.Forms.Label();
             matriculaLabel = new System.Windows.Forms.Label();
             numeroPasajerosLabel = new System.Windows.Forms.Label();
-            iDVEHICULOLabel = new System.Windows.Forms.Label();
-            //((System.ComponentModel.ISupportInitialize)(this.sistemaAAPDataSet)).BeginInit();
+            anioVehiculoLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetVehiculo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vEHICULOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vEHICULOBindingNavigator)).BeginInit();
             this.vEHICULOBindingNavigator.SuspendLayout();
             this.SuspendLayout();
             // 
+            // iDVEHICULOLabel
+            // 
+            iDVEHICULOLabel.AutoSize = true;
+            iDVEHICULOLabel.Location = new System.Drawing.Point(205, 46);
+            iDVEHICULOLabel.Name = "iDVEHICULOLabel";
+            iDVEHICULOLabel.Size = new System.Drawing.Size(65, 13);
+            iDVEHICULOLabel.TabIndex = 1;
+            iDVEHICULOLabel.Text = "ID Vehiculo:";
+            // 
             // tIPOVEHICULOLabel
             // 
             tIPOVEHICULOLabel.AutoSize = true;
-            tIPOVEHICULOLabel.Location = new System.Drawing.Point(210, 144);
+            tIPOVEHICULOLabel.Location = new System.Drawing.Point(205, 72);
             tIPOVEHICULOLabel.Name = "tIPOVEHICULOLabel";
             tIPOVEHICULOLabel.Size = new System.Drawing.Size(90, 13);
             tIPOVEHICULOLabel.TabIndex = 3;
@@ -81,16 +92,16 @@ namespace WindowsFormsApplication1.ModuloVehiculo.Formularios
             // pLACAVEHICULOLabel
             // 
             pLACAVEHICULOLabel.AutoSize = true;
-            pLACAVEHICULOLabel.Location = new System.Drawing.Point(210, 170);
+            pLACAVEHICULOLabel.Location = new System.Drawing.Point(205, 98);
             pLACAVEHICULOLabel.Name = "pLACAVEHICULOLabel";
-            pLACAVEHICULOLabel.Size = new System.Drawing.Size(81, 13);
+            pLACAVEHICULOLabel.Size = new System.Drawing.Size(96, 13);
             pLACAVEHICULOLabel.TabIndex = 5;
-            pLACAVEHICULOLabel.Text = "Placa Vehiculo:";
+            pLACAVEHICULOLabel.Text = "Placa de Vehiculo:";
             // 
             // matriculaLabel
             // 
             matriculaLabel.AutoSize = true;
-            matriculaLabel.Location = new System.Drawing.Point(210, 196);
+            matriculaLabel.Location = new System.Drawing.Point(205, 124);
             matriculaLabel.Name = "matriculaLabel";
             matriculaLabel.Size = new System.Drawing.Size(53, 13);
             matriculaLabel.TabIndex = 7;
@@ -99,50 +110,64 @@ namespace WindowsFormsApplication1.ModuloVehiculo.Formularios
             // numeroPasajerosLabel
             // 
             numeroPasajerosLabel.AutoSize = true;
-            numeroPasajerosLabel.Location = new System.Drawing.Point(210, 222);
+            numeroPasajerosLabel.Location = new System.Drawing.Point(205, 150);
             numeroPasajerosLabel.Name = "numeroPasajerosLabel";
-            numeroPasajerosLabel.Size = new System.Drawing.Size(114, 13);
+            numeroPasajerosLabel.Size = new System.Drawing.Size(96, 13);
             numeroPasajerosLabel.TabIndex = 9;
-            numeroPasajerosLabel.Text = "Numero de  Pasajeros:";
+            numeroPasajerosLabel.Text = "Número Pasajeros:";
             // 
-            // sistemaAAPDataSet
+            // anioVehiculoLabel
             // 
-            // this.sistemaAAPDataSet.DataSetName = "sistemaAAPDataSet";
-            // this.sistemaAAPDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            anioVehiculoLabel.AutoSize = true;
+            anioVehiculoLabel.Location = new System.Drawing.Point(205, 176);
+            anioVehiculoLabel.Name = "anioVehiculoLabel";
+            anioVehiculoLabel.Size = new System.Drawing.Size(90, 13);
+            anioVehiculoLabel.TabIndex = 11;
+            anioVehiculoLabel.Text = "Año del Vehiculo:";
+            // 
+            // dataSetVehiculo
+            // 
+            this.dataSetVehiculo.DataSetName = "DataSetVehiculo";
+            this.dataSetVehiculo.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // vEHICULOBindingSource
             // 
             this.vEHICULOBindingSource.DataMember = "VEHICULO";
-            //this.vEHICULOBindingSource.DataSource = this.sistemaAAPDataSet;
+            this.vEHICULOBindingSource.DataSource = this.dataSetVehiculo;
             // 
             // vEHICULOTableAdapter
             // 
-            //this.vEHICULOTableAdapter.ClearBeforeFill = true;
+            this.vEHICULOTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
-            //this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            //this.tableAdapterManager.CHOFERTableAdapter = null;
-            //this.tableAdapterManager.DisponibilidadVehiculoTableAdapter = null;
-            //this.tableAdapterManager.HistorialKilometrajeTableAdapter = null;
-            //this.tableAdapterManager.incidenciaTableAdapter = null;
-            //this.tableAdapterManager.IncidenciaVehiculoTableAdapter = null;
-            //this.tableAdapterManager.LugarTableAdapter = null;
-            //this.tableAdapterManager.MantenimientoTableAdapter = null;
-            //this.tableAdapterManager.MotivoViajeTableAdapter = null;
-            //this.tableAdapterManager.NominaProfesoresTableAdapter = null;
-            //this.tableAdapterManager.NotificacionMantenimientoTableAdapter = null;
-            //this.tableAdapterManager.NotificacionRutaTableAdapter = null;
-            //this.tableAdapterManager.Reporte_ConductorTableAdapter = null;
-            //this.tableAdapterManager.RESERVAAPROBADATableAdapter = null;
-            //this.tableAdapterManager.SolicitanteTableAdapter = null;
-            //this.tableAdapterManager.SolicitudReservaTableAdapter = null;
-            //this.tableAdapterManager.UpdateOrder = MODULO_VEHICULO.sistemaAAPDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            //this.tableAdapterManager.VEHICULOTableAdapter = this.vEHICULOTableAdapter;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Calificacion_ServicioTableAdapter = null;
+            this.tableAdapterManager.CargosTableAdapter = null;
+            this.tableAdapterManager.CHOFERTableAdapter = null;
+            this.tableAdapterManager.CuentaTableAdapter = null;
+            this.tableAdapterManager.DisponibilidadVehiculoTableAdapter = null;
+            this.tableAdapterManager.HistorialKilometrajeTableAdapter = null;
+            this.tableAdapterManager.incidenciaTableAdapter = null;
+            this.tableAdapterManager.IncidenciaVehiculoTableAdapter = null;
+            this.tableAdapterManager.LugarTableAdapter = null;
+            this.tableAdapterManager.MantenimientoTableAdapter = null;
+            this.tableAdapterManager.MotivoViajeTableAdapter = null;
+            this.tableAdapterManager.NominaProfesoresTableAdapter = null;
+            this.tableAdapterManager.NotificacionMantenimientoTableAdapter = null;
+            this.tableAdapterManager.NotificacionRutaTableAdapter = null;
+            this.tableAdapterManager.Reporte_ConductorTableAdapter = null;
+            this.tableAdapterManager.RESERVAAPROBADATableAdapter = null;
+            this.tableAdapterManager.SolicitudReservaTableAdapter = null;
+            this.tableAdapterManager.SolicitudReservaTestTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = WindowsFormsApplication1.ModuloVehiculo.DataSetVehiculoTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsuariosTableAdapter = null;
+            this.tableAdapterManager.VEHICULOTableAdapter = this.vEHICULOTableAdapter;
             // 
             // vEHICULOBindingNavigator
             // 
             this.vEHICULOBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.vEHICULOBindingNavigator.BackColor = System.Drawing.SystemColors.Highlight;
             this.vEHICULOBindingNavigator.BindingSource = this.vEHICULOBindingSource;
             this.vEHICULOBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.vEHICULOBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
@@ -178,7 +203,6 @@ namespace WindowsFormsApplication1.ModuloVehiculo.Formularios
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
-            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
             // bindingNavigatorCountItem
             // 
@@ -195,7 +219,6 @@ namespace WindowsFormsApplication1.ModuloVehiculo.Formularios
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorDeleteItem.Text = "Eliminar";
-            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -266,60 +289,60 @@ namespace WindowsFormsApplication1.ModuloVehiculo.Formularios
             this.vEHICULOBindingNavigatorSaveItem.Text = "Guardar datos";
             this.vEHICULOBindingNavigatorSaveItem.Click += new System.EventHandler(this.vEHICULOBindingNavigatorSaveItem_Click);
             // 
+            // iDVEHICULOTextBox
+            // 
+            this.iDVEHICULOTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vEHICULOBindingSource, "IDVEHICULO", true));
+            this.iDVEHICULOTextBox.Location = new System.Drawing.Point(309, 43);
+            this.iDVEHICULOTextBox.Name = "iDVEHICULOTextBox";
+            this.iDVEHICULOTextBox.ReadOnly = true;
+            this.iDVEHICULOTextBox.Size = new System.Drawing.Size(100, 20);
+            this.iDVEHICULOTextBox.TabIndex = 2;
+            // 
             // tIPOVEHICULOTextBox
             // 
             this.tIPOVEHICULOTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vEHICULOBindingSource, "TIPOVEHICULO", true));
-            this.tIPOVEHICULOTextBox.Location = new System.Drawing.Point(330, 141);
+            this.tIPOVEHICULOTextBox.Location = new System.Drawing.Point(309, 69);
             this.tIPOVEHICULOTextBox.Name = "tIPOVEHICULOTextBox";
-            this.tIPOVEHICULOTextBox.Size = new System.Drawing.Size(272, 20);
+            this.tIPOVEHICULOTextBox.Size = new System.Drawing.Size(100, 20);
             this.tIPOVEHICULOTextBox.TabIndex = 4;
             // 
             // pLACAVEHICULOTextBox
             // 
             this.pLACAVEHICULOTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vEHICULOBindingSource, "PLACAVEHICULO", true));
-            this.pLACAVEHICULOTextBox.Location = new System.Drawing.Point(330, 170);
+            this.pLACAVEHICULOTextBox.Location = new System.Drawing.Point(309, 95);
             this.pLACAVEHICULOTextBox.Name = "pLACAVEHICULOTextBox";
-            this.pLACAVEHICULOTextBox.Size = new System.Drawing.Size(272, 20);
+            this.pLACAVEHICULOTextBox.Size = new System.Drawing.Size(100, 20);
             this.pLACAVEHICULOTextBox.TabIndex = 6;
             // 
             // matriculaTextBox
             // 
             this.matriculaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vEHICULOBindingSource, "matricula", true));
-            this.matriculaTextBox.Location = new System.Drawing.Point(330, 193);
+            this.matriculaTextBox.Location = new System.Drawing.Point(309, 121);
             this.matriculaTextBox.Name = "matriculaTextBox";
-            this.matriculaTextBox.Size = new System.Drawing.Size(272, 20);
+            this.matriculaTextBox.Size = new System.Drawing.Size(100, 20);
             this.matriculaTextBox.TabIndex = 8;
             // 
             // numeroPasajerosTextBox
             // 
             this.numeroPasajerosTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vEHICULOBindingSource, "numeroPasajeros", true));
-            this.numeroPasajerosTextBox.Location = new System.Drawing.Point(330, 219);
+            this.numeroPasajerosTextBox.Location = new System.Drawing.Point(309, 147);
             this.numeroPasajerosTextBox.Name = "numeroPasajerosTextBox";
-            this.numeroPasajerosTextBox.Size = new System.Drawing.Size(272, 20);
+            this.numeroPasajerosTextBox.Size = new System.Drawing.Size(100, 20);
             this.numeroPasajerosTextBox.TabIndex = 10;
             // 
-            // iDVEHICULOLabel
+            // anioVehiculoTextBox
             // 
-            iDVEHICULOLabel.AutoSize = true;
-            iDVEHICULOLabel.Location = new System.Drawing.Point(210, 116);
-            iDVEHICULOLabel.Name = "iDVEHICULOLabel";
-            iDVEHICULOLabel.Size = new System.Drawing.Size(68, 13);
-            iDVEHICULOLabel.TabIndex = 10;
-            iDVEHICULOLabel.Text = "ID_Vehiculo:";
-            // 
-            // iDVEHICULOTextBox
-            // 
-            this.iDVEHICULOTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vEHICULOBindingSource, "IDVEHICULO", true));
-            this.iDVEHICULOTextBox.Location = new System.Drawing.Point(330, 113);
-            this.iDVEHICULOTextBox.Name = "iDVEHICULOTextBox";
-            this.iDVEHICULOTextBox.Size = new System.Drawing.Size(272, 20);
-            this.iDVEHICULOTextBox.TabIndex = 11;
-            this.iDVEHICULOTextBox.TextChanged += new System.EventHandler(this.iDVEHICULOTextBox_TextChanged);
+            this.anioVehiculoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vEHICULOBindingSource, "anioVehiculo", true));
+            this.anioVehiculoTextBox.Location = new System.Drawing.Point(309, 173);
+            this.anioVehiculoTextBox.Name = "anioVehiculoTextBox";
+            this.anioVehiculoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.anioVehiculoTextBox.TabIndex = 12;
             // 
             // FormVehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(iDVEHICULOLabel);
             this.Controls.Add(this.iDVEHICULOTextBox);
@@ -331,11 +354,14 @@ namespace WindowsFormsApplication1.ModuloVehiculo.Formularios
             this.Controls.Add(this.matriculaTextBox);
             this.Controls.Add(numeroPasajerosLabel);
             this.Controls.Add(this.numeroPasajerosTextBox);
+            this.Controls.Add(anioVehiculoLabel);
+            this.Controls.Add(this.anioVehiculoTextBox);
             this.Controls.Add(this.vEHICULOBindingNavigator);
+            this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Name = "FormVehiculo";
-            this.Text = "FormVehiculo";
+            this.Text = "Vehiculo";
             this.Load += new System.EventHandler(this.FormVehiculo_Load);
-            //((System.ComponentModel.ISupportInitialize)(this.sistemaAAPDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetVehiculo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vEHICULOBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vEHICULOBindingNavigator)).EndInit();
             this.vEHICULOBindingNavigator.ResumeLayout(false);
@@ -347,10 +373,10 @@ namespace WindowsFormsApplication1.ModuloVehiculo.Formularios
 
         #endregion
 
-        // private sistemaAAPDataSet sistemaAAPDataSet;
+        private DataSetVehiculo dataSetVehiculo;
         private System.Windows.Forms.BindingSource vEHICULOBindingSource;
-        // private sistemaAAPDataSetTableAdapters.VEHICULOTableAdapter vEHICULOTableAdapter;
-        // private sistemaAAPDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private DataSetVehiculoTableAdapters.VEHICULOTableAdapter vEHICULOTableAdapter;
+        private DataSetVehiculoTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator vEHICULOBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
@@ -364,10 +390,11 @@ namespace WindowsFormsApplication1.ModuloVehiculo.Formularios
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton vEHICULOBindingNavigatorSaveItem;
+        private System.Windows.Forms.TextBox iDVEHICULOTextBox;
         private System.Windows.Forms.TextBox tIPOVEHICULOTextBox;
         private System.Windows.Forms.TextBox pLACAVEHICULOTextBox;
         private System.Windows.Forms.TextBox matriculaTextBox;
         private System.Windows.Forms.TextBox numeroPasajerosTextBox;
-        private System.Windows.Forms.TextBox iDVEHICULOTextBox;
+        private System.Windows.Forms.TextBox anioVehiculoTextBox;
     }
 }

@@ -32,8 +32,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.buttonGuardar = new System.Windows.Forms.Button();
-            this.buttonCancelar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.checkBoxFecha = new System.Windows.Forms.CheckBox();
@@ -45,11 +43,13 @@
             this.dateTimePickerHasta = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.comboBoxSolicitantes = new System.Windows.Forms.ComboBox();
-            this.btnGenerarReporte = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.buttonGuardar = new System.Windows.Forms.Button();
+            this.buttonCancelar = new System.Windows.Forms.Button();
+            this.btnGenerarReporte = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -107,35 +107,6 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(788, 29);
             this.tableLayoutPanel3.TabIndex = 3;
-            // 
-            // buttonGuardar
-            // 
-            this.buttonGuardar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonGuardar.AutoSize = true;
-            this.buttonGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonGuardar.Image = ((System.Drawing.Image)(resources.GetObject("buttonGuardar.Image")));
-            this.buttonGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonGuardar.Location = new System.Drawing.Point(126, 3);
-            this.buttonGuardar.Name = "buttonGuardar";
-            this.buttonGuardar.Size = new System.Drawing.Size(142, 23);
-            this.buttonGuardar.TabIndex = 4;
-            this.buttonGuardar.Text = "Nuevo Reporte";
-            this.buttonGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonGuardar.UseVisualStyleBackColor = true;
-            // 
-            // buttonCancelar
-            // 
-            this.buttonCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonCancelar.AutoSize = true;
-            this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelar.Image = ((System.Drawing.Image)(resources.GetObject("buttonCancelar.Image")));
-            this.buttonCancelar.Location = new System.Drawing.Point(531, 3);
-            this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(119, 23);
-            this.buttonCancelar.TabIndex = 3;
-            this.buttonCancelar.Text = "Cancelar";
-            this.buttonCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonCancelar.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -271,19 +242,6 @@
             this.comboBoxSolicitantes.Size = new System.Drawing.Size(281, 26);
             this.comboBoxSolicitantes.TabIndex = 0;
             // 
-            // btnGenerarReporte
-            // 
-            this.btnGenerarReporte.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnGenerarReporte.Image = ((System.Drawing.Image)(resources.GetObject("btnGenerarReporte.Image")));
-            this.btnGenerarReporte.Location = new System.Drawing.Point(415, 105);
-            this.btnGenerarReporte.Name = "btnGenerarReporte";
-            this.btnGenerarReporte.Size = new System.Drawing.Size(152, 32);
-            this.btnGenerarReporte.TabIndex = 6;
-            this.btnGenerarReporte.Text = "Generar Reporte";
-            this.btnGenerarReporte.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnGenerarReporte.UseVisualStyleBackColor = true;
-            this.btnGenerarReporte.Click += new System.EventHandler(this.btnGenerarReporte_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -326,6 +284,48 @@
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(782, 447);
             this.reportViewer1.TabIndex = 0;
+            // 
+            // buttonGuardar
+            // 
+            this.buttonGuardar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonGuardar.AutoSize = true;
+            this.buttonGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonGuardar.Image = ((System.Drawing.Image)(resources.GetObject("buttonGuardar.Image")));
+            this.buttonGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonGuardar.Location = new System.Drawing.Point(126, 3);
+            this.buttonGuardar.Name = "buttonGuardar";
+            this.buttonGuardar.Size = new System.Drawing.Size(142, 23);
+            this.buttonGuardar.TabIndex = 4;
+            this.buttonGuardar.Text = "Nuevo Reporte";
+            this.buttonGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonGuardar.UseVisualStyleBackColor = true;
+            // 
+            // buttonCancelar
+            // 
+            this.buttonCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonCancelar.AutoSize = true;
+            this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancelar.Image = ((System.Drawing.Image)(resources.GetObject("buttonCancelar.Image")));
+            this.buttonCancelar.Location = new System.Drawing.Point(531, 3);
+            this.buttonCancelar.Name = "buttonCancelar";
+            this.buttonCancelar.Size = new System.Drawing.Size(119, 23);
+            this.buttonCancelar.TabIndex = 3;
+            this.buttonCancelar.Text = "Cancelar";
+            this.buttonCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonCancelar.UseVisualStyleBackColor = true;
+            // 
+            // btnGenerarReporte
+            // 
+            this.btnGenerarReporte.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnGenerarReporte.Image = ((System.Drawing.Image)(resources.GetObject("btnGenerarReporte.Image")));
+            this.btnGenerarReporte.Location = new System.Drawing.Point(415, 105);
+            this.btnGenerarReporte.Name = "btnGenerarReporte";
+            this.btnGenerarReporte.Size = new System.Drawing.Size(152, 32);
+            this.btnGenerarReporte.TabIndex = 6;
+            this.btnGenerarReporte.Text = "Generar Reporte";
+            this.btnGenerarReporte.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGenerarReporte.UseVisualStyleBackColor = true;
+            this.btnGenerarReporte.Click += new System.EventHandler(this.btnGenerarReporte_Click);
             // 
             // FrmReporteViajes
             // 

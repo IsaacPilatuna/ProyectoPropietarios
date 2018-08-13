@@ -49,6 +49,11 @@ namespace WindowsFormsApplication1
 
         }
 
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+
+        }
+
         //public void llenarCargo()
         //{
         //    //se realiza la conexión a la base de datos
