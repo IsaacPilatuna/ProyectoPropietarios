@@ -41,7 +41,7 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dateTimePickerHasta = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.comboBoxSolicitantes = new System.Windows.Forms.ComboBox();
+            this.comboBoxPlacas = new System.Windows.Forms.ComboBox();
             this.btnGenerarReporte = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -122,9 +122,9 @@
             this.checkBoxFecha.AutoSize = true;
             this.checkBoxFecha.Location = new System.Drawing.Point(4, 66);
             this.checkBoxFecha.Name = "checkBoxFecha";
-            this.checkBoxFecha.Size = new System.Drawing.Size(120, 22);
+            this.checkBoxFecha.Size = new System.Drawing.Size(193, 22);
             this.checkBoxFecha.TabIndex = 1;
-            this.checkBoxFecha.Text = "Rango Fecha:";
+            this.checkBoxFecha.Text = "Fecha de Mantenimiento:";
             this.checkBoxFecha.UseVisualStyleBackColor = true;
             this.checkBoxFecha.CheckedChanged += new System.EventHandler(this.checkBoxFecha_CheckedChanged);
             // 
@@ -133,9 +133,9 @@
             this.checkBoxSolicitante.AutoSize = true;
             this.checkBoxSolicitante.Location = new System.Drawing.Point(4, 4);
             this.checkBoxSolicitante.Name = "checkBoxSolicitante";
-            this.checkBoxSolicitante.Size = new System.Drawing.Size(99, 22);
+            this.checkBoxSolicitante.Size = new System.Drawing.Size(156, 22);
             this.checkBoxSolicitante.TabIndex = 2;
-            this.checkBoxSolicitante.Text = "Solicitante:";
+            this.checkBoxSolicitante.Text = "Vehiculo de Placas:";
             this.checkBoxSolicitante.UseVisualStyleBackColor = true;
             this.checkBoxSolicitante.CheckedChanged += new System.EventHandler(this.checkBoxSolicitante_CheckedChanged);
             // 
@@ -199,7 +199,7 @@
             this.tableLayoutPanel5.ColumnCount = 2;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Controls.Add(this.comboBoxSolicitantes, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.comboBoxPlacas, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(204, 4);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
@@ -208,15 +208,15 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(574, 55);
             this.tableLayoutPanel5.TabIndex = 5;
             // 
-            // comboBoxSolicitantes
+            // comboBoxPlacas
             // 
-            this.comboBoxSolicitantes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBoxSolicitantes.Enabled = false;
-            this.comboBoxSolicitantes.FormattingEnabled = true;
-            this.comboBoxSolicitantes.Location = new System.Drawing.Point(3, 3);
-            this.comboBoxSolicitantes.Name = "comboBoxSolicitantes";
-            this.comboBoxSolicitantes.Size = new System.Drawing.Size(281, 26);
-            this.comboBoxSolicitantes.TabIndex = 0;
+            this.comboBoxPlacas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBoxPlacas.Enabled = false;
+            this.comboBoxPlacas.FormattingEnabled = true;
+            this.comboBoxPlacas.Location = new System.Drawing.Point(3, 3);
+            this.comboBoxPlacas.Name = "comboBoxPlacas";
+            this.comboBoxPlacas.Size = new System.Drawing.Size(281, 26);
+            this.comboBoxPlacas.TabIndex = 0;
             // 
             // btnGenerarReporte
             // 
@@ -255,7 +255,7 @@
             // 
             this.reportViewer1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "WindowsFormsApplication1.ModuloReportesEstadisticos.ReporteViajes.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "WindowsFormsApplication1.ModuloReportesEstadisticos.ReporteVehiculos.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
@@ -301,7 +301,7 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DateTimePicker dateTimePickerHasta;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.ComboBox comboBoxSolicitantes;
+        private System.Windows.Forms.ComboBox comboBoxPlacas;
         private System.Windows.Forms.Button btnGenerarReporte;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Panel panel1;
