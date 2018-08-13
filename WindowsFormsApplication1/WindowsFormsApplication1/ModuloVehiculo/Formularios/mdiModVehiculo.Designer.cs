@@ -1,5 +1,4 @@
-﻿using WindowsFormsApplication1;
-namespace WindowsFormsApplication1.ModuloVehiculo.Formularios
+﻿namespace WindowsFormsApplication1.ModuloVehiculo.Formularios
 {
     partial class mdiModVehiculo
     {
@@ -31,7 +30,10 @@ namespace WindowsFormsApplication1.ModuloVehiculo.Formularios
         {
             this.components = new System.ComponentModel.Container();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.regsitroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.registroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vehiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.disponibilidadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,11 +43,9 @@ namespace WindowsFormsApplication1.ModuloVehiculo.Formularios
             this.mantenimientoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.disponibilidadToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.incidenciasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.pruebaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pruebaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStrip = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.datosVehiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xXXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -53,54 +53,65 @@ namespace WindowsFormsApplication1.ModuloVehiculo.Formularios
             // menuStrip
             // 
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.regsitroToolStripMenuItem,
+            this.registroToolStripMenuItem,
             this.listasToolStripMenuItem,
-            this.pruebaToolStripMenuItem});
+            this.datosVehiculoToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(991, 24);
+            this.menuStrip.Size = new System.Drawing.Size(632, 24);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
             // 
-            // regsitroToolStripMenuItem
+            // statusStrip
             // 
-            this.regsitroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel});
+            this.statusStrip.Location = new System.Drawing.Point(0, 431);
+            this.statusStrip.Name = "statusStrip";
+            this.statusStrip.Size = new System.Drawing.Size(632, 22);
+            this.statusStrip.TabIndex = 2;
+            this.statusStrip.Text = "StatusStrip";
+            // 
+            // toolStripStatusLabel
+            // 
+            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
+            this.toolStripStatusLabel.Size = new System.Drawing.Size(42, 17);
+            this.toolStripStatusLabel.Text = "Estado";
+            // 
+            // registroToolStripMenuItem
+            // 
+            this.registroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.vehiculoToolStripMenuItem,
             this.mantenimientoToolStripMenuItem,
             this.disponibilidadToolStripMenuItem,
             this.incidenciasToolStripMenuItem});
-            this.regsitroToolStripMenuItem.Name = "regsitroToolStripMenuItem";
-            this.regsitroToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
-            this.regsitroToolStripMenuItem.Text = "Regsitro";
-            this.regsitroToolStripMenuItem.Click += new System.EventHandler(this.regsitroToolStripMenuItem_Click);
+            this.registroToolStripMenuItem.Name = "registroToolStripMenuItem";
+            this.registroToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.registroToolStripMenuItem.Text = "Registro";
             // 
             // vehiculoToolStripMenuItem
             // 
             this.vehiculoToolStripMenuItem.Name = "vehiculoToolStripMenuItem";
-            this.vehiculoToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.vehiculoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.vehiculoToolStripMenuItem.Text = "Vehiculo";
-            this.vehiculoToolStripMenuItem.Click += new System.EventHandler(this.vehiculoToolStripMenuItem_Click);
             // 
             // mantenimientoToolStripMenuItem
             // 
             this.mantenimientoToolStripMenuItem.Name = "mantenimientoToolStripMenuItem";
-            this.mantenimientoToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.mantenimientoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.mantenimientoToolStripMenuItem.Text = "Mantenimiento";
-            this.mantenimientoToolStripMenuItem.Click += new System.EventHandler(this.mantenimientoToolStripMenuItem_Click);
             // 
             // disponibilidadToolStripMenuItem
             // 
             this.disponibilidadToolStripMenuItem.Name = "disponibilidadToolStripMenuItem";
-            this.disponibilidadToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.disponibilidadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.disponibilidadToolStripMenuItem.Text = "Disponibilidad";
-            this.disponibilidadToolStripMenuItem.Click += new System.EventHandler(this.disponibilidadToolStripMenuItem_Click);
             // 
             // incidenciasToolStripMenuItem
             // 
             this.incidenciasToolStripMenuItem.Name = "incidenciasToolStripMenuItem";
-            this.incidenciasToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.incidenciasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.incidenciasToolStripMenuItem.Text = "Incidencias";
-            this.incidenciasToolStripMenuItem.Click += new System.EventHandler(this.incidenciasToolStripMenuItem_Click);
             // 
             // listasToolStripMenuItem
             // 
@@ -116,74 +127,59 @@ namespace WindowsFormsApplication1.ModuloVehiculo.Formularios
             // vehiculoToolStripMenuItem1
             // 
             this.vehiculoToolStripMenuItem1.Name = "vehiculoToolStripMenuItem1";
-            this.vehiculoToolStripMenuItem1.Size = new System.Drawing.Size(156, 22);
+            this.vehiculoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.vehiculoToolStripMenuItem1.Text = "Vehiculo";
-            this.vehiculoToolStripMenuItem1.Click += new System.EventHandler(this.vehiculoToolStripMenuItem1_Click);
             // 
             // mantenimientoToolStripMenuItem1
             // 
             this.mantenimientoToolStripMenuItem1.Name = "mantenimientoToolStripMenuItem1";
-            this.mantenimientoToolStripMenuItem1.Size = new System.Drawing.Size(156, 22);
+            this.mantenimientoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.mantenimientoToolStripMenuItem1.Text = "Mantenimiento";
-            this.mantenimientoToolStripMenuItem1.Click += new System.EventHandler(this.mantenimientoToolStripMenuItem1_Click);
             // 
             // disponibilidadToolStripMenuItem1
             // 
             this.disponibilidadToolStripMenuItem1.Name = "disponibilidadToolStripMenuItem1";
-            this.disponibilidadToolStripMenuItem1.Size = new System.Drawing.Size(156, 22);
+            this.disponibilidadToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.disponibilidadToolStripMenuItem1.Text = "Disponibilidad";
-            this.disponibilidadToolStripMenuItem1.Click += new System.EventHandler(this.disponibilidadToolStripMenuItem1_Click);
             // 
             // incidenciasToolStripMenuItem1
             // 
             this.incidenciasToolStripMenuItem1.Name = "incidenciasToolStripMenuItem1";
-            this.incidenciasToolStripMenuItem1.Size = new System.Drawing.Size(156, 22);
+            this.incidenciasToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.incidenciasToolStripMenuItem1.Text = "Incidencias";
-            this.incidenciasToolStripMenuItem1.Click += new System.EventHandler(this.incidenciasToolStripMenuItem1_Click);
             // 
-            // pruebaToolStripMenuItem
+            // datosVehiculoToolStripMenuItem
             // 
-            this.pruebaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pruebaToolStripMenuItem1});
-            this.pruebaToolStripMenuItem.Name = "pruebaToolStripMenuItem";
-            this.pruebaToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
-            this.pruebaToolStripMenuItem.Text = "Prueba";
+            this.datosVehiculoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.buscarDatosToolStripMenuItem,
+            this.xXXToolStripMenuItem});
+            this.datosVehiculoToolStripMenuItem.Name = "datosVehiculoToolStripMenuItem";
+            this.datosVehiculoToolStripMenuItem.Size = new System.Drawing.Size(97, 20);
+            this.datosVehiculoToolStripMenuItem.Text = "Datos Vehiculo";
             // 
-            // pruebaToolStripMenuItem1
+            // buscarDatosToolStripMenuItem
             // 
-            this.pruebaToolStripMenuItem1.Name = "pruebaToolStripMenuItem1";
-            this.pruebaToolStripMenuItem1.Size = new System.Drawing.Size(111, 22);
-            this.pruebaToolStripMenuItem1.Text = "Prueba";
-            this.pruebaToolStripMenuItem1.Click += new System.EventHandler(this.pruebaToolStripMenuItem1_Click);
+            this.buscarDatosToolStripMenuItem.Name = "buscarDatosToolStripMenuItem";
+            this.buscarDatosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.buscarDatosToolStripMenuItem.Text = "Buscar Datos";
             // 
-            // statusStrip
+            // xXXToolStripMenuItem
             // 
-            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 431);
-            this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(991, 22);
-            this.statusStrip.TabIndex = 2;
-            this.statusStrip.Text = "StatusStrip";
-            // 
-            // toolStripStatusLabel
-            // 
-            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(42, 17);
-            this.toolStripStatusLabel.Text = "Estado";
+            this.xXXToolStripMenuItem.Name = "xXXToolStripMenuItem";
+            this.xXXToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.xXXToolStripMenuItem.Text = "XXX";
             // 
             // mdiModVehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(991, 453);
+            this.ClientSize = new System.Drawing.Size(632, 453);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;
             this.Name = "mdiModVehiculo";
-            this.Text = "MDIParent1";
+            this.Text = "mdiModVehiculo";
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.statusStrip.ResumeLayout(false);
@@ -199,7 +195,7 @@ namespace WindowsFormsApplication1.ModuloVehiculo.Formularios
         private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
         private System.Windows.Forms.ToolTip toolTip;
-        private System.Windows.Forms.ToolStripMenuItem regsitroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vehiculoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mantenimientoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem disponibilidadToolStripMenuItem;
@@ -209,8 +205,9 @@ namespace WindowsFormsApplication1.ModuloVehiculo.Formularios
         private System.Windows.Forms.ToolStripMenuItem mantenimientoToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem disponibilidadToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem incidenciasToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem pruebaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pruebaToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem datosVehiculoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem buscarDatosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem xXXToolStripMenuItem;
     }
 }
 

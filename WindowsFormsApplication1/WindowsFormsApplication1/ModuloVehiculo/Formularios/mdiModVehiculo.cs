@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsFormsApplication1;
+
 namespace WindowsFormsApplication1.ModuloVehiculo.Formularios
 {
     public partial class mdiModVehiculo : Form
@@ -66,9 +66,16 @@ namespace WindowsFormsApplication1.ModuloVehiculo.Formularios
         {
         }
 
-       
+        private void ToolBarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            toolStrip.Visible = toolBarToolStripMenuItem.Checked;
+        }
 
-       
+        private void StatusBarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            statusStrip.Visible = statusBarToolStripMenuItem.Checked;
+        }
+
         private void CascadeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LayoutMdi(MdiLayout.Cascade);
@@ -95,81 +102,6 @@ namespace WindowsFormsApplication1.ModuloVehiculo.Formularios
             {
                 childForm.Close();
             }
-        }
-
-        private void regsitroToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void vehiculoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormVehiculo frm_Vehiculo = new FormVehiculo();
-            frm_Vehiculo.MdiParent = this;
-            frm_Vehiculo.Show();
-        }
-
-        private void mantenimientoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormMantenimiento frm_Vehiculo = new FormMantenimiento();
-            frm_Vehiculo.MdiParent = this;
-            frm_Vehiculo.Show();
-        }
-
-        private void disponibilidadToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormDisponibilidad frm_Vehiculo = new FormDisponibilidad();
-            frm_Vehiculo.MdiParent = this;
-            frm_Vehiculo.Show();
-        }
-
-        private void incidenciasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormIncidencia frm_Vehiculo = new FormIncidencia();
-            frm_Vehiculo.MdiParent = this;
-            frm_Vehiculo.Show();
-        }
-
-        private void vehiculoToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            dataVehiculo frm_Vehiculo = new dataVehiculo();
-            frm_Vehiculo.MdiParent = this;
-            frm_Vehiculo.Show();
-        }
-
-        private void mantenimientoToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-           dataMantenimiento frm_Vehiculo = new dataMantenimiento();
-            frm_Vehiculo.MdiParent = this;
-            frm_Vehiculo.Show();
-        }
-
-        private void disponibilidadToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            dataDisponibilidad frm_Vehiculo = new dataDisponibilidad();
-            frm_Vehiculo.MdiParent = this;
-            frm_Vehiculo.Show();
-        }
-
-        private void incidenciasToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            dataIncidencias frm_Vehiculo = new dataIncidencias();
-            frm_Vehiculo.MdiParent = this;
-            frm_Vehiculo.Show();
-        }
-
-        private void mdiModVehiculo_Load(object sender, EventArgs e)
-        {
-
-            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
-            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
-        }
-
-        private void pruebaToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            Prueba frm_Vehiculo = new Prueba();
-            frm_Vehiculo.MdiParent = this;
-            frm_Vehiculo.Show();
         }
     }
 }
