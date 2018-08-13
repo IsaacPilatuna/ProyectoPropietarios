@@ -114,7 +114,7 @@ namespace WindowsFormsApplication1.ModuloFormularios
 
         public void guardarEnBase()
         {
-            int resultado = -10;
+            
             try
             {
                 cnx = new Conexion();
@@ -125,19 +125,21 @@ namespace WindowsFormsApplication1.ModuloFormularios
 
                 if (descripcionInconveniente.Equals("null"))
                 {
-                    sql = "insert into Reporte_Conductor (idReservaAprobada, gasto_combustible,comportamiento_pasajeros) values(" + idReservaAprobada + "," + dineroGastadoEnGasolina + "," + comportamientoPasajeros + ")";
+                    sql = "insert into Reporte_Conductor (idReservaAprob, gasto_combustible,comportamiento_pasajeros) values(" + idReservaAprobada + "," + dineroGastadoEnGasolina + "," + comportamientoPasajeros + ")";
                 }
                 else
                 {
 
-                    sql = "insert into Reporte_Conductor(idReservaAprobada, INCONVENIENTE, GASTO_COMBUSTIBLE, COMPORTAMIENTO_PASAJEROS) VALUES(" + idReservaAprobada + ", '" + descripcionInconveniente + "'," + dineroGastadoEnGasolina + "," + comportamientoPasajeros + ")";
+                    sql = "insert into Reporte_Conductor(idReservaAprob, INCONVENIENTE, GASTO_COMBUSTIBLE, COMPORTAMIENTO_PASAJEROS) VALUES(" + idReservaAprobada + ", '" + descripcionInconveniente + "'," + dineroGastadoEnGasolina + "," + comportamientoPasajeros + ")";
                 }
 
-               // MessageBox.Show("" + sql);
-
                 SqlCommand comando = new SqlCommand(sql, conn);
+                int resultado = comando.ExecuteNonQuery();
+                conn = new SqlConnection(cnx.stringConexion);
+                conn.Open();
+                comando = new SqlCommand("update reservaaprobada set reporteconductor='V' where IDRESERVAAPROB=" + idReservaAprobada, conn);
                 resultado = comando.ExecuteNonQuery();
-                            
+
                 MessageBox.Show("REPORTE INGRESADO CORRECTAMENTE");
 
             }

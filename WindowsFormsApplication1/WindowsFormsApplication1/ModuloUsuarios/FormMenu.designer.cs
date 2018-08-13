@@ -292,6 +292,7 @@
             this.btnReservas.TabIndex = 11;
             this.btnReservas.Text = "Gestión de Reservas";
             this.btnReservas.UseVisualStyleBackColor = true;
+            this.btnReservas.Click += new System.EventHandler(this.btnReservas_Click);
             // 
             // btnmenu
             // 

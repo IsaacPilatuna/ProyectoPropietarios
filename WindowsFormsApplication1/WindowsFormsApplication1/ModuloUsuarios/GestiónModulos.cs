@@ -17,11 +17,13 @@ namespace WindowsFormsApplication1
         Usuario usuario = new Usuario();
         FormDatos frmDatos = new FormDatos();
         mdiModVehiculo frmVehi = new mdiModVehiculo();
+        Form1 reservas = new Form1();
+
         solicitudesPendientes solicitudes;
         String aux;
         FrmPrincipalChofer frmConductor;
         FrmPrincipalFormularioProfesor frmProfesor;
-
+        FrmMenuPrincipalReportes frmReportes;
 
         //FrmReporteHistorialKilometraje frmRep
 
@@ -162,6 +164,12 @@ namespace WindowsFormsApplication1
             fh.Show();
         }
 
+        public void mostrarReportes(FormMenu formMenu)
+        {
+            frmReportes = new FrmMenuPrincipalReportes();
+            mostrarMódulo(formMenu,frmReportes);
+        }
+
         public void mostrarFormularios(FormMenu frmMenu)
         {
             if (usuario.IDcargo1 == 5)
@@ -192,6 +200,11 @@ namespace WindowsFormsApplication1
 
         }
 
+        public void mostrarFormReservas(FormMenu frmMenu)
+        {
+            
+            mostrarMódulo(frmMenu, reservas);
+        }
 
 
 

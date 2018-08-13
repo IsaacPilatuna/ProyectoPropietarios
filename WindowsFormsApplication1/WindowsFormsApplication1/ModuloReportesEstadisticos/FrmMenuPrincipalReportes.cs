@@ -15,6 +15,18 @@ namespace WindowsFormsApplication1.ModuloReportesEstadisticos
         public FrmMenuPrincipalReportes()
         {
             InitializeComponent();
+            FrmReporteViajes frmViajes = new FrmReporteViajes();
+            frmViajes.TopLevel = false;
+            frmViajes.FormBorderStyle = FormBorderStyle.None;
+            frmViajes.Dock = DockStyle.Fill;
+            tabControl1.TabPages[0].Controls.Add(frmViajes);
+            frmViajes.Show();
+            FrmReporteHistorialKilometraje frmvehiculo = new FrmReporteHistorialKilometraje();
+            frmvehiculo.TopLevel = false;
+            frmvehiculo.FormBorderStyle = FormBorderStyle.None;
+            frmvehiculo.Dock = DockStyle.Fill;
+            tabControl1.TabPages[2].Controls.Add(frmvehiculo);
+            frmvehiculo.Show();
         }
     }
 }

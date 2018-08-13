@@ -9,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsFormsApplication1.ModuloDisponibilidad;
 
 namespace WindowsFormsApplication1.ModuloFormularios
 {
@@ -18,6 +17,7 @@ namespace WindowsFormsApplication1.ModuloFormularios
         Usuario usu;
         private Conexion cnx;
         private SqlConnection conn;
+        private string valor;
         public FrmPrincipalFormularioProfesor()
         {
             InitializeComponent();
@@ -57,7 +57,7 @@ namespace WindowsFormsApplication1.ModuloFormularios
         {
             if (existeCalificacion())
             {
-                FrmCalificacionServicio calificacionServicio = new FrmCalificacionServicio(usu.IDusuario1 + "", idReservaCalificacion());
+                FrmCalificacionServicio calificacionServicio = new FrmCalificacionServicio(usu.IDusuario1 + "",usu.Nombre ,idReservaCalificacion());
                 calificacionServicio.Show();
             }
             else {
@@ -87,35 +87,23 @@ namespace WindowsFormsApplication1.ModuloFormularios
 
         public string[] idReservaCalificacion()
         {
-            string sql = "select idReservaAprob from reservaaprobada where idusuario=" + usu.IDusuario1 + " and calificacionservicio is null and estadosolicitud is null ";
-            string[] valores = null;
-            conn = new SqlConnection(cnx.stringConexion);
-            try
+            Conexion cn = new Conexion();
+            string[] valores = new string[Convert.ToInt32(valor)];
+            
+            DataTable dtaux = cn.Buscar("", "select IDRESERVAAPROB from reservaaprobada where IDSOLICITANTE =" + usu.IDusuario1 + " and calificacionservicio is null and estadosolicitud like 'aprobadA2'");
+            for (Int32 j=0; j < Convert.ToInt32(valor); j++)
             {
-                conn.Open();
-                SqlCommand comando = new SqlCommand(sql, conn);
-                SqlDataReader reader = comando.ExecuteReader();
-                int i = 0;
-                while (reader.Read())
-                {
-
-                    valores[i] = reader[0] + "";
-                    i++;
-
-                }
+                DataRow row = dtaux.Rows[j];
+                valores[j] = Convert.ToString(row["IDRESERVAAPROB"]);
             }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.ToString());
-            }
-
+          
             return valores;
         }
 
         public bool existeCalificacion()
         {
-            string sql = "select count(*) from reservaaprobada where idusuario=" + usu.IDusuario1 + " and calificacionservicio is null and estadosolicitud is null";
-            string valor = "";
+            string sql = "select count(*) from reservaaprobada where IDSOLICITANTE="+ usu.IDusuario1+" and calificacionservicio is null and estadosolicitud like 'aprobada2'";
+            valor = "";
             MessageBox.Show(sql + "");
             conn = new SqlConnection(cnx.stringConexion);
             try
@@ -144,17 +132,7 @@ namespace WindowsFormsApplication1.ModuloFormularios
                 return true;
             }
         }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MenuDisponibilidad disponibilidad = new MenuDisponibilidad();
-            disponibilidad.Show();
-        }
+       
     }
 }
 
