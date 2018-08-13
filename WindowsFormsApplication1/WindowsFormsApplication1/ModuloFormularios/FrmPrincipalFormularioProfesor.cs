@@ -104,7 +104,7 @@ namespace WindowsFormsApplication1.ModuloFormularios
         {
             string sql = "select count(*) from reservaaprobada where IDSOLICITANTE="+ usu.IDusuario1+" and calificacionservicio is null and estadosolicitud like 'aprobada2'";
             valor = "";
-            MessageBox.Show(sql + "");
+            //MessageBox.Show(sql + "");
             conn = new SqlConnection(cnx.stringConexion);
             try
             {
