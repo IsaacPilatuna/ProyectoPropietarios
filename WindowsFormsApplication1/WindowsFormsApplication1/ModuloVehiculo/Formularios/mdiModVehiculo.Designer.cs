@@ -45,6 +45,7 @@
             this.incidenciasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.datosVehiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xXXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -150,7 +151,8 @@
             // datosVehiculoToolStripMenuItem
             // 
             this.datosVehiculoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.buscarDatosToolStripMenuItem});
+            this.buscarDatosToolStripMenuItem,
+            this.xXXToolStripMenuItem});
             this.datosVehiculoToolStripMenuItem.Name = "datosVehiculoToolStripMenuItem";
             this.datosVehiculoToolStripMenuItem.Size = new System.Drawing.Size(97, 20);
             this.datosVehiculoToolStripMenuItem.Text = "Datos Vehiculo";
@@ -160,6 +162,12 @@
             this.buscarDatosToolStripMenuItem.Name = "buscarDatosToolStripMenuItem";
             this.buscarDatosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.buscarDatosToolStripMenuItem.Text = "Buscar Datos";
+            // 
+            // xXXToolStripMenuItem
+            // 
+            this.xXXToolStripMenuItem.Name = "xXXToolStripMenuItem";
+            this.xXXToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.xXXToolStripMenuItem.Text = "XXX";
             // 
             // mdiModVehiculo
             // 
@@ -199,6 +207,7 @@
         private System.Windows.Forms.ToolStripMenuItem incidenciasToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem datosVehiculoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarDatosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem xXXToolStripMenuItem;
     }
 }
 
