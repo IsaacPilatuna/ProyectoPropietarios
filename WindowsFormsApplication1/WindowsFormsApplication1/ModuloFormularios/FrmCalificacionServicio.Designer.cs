@@ -426,6 +426,7 @@
             // 
             this.groupBox2.Controls.Add(this.txt_comenAdicionales);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.groupBox2.Location = new System.Drawing.Point(5, 236);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(661, 62);

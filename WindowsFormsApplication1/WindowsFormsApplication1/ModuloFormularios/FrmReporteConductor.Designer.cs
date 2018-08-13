@@ -48,11 +48,11 @@
             this.rb_50 = new System.Windows.Forms.RadioButton();
             this.rb_75 = new System.Windows.Forms.RadioButton();
             this.rb_100 = new System.Windows.Forms.RadioButton();
-            this.btn_guardar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.txt_dinCombustible = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cb_reservas = new System.Windows.Forms.ComboBox();
+            this.btn_guardar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -325,19 +325,9 @@
             this.rb_100.Text = "100";
             this.rb_100.UseVisualStyleBackColor = true;
             // 
-            // btn_guardar
-            // 
-            this.btn_guardar.Location = new System.Drawing.Point(2, 365);
-            this.btn_guardar.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(104, 34);
-            this.btn_guardar.TabIndex = 13;
-            this.btn_guardar.Text = "GUARDAR";
-            this.btn_guardar.UseVisualStyleBackColor = true;
-            this.btn_guardar.Click += new System.EventHandler(this.obtenerDatos);
-            // 
             // button2
             // 
+            this.button2.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.button2.Location = new System.Drawing.Point(370, 365);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
@@ -372,6 +362,18 @@
             this.cb_reservas.Name = "cb_reservas";
             this.cb_reservas.Size = new System.Drawing.Size(295, 21);
             this.cb_reservas.TabIndex = 16;
+            // 
+            // btn_guardar
+            // 
+            this.btn_guardar.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btn_guardar.Location = new System.Drawing.Point(2, 365);
+            this.btn_guardar.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_guardar.Name = "btn_guardar";
+            this.btn_guardar.Size = new System.Drawing.Size(104, 34);
+            this.btn_guardar.TabIndex = 13;
+            this.btn_guardar.Text = "GUARDAR";
+            this.btn_guardar.UseVisualStyleBackColor = true;
+            this.btn_guardar.Click += new System.EventHandler(this.obtenerDatos);
             // 
             // Form2
             // 
