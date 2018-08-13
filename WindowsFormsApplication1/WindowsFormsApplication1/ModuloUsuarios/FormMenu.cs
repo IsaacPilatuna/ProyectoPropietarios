@@ -215,6 +215,11 @@ namespace WindowsFormsApplication1
             fm1.mostrarFormReservas(this);
         }
 
+        private void btnRutas_Click(object sender, EventArgs e)
+        {
+            fm1.mostrarRutas(this);
+        }
+
         protected override void WndProc(ref Message m)
         {
             switch (m.Msg)

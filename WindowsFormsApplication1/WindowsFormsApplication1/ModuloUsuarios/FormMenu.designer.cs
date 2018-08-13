@@ -356,6 +356,7 @@
             this.btnRutas.Text = "               Rutas             ";
             this.btnRutas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRutas.UseVisualStyleBackColor = false;
+            this.btnRutas.Click += new System.EventHandler(this.btnRutas_Click);
             // 
             // btnVehículos
             // 
