@@ -90,5 +90,20 @@ namespace ModuloFormularios
 
             }
         }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btn_guardar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

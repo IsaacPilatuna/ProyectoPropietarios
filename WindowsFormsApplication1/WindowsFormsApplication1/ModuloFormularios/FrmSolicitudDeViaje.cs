@@ -74,5 +74,25 @@ namespace ModuloFormularios
             }
 
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

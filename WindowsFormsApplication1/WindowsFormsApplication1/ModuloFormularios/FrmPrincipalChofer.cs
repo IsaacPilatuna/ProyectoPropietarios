@@ -36,7 +36,7 @@ namespace WindowsFormsApplication1.ModuloFormularios
 
             }
             else {
-                MessageBox.Show("NO TIENE REPORTES PENDIENTES");
+                new FrmMensajeError().Show(); 
             }
         }
 
@@ -53,7 +53,7 @@ namespace WindowsFormsApplication1.ModuloFormularios
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void btnMinimizar_Click(object sender, EventArgs e)

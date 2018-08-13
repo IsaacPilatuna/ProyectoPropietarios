@@ -21,5 +21,15 @@ namespace WindowsFormsApplication1.ModuloFormularios
         {
 
         }
+
+        private void Ingresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
