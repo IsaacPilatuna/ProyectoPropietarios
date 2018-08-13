@@ -163,6 +163,26 @@ namespace WindowsFormsApplication1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ground_transportation {
+            get {
+                object obj = ResourceManager.GetObject("ground-transportation", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ground_transportation__2_ {
+            get {
+                object obj = ResourceManager.GetObject("ground-transportation (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_atención_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-atención-64", resourceCulture);
@@ -203,6 +223,16 @@ namespace WindowsFormsApplication1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_cancelar_suscripción_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-cancelar-suscripción-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_comprobado_30 {
             get {
                 object obj = ResourceManager.GetObject("icons8-comprobado-30", resourceCulture);
@@ -236,6 +266,26 @@ namespace WindowsFormsApplication1.Properties {
         internal static System.Drawing.Bitmap leteers {
             get {
                 object obj = ResourceManager.GetObject("leteers", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap poli__2_ {
+            get {
+                object obj = ResourceManager.GetObject("poli (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap poli__2___1_ {
+            get {
+                object obj = ResourceManager.GetObject("poli (2) (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
