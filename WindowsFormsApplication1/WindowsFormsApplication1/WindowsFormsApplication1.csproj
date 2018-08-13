@@ -193,6 +193,12 @@
     <Compile Include="ModuloReportesEstadisticos\FrmReporteServicio.Designer.cs">
       <DependentUpon>FrmReporteServicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModuloReportesEstadisticos\FrmReporteVehiculos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloReportesEstadisticos\FrmReporteVehiculos.Designer.cs">
+      <DependentUpon>FrmReporteVehiculos.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModuloReportesEstadisticos\FrmReporteViajes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -342,6 +348,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModuloReportesEstadisticos\FrmReporteServicio.resx">
       <DependentUpon>FrmReporteServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloReportesEstadisticos\FrmReporteVehiculos.resx">
+      <DependentUpon>FrmReporteVehiculos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModuloReportesEstadisticos\FrmReporteViajes.resx">
       <DependentUpon>FrmReporteViajes.cs</DependentUpon>

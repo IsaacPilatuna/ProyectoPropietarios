@@ -292,3 +292,4 @@ C:\Users\sofi-\Source\Repos\ProyectoPropietarios4\WindowsFormsApplication1\Windo
 C:\Users\sofi-\Source\Repos\ProyectoPropietarios4\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.CopyComplete
 C:\Users\sofi-\Source\Repos\ProyectoPropietarios4\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 C:\Users\sofi-\Source\Repos\ProyectoPropietarios4\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Isaac\Source\Repos\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ModuloReportesEstadisticos.FrmReporteVehiculos.resources
