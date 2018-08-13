@@ -355,8 +355,8 @@
     <EmbeddedResource Include="ModuloReportesEstadisticos\FrmReporteViajes.resx">
       <DependentUpon>FrmReporteViajes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ModuloReportesEstadisticos\ReporteHistorialKilometraje.rdlc" />
     <EmbeddedResource Include="ModuloReportesEstadisticos\ReporteServicio.rdlc" />
+    <EmbeddedResource Include="ModuloReportesEstadisticos\ReporteVehiculos.rdlc" />
     <EmbeddedResource Include="ModuloReportesEstadisticos\ReporteViajes.rdlc" />
     <EmbeddedResource Include="ModuloReserva\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

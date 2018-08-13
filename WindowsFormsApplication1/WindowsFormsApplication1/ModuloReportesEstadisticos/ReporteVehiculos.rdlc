@@ -7,7 +7,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>35f2cb32-abe0-4c68-9a9c-c38fd7c5d6f3</rd:DataSourceID>
+      <rd:DataSourceID>51689f7a-4fb4-4d99-8b79-743e855389b6</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -17,30 +17,22 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="idHistorial">
-          <DataField>idHistorial</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="fecha">
-          <DataField>fecha</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
+        <Field Name="fecha_mantenimiento">
+          <DataField>fecha_mantenimiento</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="kilometraje">
           <DataField>kilometraje</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="idVehiculo">
-          <DataField>idVehiculo</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="placa">
-          <DataField>placa</DataField>
+        <Field Name="placavehiculo">
+          <DataField>placavehiculo</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSetHistorialKilometraje</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Isaac\Source\Repos\Propietarios\WindowsFormsApplication1\WindowsFormsApplication1\ModuloReportesEstadisticos\DataSetHistorialKilometraje.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\Isaac\Source\Repos\ProyectoPropietarios\WindowsFormsApplication1\WindowsFormsApplication1\ModuloReportesEstadisticos\DataSetHistorialKilometraje.xsd</rd:SchemaPath>
         <rd:TableName>DataSetHistorialKilometraje</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
@@ -52,38 +44,67 @@
     <ReportSection>
       <Body>
         <ReportItems>
-          <Chart Name="Chart1">
+          <Textbox Name="Textbox10">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>HISTORIAL DEL MANTENIMIENTO DE VEHICULOS</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox10</rd:DefaultName>
+            <Top>11.93215cm</Top>
+            <Left>1.09832cm</Left>
+            <Height>0.6cm</Height>
+            <Width>14.40153cm</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Chart Name="Chart3">
             <ChartCategoryHierarchy>
               <ChartMembers>
                 <ChartMember>
-                  <Group Name="Chart1_CategoryGroup">
+                  <Group Name="Chart3_CategoryGroup">
                     <GroupExpressions>
-                      <GroupExpression>=Fields!fecha.Value</GroupExpression>
+                      <GroupExpression>=Fields!fecha_mantenimiento.Value</GroupExpression>
                     </GroupExpressions>
                   </Group>
                   <SortExpressions>
                     <SortExpression>
-                      <Value>=Fields!fecha.Value</Value>
+                      <Value>=Fields!fecha_mantenimiento.Value</Value>
                     </SortExpression>
                   </SortExpressions>
-                  <Label>=Fields!fecha.Value</Label>
+                  <Label>=Fields!fecha_mantenimiento.Value</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartCategoryHierarchy>
             <ChartSeriesHierarchy>
               <ChartMembers>
                 <ChartMember>
-                  <Group Name="Chart1_SeriesGroup">
+                  <Group Name="Chart3_SeriesGroup">
                     <GroupExpressions>
-                      <GroupExpression>=Fields!idVehiculo.Value</GroupExpression>
+                      <GroupExpression>=Fields!placavehiculo.Value</GroupExpression>
                     </GroupExpressions>
                   </Group>
                   <SortExpressions>
                     <SortExpression>
-                      <Value>=Fields!idVehiculo.Value</Value>
+                      <Value>=Fields!placavehiculo.Value</Value>
                     </SortExpression>
                   </SortExpressions>
-                  <Label>=Fields!idVehiculo.Value</Label>
+                  <Label>=Fields!placavehiculo.Value</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartSeriesHierarchy>
@@ -363,7 +384,6 @@
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontSize>8pt</FontSize>
                 </Style>
-                <Position>TopLeft</Position>
                 <ChartLegendTitle>
                   <Caption />
                   <Style>
@@ -378,10 +398,10 @@
             </ChartLegends>
             <ChartTitles>
               <ChartTitle Name="Default">
-                <Caption>Historial de Kilometraje</Caption>
+                <Caption>Historial del Kilometraje de los Vehiculos</Caption>
                 <Style>
                   <BackgroundGradientType>None</BackgroundGradientType>
-                  <FontSize>9pt</FontSize>
+                  <FontSize>12pt</FontSize>
                   <FontWeight>Normal</FontWeight>
                   <TextAlign>Left</TextAlign>
                   <VerticalAlign>Top</VerticalAlign>
@@ -408,31 +428,60 @@
               </Style>
             </ChartNoDataMessage>
             <DataSetName>DataSetHistorialKilometraje</DataSetName>
-            <Top>0.10583cm</Top>
-            <Left>3.38349cm</Left>
-            <Height>5cm</Height>
-            <Width>16.68104cm</Width>
+            <Top>0.71974cm</Top>
+            <Left>1.09832cm</Left>
+            <Height>9.33917cm</Height>
+            <Width>21.19249cm</Width>
+            <ZIndex>1</ZIndex>
             <Style>
               <Border>
-                <Color>DimGray</Color>
                 <Style>Solid</Style>
-                <Width>0.75pt</Width>
               </Border>
               <BackgroundColor>White</BackgroundColor>
               <BackgroundGradientType>None</BackgroundGradientType>
             </Style>
           </Chart>
+          <Textbox Name="Textbox13">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>[Figura 1: Historial del kilometraje de los vehiculos]</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox13</rd:DefaultName>
+            <Top>10.12946cm</Top>
+            <Left>7.87166cm</Left>
+            <Height>0.6cm</Height>
+            <Width>8.79645cm</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
           <Tablix Name="Tablix1">
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>6.27472cm</Width>
+                  <Width>7.06416cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>6.32764cm</Width>
+                  <Width>7.06416cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>7.20076cm</Width>
+                  <Width>7.06416cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -441,21 +490,21 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox3">
+                        <Textbox Name="Textbox15">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Vehiculo</Value>
+                                  <Value>placavehiculo</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox3</rd:DefaultName>
+                          <rd:DefaultName>Textbox15</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -471,21 +520,21 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox5">
+                        <Textbox Name="Textbox12">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Kilometraje</Value>
+                                  <Value>kilometraje</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox5</rd:DefaultName>
+                          <rd:DefaultName>Textbox12</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -501,21 +550,21 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox6">
+                        <Textbox Name="Textbox9">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Fecha</Value>
+                                  <Value>fecha mantenimiento</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox6</rd:DefaultName>
+                          <rd:DefaultName>Textbox9</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -536,21 +585,21 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="idVehiculo">
+                        <Textbox Name="placavehiculo">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!idVehiculo.Value</Value>
+                                  <Value>=Fields!placavehiculo.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>idVehiculo</rd:DefaultName>
+                          <rd:DefaultName>placavehiculo</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -596,21 +645,21 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="fecha">
+                        <Textbox Name="fecha_mantenimiento">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!fecha.Value</Value>
+                                  <Value>=Fields!fecha_mantenimiento.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>fecha</rd:DefaultName>
+                          <rd:DefaultName>fecha_mantenimiento</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -641,64 +690,30 @@
                   <KeepWithGroup>After</KeepWithGroup>
                 </TablixMember>
                 <TablixMember>
-                  <Group Name="Detalles" />
+                  <Group Name="Details" />
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSetHistorialKilometraje</DataSetName>
-            <Top>6.39974cm</Top>
-            <Left>0.7112cm</Left>
+            <Top>12.96995cm</Top>
+            <Left>1.09832cm</Left>
             <Height>1.2cm</Height>
-            <Width>19.80312cm</Width>
-            <ZIndex>1</ZIndex>
+            <Width>21.19249cm</Width>
+            <ZIndex>3</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
             </Style>
           </Tablix>
-          <Textbox Name="Textbox10">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>LISTADO DE VEHÍCULOS CON SU KILOMETRAJE</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox10</rd:DefaultName>
-            <Top>5.73828cm</Top>
-            <Left>0.7112cm</Left>
-            <Height>0.6cm</Height>
-            <Width>14.40153cm</Width>
-            <ZIndex>2</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
         </ReportItems>
-        <Height>3.39583in</Height>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
-          </Border>
-        </Style>
+        <Height>6.21538in</Height>
+        <Style />
       </Body>
-      <Width>9.76909in</Width>
+      <Width>9.22916in</Width>
       <Page>
         <PageHeader>
-          <Height>2.54cm</Height>
+          <Height>2.76958cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -706,10 +721,10 @@
               <Source>Embedded</Source>
               <Value>Escudo_de_la_Escuela_Politécnica_Nacional</Value>
               <Sizing>FitProportional</Sizing>
-              <Top>0.65828cm</Top>
-              <Left>3.38349cm</Left>
-              <Height>1.5cm</Height>
-              <Width>1.5cm</Width>
+              <Top>0.76729cm</Top>
+              <Left>2.71229cm</Left>
+              <Height>1.79104cm</Height>
+              <Width>2.10854cm</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -747,7 +762,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>REPORTE DE HISTORIAL DE KILOMETRAJE DE VEHÍCULOS</Value>
+                      <Value>REPORTE DE HISTORIAL DEL MANTENIMIENTO DE VEHICULOS</Value>
                       <Style />
                     </TextRun>
                   </TextRuns>
@@ -757,8 +772,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>0.65828cm</Top>
-              <Left>5.81766cm</Left>
+              <Top>0.76729cm</Top>
+              <Left>5.88729cm</Left>
               <Height>1.5cm</Height>
               <Width>11.94562cm</Width>
               <ZIndex>1</ZIndex>
@@ -772,6 +787,21 @@
                 <PaddingBottom>2pt</PaddingBottom>
               </Style>
             </Textbox>
+            <Image Name="logoEPN2">
+              <Source>Embedded</Source>
+              <Value>Escudo_de_la_Escuela_Politécnica_Nacional</Value>
+              <Sizing>FitProportional</Sizing>
+              <Top>0.76729cm</Top>
+              <Left>18.60426cm</Left>
+              <Height>1.79104cm</Height>
+              <Width>2.10854cm</Width>
+              <ZIndex>2</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+              </Style>
+            </Image>
           </ReportItems>
           <Style>
             <Border>
@@ -780,10 +810,43 @@
           </Style>
         </PageHeader>
         <PageFooter>
-          <Height>1.68162cm</Height>
+          <Height>1.04042cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
+            <Textbox Name="ExecutionTime">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Informe generado el: </Value>
+                      <Style />
+                    </TextRun>
+                    <TextRun>
+                      <Value>=Globals!ExecutionTime</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>ExecutionTime</rd:DefaultName>
+              <Top>0.17639cm</Top>
+              <Left>0.43687cm</Left>
+              <Height>0.6cm</Height>
+              <Width>9.41854cm</Width>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
             <Textbox Name="OverallPageNumber">
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
@@ -807,43 +870,10 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>OverallPageNumber</rd:DefaultName>
-              <Top>0.68474cm</Top>
-              <Left>15.60724cm</Left>
+              <Top>0.17639cm</Top>
+              <Left>15.82207cm</Left>
               <Height>0.6cm</Height>
               <Width>7.13021cm</Width>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="ExecutionTime">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Informe generado el: </Value>
-                      <Style />
-                    </TextRun>
-                    <TextRun>
-                      <Value>=Globals!ExecutionTime</Value>
-                      <Style />
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>ExecutionTime</rd:DefaultName>
-              <Top>0.68474cm</Top>
-              <Left>0.34078cm</Left>
-              <Height>0.6cm</Height>
-              <Width>6.28354cm</Width>
               <ZIndex>1</ZIndex>
               <Style>
                 <Border>
@@ -862,8 +892,8 @@
             </Border>
           </Style>
         </PageFooter>
-        <PageHeight>29.7cm</PageHeight>
-        <PageWidth>21cm</PageWidth>
+        <PageHeight>21cm</PageHeight>
+        <PageWidth>29.7cm</PageWidth>
         <LeftMargin>2cm</LeftMargin>
         <RightMargin>2cm</RightMargin>
         <TopMargin>2cm</TopMargin>
@@ -904,5 +934,5 @@ LyadXV1oj59MyoM+vPsY1HmtQSfe8Sn9bk8+h1DYu7vgim9ltnehfqG7uwdt/5XcO+BX4N3Ednpvcn3g
     </EmbeddedImage>
   </EmbeddedImages>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>9310dbf5-b466-4556-839d-b44f4e9126ae</rd:ReportID>
+  <rd:ReportID>cecad474-a849-4b6e-b273-c7718db423e6</rd:ReportID>
 </Report>

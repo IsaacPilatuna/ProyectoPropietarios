@@ -122,9 +122,9 @@
             this.checkBoxFecha.AutoSize = true;
             this.checkBoxFecha.Location = new System.Drawing.Point(4, 66);
             this.checkBoxFecha.Name = "checkBoxFecha";
-            this.checkBoxFecha.Size = new System.Drawing.Size(120, 22);
+            this.checkBoxFecha.Size = new System.Drawing.Size(136, 22);
             this.checkBoxFecha.TabIndex = 1;
-            this.checkBoxFecha.Text = "Rango Fecha:";
+            this.checkBoxFecha.Text = "Fecha de Salida:";
             this.checkBoxFecha.UseVisualStyleBackColor = true;
             this.checkBoxFecha.CheckedChanged += new System.EventHandler(this.checkBoxFecha_CheckedChanged);
             // 

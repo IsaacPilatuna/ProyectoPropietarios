@@ -22,17 +22,17 @@ namespace WindowsFormsApplication1.ModuloReportesEstadisticos
             try
             {
                 conn.Open();
-                SqlCommand comando = new SqlCommand("SELECT distinct reservaaprobada.idSolicitante, usuarios.nombre FROM dbo.reservaaprobada,dbo.usuarios where dbo.reservaaprobada.idsolicitante=dbo.usuarios.idusuario", conn);
+                SqlCommand comando = new SqlCommand("SELECT distinct dbo.mantenimiento.idVehiculo, dbo.vehiculo.PLACAVEHICULO FROM dbo.mantenimiento inner join dbo.vehiculo on dbo.mantenimiento.idVehiculo = dbo.vehiculo.idvehiculo", conn);
                 reader = comando.ExecuteReader();
 
-                comboBoxSolicitantes.DisplayMember = "Text";
-                comboBoxSolicitantes.ValueMember = "Value";
+                comboBoxPlacas.DisplayMember = "Text";
+                comboBoxPlacas.ValueMember = "Value";
                 while (reader.Read())
                 {
-                    comboBoxSolicitantes.Items.Add(new { Text = reader[1], Value = reader[0] });
+                    comboBoxPlacas.Items.Add(new { Text = reader[1], Value = reader[0] });
 
                 }
-                comboBoxSolicitantes.SelectedIndex = 0;
+                comboBoxPlacas.SelectedIndex = 0;
                 conn.Close();
             }
             catch (Exception e)
@@ -46,11 +46,11 @@ namespace WindowsFormsApplication1.ModuloReportesEstadisticos
         {
             if (checkBoxSolicitante.Checked)
             {
-                comboBoxSolicitantes.Enabled = true;
+                comboBoxPlacas.Enabled = true;
             }
             else
             {
-                comboBoxSolicitantes.Enabled = false;
+                comboBoxPlacas.Enabled = false;
             }
         }
 
@@ -70,49 +70,43 @@ namespace WindowsFormsApplication1.ModuloReportesEstadisticos
 
         private void btnGenerarReporte_Click(object sender, EventArgs e)
         {
-            String consulta = "SELECT solicitudreserva.lugar, reservaaprobada.fechasalida, reservaaprobada.fecharetorno, usuarios.nombre, reservaaprobada.numeropersonas FROM reservaaprobada inner join solicitudreserva on reservaaprobada.idsolicitudreserva = solicitudreserva.idsolicitudreserva inner JOIN usuarios on solicitudreserva.idusuario = usuarios.idusuario";
+            String consulta = "select mantenimiento.fecha_mantenimiento, mantenimiento.kilometraje, VEHICULO.PLACAVEHICULO from Mantenimiento inner join VEHICULO on Mantenimiento.idVehiculo = Vehiculo.idVehiculo";
             if (checkBoxSolicitante.Checked)
             {
-                int idSolicitante = (int)comboBoxSolicitantes.SelectedItem.GetType().GetProperty("Value").GetValue(comboBoxSolicitantes.SelectedItem);
-                consulta += " WHERE usuarios.idusuario =" + idSolicitante;
+                int idvehiculo = (int)comboBoxPlacas.SelectedItem.GetType().GetProperty("Value").GetValue(comboBoxPlacas.SelectedItem);
+                consulta += " WHERE vehiculo.idvehiculo =" + idvehiculo;
                 if (checkBoxFecha.Checked)
                 {
-                    consulta += " AND reservaaprobada.fechasalida BETWEEN '" + dateTimePickerDesde.Value.Date.ToString("dd/MM/yyyy") + "' AND '" + dateTimePickerHasta.Value.Date.ToString("dd/MM/yyyy") + "' ";
+                    consulta += " AND mantenimiento.fecha_mantenimiento BETWEEN '" + dateTimePickerDesde.Value.Date.ToString("dd/MM/yyyy") + "' AND '" + dateTimePickerHasta.Value.Date.ToString("dd/MM/yyyy") + "' ";
                 }
             }
             else
             {
                 if (checkBoxFecha.Checked)
                 {
-                    consulta += " WHERE reservaaprobada.fechasalida BETWEEN '" + dateTimePickerDesde.Value.Date.ToString("dd/MM/yyyy") + "' AND '" + dateTimePickerHasta.Value.Date.ToString("dd/MM/yyyy") + "' ";
+                    consulta += " WHERE mantenimiento.fecha_mantenimiento BETWEEN '" + dateTimePickerDesde.Value.Date.ToString("dd/MM/yyyy") + "' AND '" + dateTimePickerHasta.Value.Date.ToString("dd/MM/yyyy") + "' ";
                 }
             }
 
-            consulta += " order BY usuarios.nombre, reservaaprobada.fechasalida";
+            consulta += " order BY VEHICULO.PLACAVEHICULO, mantenimiento.kilometraje";
             SqlConnection cn = new SqlConnection(new Conexion().stringConexion);
             cn.Open();
             SqlCommand comando = new SqlCommand(consulta, cn);
             SqlDataReader reader = comando.ExecuteReader();
-            DataSetViajes dsViajes = new DataSetViajes();
-            dsViajes.Tables[0].Load(reader);
+            DataSetHistorialKilometraje dsKilometraje = new DataSetHistorialKilometraje();
+            dsKilometraje.Tables[0].Load(reader);
             reader = comando.ExecuteReader();
             int i = 0;
             while (reader.Read())
             {
-                string lugar = dsViajes.Tables[0].Rows[i]["lugar"].ToString();
-                string fechaSalida = dsViajes.Tables[0].Rows[i]["fechaSalida"].ToString();
-                fechaSalida = fechaSalida.Split()[0];
-                string fechaRetorno = dsViajes.Tables[0].Rows[i]["fechaRetorno"].ToString();
-                fechaRetorno = fechaRetorno.Split()[0];
-                lugar = lugar.Split(',')[1];
-                dsViajes.Tables[0].Rows[i].SetField("lugar", lugar);
-                dsViajes.Tables[0].Rows[i].SetField("fechaSalida", fechaSalida);
-                dsViajes.Tables[0].Rows[i].SetField("fechaRetorno", fechaRetorno);
+                string fecha = dsKilometraje.Tables[0].Rows[i]["fecha_mantenimiento"].ToString();
+                fecha = fecha.Split()[0];
+                dsKilometraje.Tables[0].Rows[i].SetField("fecha_mantenimiento", fecha);
                 i++;
 
             }
 
-            ReportDataSource rds = new ReportDataSource("DataSetViajes", dsViajes.Tables[0]);
+            ReportDataSource rds = new ReportDataSource("DataSetHistorialKilometraje", dsKilometraje.Tables[0]);
             this.reportViewer1.LocalReport.DataSources.Clear();
             this.reportViewer1.LocalReport.DataSources.Add(rds);
             this.reportViewer1.LocalReport.Refresh();
