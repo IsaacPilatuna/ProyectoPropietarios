@@ -79,6 +79,7 @@ namespace ModuloFormularios
                     // reporteConductor.getDineroGastadoEnGasolina() + " " + reporteConductor.getComportameientoPasajeros());
 //
                     reporteConductor.guardarEnBase();
+                    this.Close();
                 }
                 else {
                     MessageBox.Show("ERROR AL INGRESAR LOS DATOS");
